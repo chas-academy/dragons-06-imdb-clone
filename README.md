@@ -1,1 +1,2 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/chas-academy/dragons-06-imdb-clone.png?columns=all)](https://waffle.io/chas-academy/dragons-06-imdb-clone?utm_source=badge)
 # dragons-06-imdb-clone
