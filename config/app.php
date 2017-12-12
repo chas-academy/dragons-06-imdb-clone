@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        MoviKyte\Providers\AppServiceProvider::class,
+        MoviKyte\Providers\AuthServiceProvider::class,
+        // MoviKyte\Providers\BroadcastServiceProvider::class,
+        MoviKyte\Providers\EventServiceProvider::class,
+        MoviKyte\Providers\RouteServiceProvider::class,
 
     ],
 
