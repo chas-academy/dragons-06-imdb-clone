@@ -15,8 +15,6 @@ Kör artisan preset none
 
 Kör npm install
 
-Kör npm dev
-
 (Nu borde alla js-grejer fungera)
 
 Nu ska det gå att köra npm run dev
