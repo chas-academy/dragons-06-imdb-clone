@@ -1,7 +1,36 @@
+//
+//
+//          Här skriver vi den style som skriver över Bulmas standardkod,
+//          eller, kompletterar den. Använd inga #id, försök använda så få
+//          elementselektorer som möjligt, och död åt den som använder *.
+//
+//
+p.content {
+  margin-left: 30%;
+  margin-right: 15%;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hanging-punctuation: first;
+  color: pink;
+}
+.content .pull {
+  width: calc(30% - 48px);
+  margin: 24px;
+  float: left;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  font-size: 2rem;
+}
+.content p:first-child {
+  padding-top: 2em;
+}
+q {
+quotes: "\201C" "\201D";
+  }
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
-@import "bulma";
-@import "slideout"
+.tabs a {
+  color: white;
+}

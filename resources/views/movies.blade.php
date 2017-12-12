@@ -9,6 +9,8 @@
 
         <!-- Fonts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
     <title>Movykyte.io – Superbabies 2</title>
     <style>
       .slideout-menu { left: auto; }
@@ -19,7 +21,7 @@
         padding-right: 24px;
         font-size: 1.5rem;
       }
-      .synopsis p {
+    /*  .synopsis p {
         margin-left: 30%;
         margin-right: 15%;
         //font-size: 1.5rem;
@@ -46,7 +48,7 @@
       }
       .tabs a {
         color: white;
-      }
+      }*/
     </style>
 
   </head>
@@ -176,11 +178,11 @@
             </nav>
           </div>
         </div>
-        <article class="content is-medium synopsis">
+        <article class="content is-medium">
 
             <p>The film starts with a group of babies in a day care center. Archie tells his friends, Finkleman, Alex, and Rosita, a story about Kahuna; according to Archie, Kahuna is a super baby with super strength and seemingly doesn't age, and he once rescued a group of children from an evil orphanage at the Berlin Wall run by a villainous overseer Biscane.</p>
 
-            <p class="pullquote">
+            <p class="pull">
               <q>Kahuna transforms the babies into ‘superbabies’: Archie is Brain Boy, Alex is Bouncing Boy, Rosita is Cupid Girl, and Finkleman is Baby Courageous.</q>
             </p>
 
@@ -190,7 +192,7 @@
 
             <p>The next day, Zack and Kylie find the disc that fell in the stroller earlier. The disc contains a clip of the program that is to be aired on Biscane's TV channel, followed by seemingly random code; they realize that Biscane is up to no good. The group spies on Biscane as he prepares to launch his channel, but Kahuna figures out that Biscane plans to take over the world through his TV channel by hypnotizing kids to never go outside, so he attacks the broadcast satellites, which causes him to disappear.</p>
 
-            <p class="pullquote">
+            <p class="pull">
               <q>The babies decide to become their super alter egos to save Kahuna.</q>
             </p>
 

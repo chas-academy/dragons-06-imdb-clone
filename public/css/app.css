@@ -17605,3 +17605,36 @@ body {
 .slideout-open .slideout-menu {
   display: block;
 }
+
+p.content {
+  margin-left: 30%;
+  margin-right: 15%;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hanging-punctuation: first;
+  color: pink;
+}
+
+.content .pull {
+  width: calc(30% - 48px);
+  margin: 24px;
+  float: left;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.content p:first-child {
+  padding-top: 2em;
+}
+
+q {
+  quotes: "\201C" "\201D";
+}
+
+.tabs a {
+  color: white;
+}
