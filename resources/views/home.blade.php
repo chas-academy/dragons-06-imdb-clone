@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Hello there {{ Auth::user()->name }}! Welcome to your profile page.
+                    <!--michael movie code here?-->
+                    
+
                 </div>
             </div>
         </div>
