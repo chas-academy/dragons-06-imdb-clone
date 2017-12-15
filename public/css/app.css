@@ -17606,7 +17606,7 @@ body {
   display: block;
 }
 
-p.content {
+.content p {
   margin-left: 30%;
   margin-right: 15%;
   text-align: justify;
@@ -17614,7 +17614,6 @@ p.content {
   -ms-hyphens: auto;
   hyphens: auto;
   hanging-punctuation: first;
-  color: pink;
 }
 
 .content .pull {

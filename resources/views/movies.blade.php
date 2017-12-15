@@ -21,49 +21,24 @@
         padding-right: 24px;
         font-size: 1.5rem;
       }
-    /*  .synopsis p {
-        margin-left: 30%;
-        margin-right: 15%;
-        //font-size: 1.5rem;
-        text-align: justify;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        hanging-punctuation: first;
-      }
-      .synopsis p.pullquote {
-        width: calc(30% - 48px);
-        margin: 24px;
-        float: left;
-        font-style: italic;
-        font-weight: bold;
-        text-align: left;
-        font-size: 2rem;
-      }
-      q {
-    quotes: "\201C" "\201D";
-        }
-      .synopsis p:first-child {
-        padding-top: 2em;
-      }
-      .tabs a {
-        color: white;
-      }*/
+    .search-flap {
+      border-radius: 0px 0px 30px 30px;
+    }
     </style>
 
   </head>
   <body>
-    <nav id="menu" class="menu">
+    <nav id="menu" class="menu" style="padding-left: 24px;">
       <header class="menu-header">
         <h2 class="title is-2">MoviKyte</h2>
       </header>
 
-    <section class="menu-section" style="padding-right: 24px;"> <!-- Log in -->
+    <section class="menu-section" style=""> <!-- Log in -->
       <div class="field">
         <p class="control has-icons-left has-icons-right">
           <input class="input" type="username" placeholder="Username">
           <span class="icon is-small is-left">
-            <i class="fa fa-user-circle-o"></i>
+            <i class="fa fa-user-circle"></i>
           </span>
           <span class="icon is-small is-right">
             <i class="fa fa-check"></i>
@@ -109,33 +84,34 @@
     </section>
 
   </nav>
-    <main class="columns is-gapless" id="panel">
+
+
+
+
+    <main class="columns" id="panel">
       <section class="column">
-        <div class="hero is-large" style="background: url(baby.jpeg);background-size: cover;background-attachment: fixed">
+        <div class="hero is-large" style="background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);background-size: cover;background-attachment: fixed">
           <div class="level"><!-- Hero head: will stick at the top -->
 
+<p class="field">"<button class="button js-slideout-toggle is-large" style="position: absolute; top: 24px; right: 24px;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></p>
             <!-- Search field -->
-            <!-- Försök få skiten centrerad... -->
+
+            <!-- SÖK...  Den funkar nu!-->
             <div class="level-item has-text-centered">
-              <div class="field has-addons">
+              <div class="field">
                 <p class="control has-icons-left">
-                  <input class="input is-large" >
+                  <input class="input is-large search-flap" >
                   <span class="icon is-left">
                     <i class="fa fa-search"></i>
                   </span>
                 </p>
-                <p class="control">
-                 <a class="button is-info is-large">
-                   Search
-                 </a>
-               </p>
               </div>
             </div>
 
 
 
           </div><!--Slut Hero head-->
-          <div class="hero-body"><!-- Hero content: will be in the middle -->
+          <div class="hero-body has-text-centered"><!-- Hero content: will be in the middle -->
             <!-- Title and subtitle -->
             <div class="columns">
               <div class="column has-text-right">
@@ -155,15 +131,25 @@
                   Adventure
                 </span>
               </div>
-              <div class="column">
-                <h1 class="title is-1 has-text-white-bis" style="font-size: 4rem;">
-                  22.3
+              <div class="column has-text-left">
+                <h1 class="title is-1 has-text-white-bis" style="font-size: 10rem;">
+                  <output for="sliderWithValue">
+                  10
+                  </output>
                 </h1>
-                <h2 class="subtitle is-3 has-text-white-bis">
-                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                </h2>
               </div>
             </div>
+<div class="title is-2">
+  <h2>Rate the movie!</h2>
+</div>
+<div class="has-text-centered">
+<div class="field">
+            <input id="sliderWithValue" class="slider is-large"  style="width: 70%; background: red;" step="1" min="0" max="100" value="50" type="range">
+</div>
+</div>
+
+
+
           </div><!--slut hero body-->
           <div class="hero-foot">
             <nav class="tabs is-boxed is-fullwidth">
@@ -199,10 +185,19 @@
             <p>The babies decide to become their super alter egos to save Kahuna. With Stan, Archie's mom, Kylie, and Zack with them, they return to Kahuna's hideout and become Bounce Boy, Cupid Girl, Brain Boy and Courageous Boy. After having escaped his prison, Kahuna arrives, followed by Biscane and his goons. Biscane manages to get the disc he needs and begins to air the hypnotic clip on TV. Biscane then reveals the truth that he is actually Kahuna's jealous older brother, now much older than him. The babies then knock Biscane into Kahuna's machine and he becomes a baby, much to his despair. Kahuna reverses Biscane's TV clip and all the children decide to run and play outside. Kahuna tells Archie that he must go and though they'll always be friends. Kahuna leaves in his flying vehicle, waving at him and saying he'll always be a hero.</p>
         </article>
       </section>
-      <section class="column is-narrow js-slideout-toggle">
+    <!--  <section class="column is-narrow js-slideout-toggle">
         <img src="kite.svg" style="padding: 2px; padding-top: 1em;" height="48px" width="48px">
-      </section>
+      </section>-->
     </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        MoviKyte – movies high as hell!
+      </p>
+    </div>
+  </div>
+</footer>
     <script src="js/app.js"></script>
   </body>
 </html>
