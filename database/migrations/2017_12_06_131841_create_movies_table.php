@@ -26,6 +26,7 @@ class CreateMoviesTable extends Migration
              $table->timestamps();
          });
      }
+    // TO BE REMOVED!
     // public function up()
     // {
     //     Schema::create('movies', function (Blueprint $table) {

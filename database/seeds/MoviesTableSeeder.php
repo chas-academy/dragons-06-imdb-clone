@@ -11,6 +11,9 @@ class MoviesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('authors')->delete();
+
+        //skapa upp 3 exempelfilmer.
+
     }
 }
