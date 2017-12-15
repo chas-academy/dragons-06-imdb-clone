@@ -6,8 +6,10 @@
  */
 
 require('./bootstrap');
+require('./bulma-extensions');
 
-//require('./bulma-extensions');
+
+//Menu slide**/
 import Slideout from "slideout";
 
   var slideout = new Slideout({
@@ -16,7 +18,7 @@ import Slideout from "slideout";
     'side': 'right'
   });
 
-  document.querySelector('.js-slideout-toggle').addEventListener('mouseover', function() {
+  document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
     slideout.toggle();
   });
 
