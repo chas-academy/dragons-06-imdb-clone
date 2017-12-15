@@ -19,6 +19,10 @@ Route::get('/movies', function () {
     return view('movies');
 });
 
+Route::get('/genre', function() {
+    return view('genre');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
