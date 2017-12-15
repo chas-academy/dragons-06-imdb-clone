@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/movies', function () {
     return view('movies');
 });
+
+/* This is test, should be /movies in production */
+Route::get('/hejsan', function () {
+    return view('hejsan');
+});
+
