@@ -776,7 +776,7 @@ var slideout = new __WEBPACK_IMPORTED_MODULE_0_slideout___default.a({
   'side': 'right'
 });
 
-document.querySelector('.js-slideout-toggle').addEventListener('mouseover', function () {
+document.querySelector('.js-slideout-toggle').addEventListener('click', function () {
   slideout.toggle();
 });
 
