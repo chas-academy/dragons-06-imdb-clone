@@ -23,7 +23,54 @@
       }
     .search-flap {
       border-radius: 0px 0px 30px 30px;
+      width: 70%;
+      margin-left: 15%;
+      float: left;
     }
+    .flap-holder:hover {
+      top: 10px;
+    }
+
+    .fixed-header {
+      position: fixed;
+      width: 100%;
+      //height: 50px;
+      backface-visibility: hidden;
+      z-index: 2;
+      //background-color: red;
+      margin: 0;
+      padding: 0;
+      left: 0px;
+      right: 0px;
+    }
+
+    .btn-hamburger {
+      position: static;
+      height: 40px;
+      width: 40px;
+    }
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(45deg, red, blue);
+
+  background-position: right top;
+}
+input[type=range]::-moz-range-track {
+  background: linear-gradient(to left, red 30%, transparent 30%);
+  background-position: right top;
+}
+input[type=range]::-ms-track {
+  background: linear-gradient(to left, red 30%, transparent 30%);
+  background-position: right top;
+  background-repeat: no-repeat;  /* no repeat means background appears a little on the left due to width issue and hence the fix */
+  width: 100%;  /* to fix width issue in Edge */
+  color: transparent;  /* to avoid the intermediate stripe lines in < IE11 */
+  border: none;  /* just do away with the track's border */
+}
+input[type=range]::-ms-fill-lower {
+  background: transparent; /* IE11 has default fill and that needs to be removed */
+}
     </style>
 
   </head>
@@ -85,18 +132,29 @@
 
   </nav>
 
+<!--
+-->
+  <header class="fixed-header has-text-centered">
+                  <div class="field">
+                    <p class="control has-icons-left flap-holder">
+                      <input class="input is-large search-flap" >
+                      <span class="icon is-left" style="margin-left: 15%;">
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </p>
+                  </div>
+    <span class="field"><button class="button js-slideout-toggle is-large" style="position: static; margin: 24px; float: right;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></span>
+  </header>
 
-
-
+              <!-- Search field -->
     <main class="columns" id="panel">
-      <section class="column">
+          <section class="column">
         <div class="hero is-large" style="background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);background-size: cover;background-attachment: fixed">
           <div class="level"><!-- Hero head: will stick at the top -->
 
-<p class="field">"<button class="button js-slideout-toggle is-large" style="position: absolute; top: 24px; right: 24px;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></p>
-            <!-- Search field -->
 
-            <!-- SÖK...  Den funkar nu!-->
+
+            <!-- SÖK...  Den funkar nu! OBS: flyttad högre upp i koden
             <div class="level-item has-text-centered">
               <div class="field">
                 <p class="control has-icons-left">
@@ -107,7 +165,7 @@
                 </p>
               </div>
             </div>
-
+-->
 
 
           </div><!--Slut Hero head-->
@@ -144,7 +202,7 @@
 </div>
 <div class="has-text-centered">
 <div class="field">
-            <input id="sliderWithValue" class="slider is-large"  style="width: 70%; background: red;" step="1" min="0" max="100" value="50" type="range">
+            <input id="sliderWithValue" class="slider is-large"  style="width: 70%;" step="1" min="0" max="100" value="50" type="range">
 </div>
 </div>
 
