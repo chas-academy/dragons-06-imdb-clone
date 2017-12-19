@@ -10,6 +10,9 @@
         <!-- Fonts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="icon" 
+      type="image/png"
+      href="favicon.png">
 
     <title>Movykyte.io – Superbabies 2</title>
     <style>
