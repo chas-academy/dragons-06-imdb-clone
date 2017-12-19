@@ -25,14 +25,14 @@ set('allow_anonymous_stats', false);
 host('dev.dmdb.cmalmgren.me')
     ->set('deploy_path', '/var/www/dmdb/dev.dmdb.cmalmgren.me')
     ->user('deployer')
-    ->identityFile('~/.ssh/do_dep')
+    ->identityFile('~/.ssh/deployer_do')
     ->stage('dev')
     ->set('branch', 'dev');
 
 host('dmdb.cmalmgren.me')
     ->set('deploy_path', '/var/www/dmdb/dmdb.cmalmgren.me')
     ->user('deployer')
-    ->identityFile('~/.ssh/do_dep')
+    ->identityFile('~/.ssh/deployer_do')
     ->stage('production')
     ->set('branch', 'master');
 // Tasks
