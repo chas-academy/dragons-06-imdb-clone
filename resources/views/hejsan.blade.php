@@ -79,8 +79,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hejsan
+                    Edit
                 </div>
+                <textarea class="textarea" rows="4" placeholder="Edit movieplot"></textarea>
 
             </div>
         </div>
