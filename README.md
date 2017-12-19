@@ -1,4 +1,11 @@
 # MoviKyte
+
+Deploy adress:
+
+Staging: dev.dmdb.cmalmgren.me
+
+Production: dmdb.cmalmgren.me
+
 Klona repot
 
 Installera php-dependensies med composer
