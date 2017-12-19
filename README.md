@@ -1,5 +1,10 @@
 # MoviKyte
 
+Deploy adress:
+
+Staging: dev.dmdb.cmalmgren.me
+
+Production: dmdb.cmalmgren.me
 
 Klona repot
 
