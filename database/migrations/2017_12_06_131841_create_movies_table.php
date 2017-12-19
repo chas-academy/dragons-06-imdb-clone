@@ -11,13 +11,29 @@ class CreateMoviesTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('movies', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
-    }
+     public function up()
+     {
+         Schema::create('movies', function (Blueprint $table) {
+             $table->increments('id')->unique();
+             $table->string('titel');
+             $table->string('genre');
+             $table->integer('year');
+             $table->string('actors');
+             $table->string('plot');
+             $table->string('director');
+             $table->string('rating');
+             $table->string('reviews');
+             $table->timestamps();
+         });
+     }
+    // TO BE REMOVED!
+    // public function up()
+    // {
+    //     Schema::create('movies', function (Blueprint $table) {
+    //         $table->increments('id');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.

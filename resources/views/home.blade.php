@@ -14,10 +14,14 @@
                         </div>
                     @endif
 
+<<<<<<< HEAD
                     Hello there {{ Auth::user()->name }}! Welcome to your profile page.
                     <!--michael movie code here?-->
                     
 
+=======
+                    You are logged in!
+>>>>>>> mike
                 </div>
             </div>
         </div>
