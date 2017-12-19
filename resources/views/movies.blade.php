@@ -28,7 +28,8 @@
       float: left;
     }
     .flap-holder:hover {
-      top: 10px;
+      transform: scale(1.1);
+      transition: all .2s ease-in-out;
     }
 
     .fixed-header {
@@ -143,7 +144,7 @@ input[type=range]::-ms-fill-lower {
                       </span>
                     </p>
                   </div>
-    <span class="field"><button class="button js-slideout-toggle is-large" style="position: static; margin: 24px; float: right;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></span>
+    <span class="field"><button class="button js-slideout-toggle is-large is-rounded" style="position: static; margin: 24px; float: right; border-radius: 50%;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></span>
   </header>
 
               <!-- Search field -->
