@@ -15,10 +15,10 @@ class UserController extends Controller
 
     public function updatePic(Request $request) {
 
-    	//handle user upload of profile picture (change avatar to somehting else)
     	if ($request->hasFile('image')) {
     		$avatar = $request->file('image');
     		$filename = time() . '.' . $avatar->getClientOriginalExtension();
+    		//this uses image intervention. link pinned on slack
     		Image::make($avatar)->resize(100, 100)->save( public_path('/uploads/profile/' . $filename));
 
     		$user = Auth::user();
