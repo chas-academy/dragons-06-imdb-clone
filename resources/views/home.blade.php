@@ -15,7 +15,8 @@
                     @endif
 
                     Hello there {{ Auth::user()->name }}! Welcome to your profile page.
-                    <!--michael movie code here?-->
+                    <img src="/uploads/profile/{{ Auth::user()->image }}" style="width:120px; border-radius:50%;" alt="Profile picture">
+                    {{ csrf_field() }}
                     
 
                 </div>
