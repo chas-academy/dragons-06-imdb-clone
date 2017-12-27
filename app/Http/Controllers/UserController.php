@@ -17,8 +17,10 @@ class UserController extends Controller
 
     	if ($request->hasFile('image')) {
     		$avatar = $request->file('image');
+    		//assigns a random number plus the original file extension
     		$filename = time() . '.' . $avatar->getClientOriginalExtension();
-    		//this uses image intervention. link pinned on slack
+    		//the line below uses image intervention. link pinned on slack
+    		//this also changes the image size and names it after the random time number assigned above
     		Image::make($avatar)->resize(100, 100)->save( public_path('/uploads/profile/' . $filename));
 
     		$user = Auth::user();
