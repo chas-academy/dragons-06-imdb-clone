@@ -32,9 +32,11 @@ class UserController extends Controller
 
     }
 
-    public function updateName() {
+    public function updateName(Request $request, Name $name) {
 
-        
+        $nameUpdate = Name::where('id', $name->id)->update([ 'name'=>$request ])
+
+
         return view('profile', array('user' => Auth::user()) );
     }
 }
