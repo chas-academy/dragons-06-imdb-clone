@@ -31,4 +31,10 @@ class UserController extends Controller
     	return view('profile', array('user' => Auth::user()));
 
     }
+
+    public function updateName() {
+
+        
+        return view('profile', array('user' => Auth::user()) );
+    }
 }
