@@ -48,5 +48,16 @@ class MoviesTableSeeder extends Seeder
             'rating' => '',
             'reviews' => '',
         ));
+        Movie::create(array(
+            'id' => '4',
+            'titel' => 'Cheescake Factory',
+            'genre' => 'Sweety',
+            'year' => '2015',
+            'actors' => 'Bagarn Bosse',
+            'plot' => 'One cheesecake to rule them all',
+            'director' => 'Master Bagger',
+            'rating' => '',
+            'reviews' => '',
+        ));
     }
 }
