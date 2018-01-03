@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+namespace MoviKyte\Http\Controllers;
+=======
 namespace App\Http\Controllers;
+>>>>>>> mike
 
 use Illuminate\Http\Request;
 

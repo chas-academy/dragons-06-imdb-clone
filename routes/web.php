@@ -19,8 +19,15 @@ Route::get('/movies', function () {
     return view('movies');
 });
 
-/* This is test, should be /movies in production */
-Route::get('/hejsan', function () {
-    return view('hejsan');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('editprofile', 'UserController@Profile');
+Route::post('editprofile', 'UserController@updatePic');
+
+
+Route::get('/search', function () {
+    return view('search');
 });
 
