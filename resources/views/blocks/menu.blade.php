@@ -37,25 +37,30 @@
       <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="/uploads/profile/{{ Auth::user()->image }}" alt="It's you!">
+                <img src="/uploads/profile/default.png" alt="Its you!">
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">{{ Auth::user()->name }}
+              <p class="title is-5">{{ Auth::user()->name }}
                 <br>
                Surname</p>
             </div>
           </div>
 
           <div class="content is-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
+            <a href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"
+                class="button">
+                Logout
+            </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
 
           </div>
         </div>
-
-<a class="button" href="#">Knapp</a>
 
       </div>
       @endguest
