@@ -10,81 +10,26 @@
         <!-- Fonts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-    <link rel="icon" 
+    <link rel="icon"
       type="image/png"
       href="favicon.png">
 
     <title>Movykyte.io – Superbabies 2</title>
     <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px;}
-      .box { height: 1500px; }
-      .menu-section {
-        margin-top:1em;
-        padding-right: 24px;
-        font-size: 1.5rem;
-      }
-    .search-flap {
-      border-radius: 0px 0px 30px 30px;
-      width: 70%;
-      margin-left: 15%;
-      float: left;
-    }
-    .flap-holder:hover {
-      transform: scale(1.1);
-      transition: all .2s ease-in-out;
-    }
 
-    .fixed-header {
-      position: fixed;
-      width: 100%;
-      //height: 50px;
-      backface-visibility: hidden;
-      z-index: 2;
-      //background-color: red;
-      margin: 0;
-      padding: 0;
-      left: 0px;
-      right: 0px;
-    }
-
-    .btn-hamburger {
-      position: static;
-      height: 40px;
-      width: 40px;
-    }
-
-
-input[type=range]::-webkit-slider-runnable-track {
-  background: linear-gradient(45deg, red, blue);
-
-  background-position: right top;
-}
-input[type=range]::-moz-range-track {
-  background: linear-gradient(to left, red 30%, transparent 30%);
-  background-position: right top;
-}
-input[type=range]::-ms-track {
-  background: linear-gradient(to left, red 30%, transparent 30%);
-  background-position: right top;
-  background-repeat: no-repeat;  /* no repeat means background appears a little on the left due to width issue and hence the fix */
-  width: 100%;  /* to fix width issue in Edge */
-  color: transparent;  /* to avoid the intermediate stripe lines in < IE11 */
-  border: none;  /* just do away with the track's border */
-}
-input[type=range]::-ms-fill-lower {
-  background: transparent; /* IE11 has default fill and that needs to be removed */
-}
     </style>
 
   </head>
   <body>
-    <nav id="menu" class="menu" style="padding-left: 24px;">
+
+
+<nav id="menu" class="menu" style="">
+
       <header class="menu-header">
         <h2 class="title is-2">MoviKyte</h2>
       </header>
 
-    <section class="menu-section" style=""> <!-- Log in -->
+    <section class="menu-section" style=""> <!-- Log in, skall includas sen -->
       <div class="field">
         <p class="control has-icons-left has-icons-right">
           <input class="input" type="username" placeholder="Username">
@@ -109,9 +54,7 @@ input[type=range]::-ms-fill-lower {
         </button>
       </p>
       </div>
-      <span style="font-size: 0.75rem;">New user? <a href="#">Register!</a></span>
-
-
+      <span class="smaller">New user? <a href="#">Register!</a></span>
     </section> <!-- End longin -->
 
     <section class="menu-section">
@@ -134,11 +77,10 @@ input[type=range]::-ms-fill-lower {
       </ul>
     </section>
 
-  </nav>
+</nav>
 
-<!--
--->
-  <header class="fixed-header has-text-centered">
+
+<header class="fixed-header has-text-centered">
                   <div class="field">
                     <p class="control has-icons-left flap-holder">
                       <input class="input is-large search-flap" >
@@ -148,35 +90,21 @@ input[type=range]::-ms-fill-lower {
                     </p>
                   </div>
     <span class="field"><button class="button js-slideout-toggle is-large is-rounded" style="position: static; margin: 24px; float: right; border-radius: 50%;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></span>
-  </header>
+</header>
 
               <!-- Search field -->
-    <main class="columns" id="panel">
-          <section class="column">
+<main class="columns" id="panel">
+    <section class="column">
         <div class="hero is-large" style="background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);background-size: cover;background-attachment: fixed">
-          <div class="level"><!-- Hero head: will stick at the top -->
 
-
-
-            <!-- SÖK...  Den funkar nu! OBS: flyttad högre upp i koden
-            <div class="level-item has-text-centered">
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input is-large search-flap" >
-                  <span class="icon is-left">
-                    <i class="fa fa-search"></i>
-                  </span>
-                </p>
-              </div>
-            </div>
--->
-
-
+          <div class="level"><!-- Hero head: will stick at the top
+          Skall tas bort men kan sabba layouten -->
           </div><!--Slut Hero head-->
+
           <div class="hero-body has-text-centered"><!-- Hero content: will be in the middle -->
             <!-- Title and subtitle -->
-            <div class="columns">
-              <div class="column has-text-right">
+            <div class="">
+
                 <h1 class="title is-1 has-text-white-bis">
                   Superbabies 2
                 </h1>
@@ -192,23 +120,21 @@ input[type=range]::-ms-fill-lower {
                 <span class="tag is-warning">
                   Adventure
                 </span>
-              </div>
-              <div class="column has-text-left">
-                <h1 class="title is-1 has-text-white-bis" style="font-size: 10rem;">
+                <h2 class="title is-1 has-text-white-bis" style="font-size: 10rem;">
                   <output for="sliderWithValue">
                   10
                   </output>
-                </h1>
-              </div>
+                </h2>
             </div>
-<div class="title is-2">
-  <h2>Rate the movie!</h2>
-</div>
-<div class="has-text-centered">
-<div class="field">
-            <input id="sliderWithValue" class="slider is-large"  style="width: 70%;" step="1" min="0" max="100" value="50" type="range">
-</div>
-</div>
+
+        <div class="title is-2">
+          <h2>Rate the movie!</h2>
+        </div>
+        <div class="has-text-centered">
+            <div class="field">
+                <input id="sliderWithValue" class="slider is-large wide"   step="1" min="0" max="100" value="50" type="range">
+            </div>
+        </div>
 
 
 
@@ -247,9 +173,6 @@ input[type=range]::-ms-fill-lower {
             <p>The babies decide to become their super alter egos to save Kahuna. With Stan, Archie's mom, Kylie, and Zack with them, they return to Kahuna's hideout and become Bounce Boy, Cupid Girl, Brain Boy and Courageous Boy. After having escaped his prison, Kahuna arrives, followed by Biscane and his goons. Biscane manages to get the disc he needs and begins to air the hypnotic clip on TV. Biscane then reveals the truth that he is actually Kahuna's jealous older brother, now much older than him. The babies then knock Biscane into Kahuna's machine and he becomes a baby, much to his despair. Kahuna reverses Biscane's TV clip and all the children decide to run and play outside. Kahuna tells Archie that he must go and though they'll always be friends. Kahuna leaves in his flying vehicle, waving at him and saying he'll always be a hero.</p>
         </article>
       </section>
-    <!--  <section class="column is-narrow js-slideout-toggle">
-        <img src="kite.svg" style="padding: 2px; padding-top: 1em;" height="48px" width="48px">
-      </section>-->
     </main>
     <footer class="footer">
   <div class="container">
