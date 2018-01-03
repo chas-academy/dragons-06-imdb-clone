@@ -11,15 +11,18 @@
                 <input type="file" name="image">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <br>
                 <input type="submit" value="Update picture">
             </form>
-
+            <br>
             <form enctype="multipart/form-data" action="/editprofile" method="POST">
                 <label>Update Profile</label><br>
                 <label>Bio: </label><textarea type="text" name="bio" rows="5" cols="35">{{ $user->bio }}</textarea>
+                <br>
                 <label>Name: </label><input type="text" name="name" value="{{ $user->name }}">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <br>
                 <input type="submit" value="Update profile">
             </form>
             <a href="{{ url('/home') }}">Go Back</a>
