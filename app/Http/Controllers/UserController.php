@@ -19,7 +19,7 @@ class UserController extends Controller
 
     		$profilePic = $request->file('image');
     		//assigns a random number plus the original file extension
-    		$filename = time() . '.' . $profilePic->getClientOriginalExtension();
+    		$filename = Auth::user()->email . '.' . $profilePic->getClientOriginalExtension();
     		//the line below uses image intervention. link pinned on slack
     		//this changes the image size and names it after the random $filename number assigned above
     		Image::make($profilePic)->resize(100, 100)->save( public_path('/uploads/profile/' . $filename));
