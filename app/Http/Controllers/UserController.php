@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function updateUser(Request $request) {
 
-    	if ($request->hasFile('image')) {
+    	if ($request) {
 
     		$profilePic = $request->file('image');
     		//assigns a random number plus the original file extension
@@ -26,17 +26,10 @@ class UserController extends Controller
 
     		$user = Auth::user();
     		$user->image = $filename;
-    		$user->save();
-    	} else {
-
-            $user = Auth::user();
             $user->bio = $request->bio;
             $user->name = $request->name;
-            $user->save();
-
-            return view('editprofile', array('user' => Auth::user()));
-
-        }
+    		$user->save();
+    	}
 
     	return view('editprofile', array('user' => Auth::user()));
 
