@@ -36,7 +36,7 @@
     <!--Register Form Bulma-->
 <body>
 
-    <hr>
+    
 
     <div class="container is-fluid">
 
@@ -94,7 +94,7 @@
 
     </div>
 
-    <hr>
+ 
 
 </body>
 </html>
