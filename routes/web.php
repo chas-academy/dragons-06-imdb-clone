@@ -11,8 +11,14 @@
 |
  */
 
+
 Route::get('/', function () {
     return view('main');
+});
+
+// https://chasacademy.slack.com/archives/G89N8QX32/p1515016329000347
+Route::get('/welcome', function () {
+    return view('welcome');
 });
 
 Route::get('/movies', function () {
