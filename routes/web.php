@@ -27,4 +27,7 @@ Route::get('editprofile', 'UserController@Profile');
 Route::post('editprofile', 'UserController@updatePic');
 
 
+Route::get('/search', function () {
+    return view('search');
+});
 

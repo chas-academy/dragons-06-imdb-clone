@@ -5,12 +5,15 @@
 //          elementselektorer som möjligt, och död åt den som använder *.
 //
 //
+body {
+  overflow: hidden;
+}
 .content p {
   margin-left: 30%;
   margin-right: 15%;
   text-align: justify;
   -webkit-hyphens: auto;
-  -ms-hyphens: auto;
+      -ms-hyphens: auto;
   hyphens: auto;
   hanging-punctuation: first;
 }
