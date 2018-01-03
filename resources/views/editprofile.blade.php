@@ -22,7 +22,7 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="submit" value="Update profile">
             </form>
-            <a href="{{ url('/home') }}">Go back without saving</a>
+            <a href="{{ url('/home') }}">Go Back</a>
         </div>
     </div>
 </div>
