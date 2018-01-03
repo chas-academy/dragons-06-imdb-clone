@@ -9,12 +9,13 @@
             <form enctype="multipart/form-data" action="/editprofile" method="POST">
                 <label>Update Profile Picture</label><br>
                 <input type="file" name="image">
-                <label>Bio: </label><input type="text" name="bio" value="{{ $user->bio }}">
+                <label>Bio: </label><textarea type="text" name="bio" rows="5" cols="35">{{ $user->bio }}</textarea>
                 <label>Name: </label><input type="text" name="name" value="{{ $user->name }}">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="submit" value="Update">
             </form>
+            <a href="{{ url('/home') }}">Go back without saving</a>
         </div>
     </div>
 </div>

@@ -16,6 +16,11 @@
 
                     Hello there {{ Auth::user()->name }}! Welcome to your profile page.
                     <img src="/uploads/profile/{{ Auth::user()->image }}" style="width:120px; border-radius:50%;" alt="Profile picture">
+                    <br>
+                    my bio:
+                    <div style="border: solid 1px black;">
+                        {{ Auth::user()->bio }}
+                    </div>
                     {{ csrf_field() }}
                     <a href="{{ url('/editprofile') }}">edit profile</a>
 
