@@ -13,16 +13,21 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
 </head>
     <!--style for register, make a new file later-->
 
     <style>
-    body{
-        background-image: url("https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMDcxNDA4MV5BMl5BanBnXkFtZTgwNjY1NTk4NjE@._V1_UY113_CR0,0,76,113_AL_.jpg");
+    
+    html{
+        
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp8GMRz-lSUgR0EfVlXq4lbz9nn7IOZIsj8RY7ATjK2i-aj5XwA);
         background-repeat: no-repeat;
-       
+        background-size: cover;
+        background-color: none;
     
     }
+    
 
     
 
@@ -35,7 +40,7 @@
 
     <div class="container is-fluid">
 
-        <div class="columns is-centered">
+        <div class="columns is-centered ">
             <h1 class="title">Moviekyte</h1>
         </div>
 
@@ -43,47 +48,48 @@
             <h2 class="subtitle">Create New Account</h2>
         </div>
         
-
-        <div class="field">
-            <label class="label">Name:</label>
-            <div class="control">
-                <input class="input" type="text">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Email:</label>
-            <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email">
-                <span class="icon is-small is-left">
-                <i class="fa fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                <i class="fa fa-check"></i>
-                </span>
-            </p>
-        </div>
-
-        <div class="field">
-            <label class="label">Password:</label>
-            <p class="control has-icons-left">
-                <input class="input" type="password">
-                <span class="icon is-small is-left">
-                <i class="fa fa-lock"></i>
-                </span>
-            </p>
-        </div>
-        <div class="field">
-            <p class="control">
-                <button class="button is-success is-fullwidth">
-                Submit  
-                </button>
-            </p>
-        </div>
-
         <div class="columns is-centered">
-            <h2 class="subtitle">Already have an Account?
-            <a href="#">Sign in</a></h2>
+            <div class="column is-half">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                        <i class="fa fa-check"></i>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="field"> 
+                    <p class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password">
+                        <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-success is-fullwidth">
+                        Submit  
+                        </button>
+                    </p>
+                </div>
+
+                <div class="columns is-centered">
+                    <h2 class="subtitle">Already have an Account?
+                    <a href="/login">Sign in</a></h2>
+                </div>
+            </div>
         </div>
 
     </div>
