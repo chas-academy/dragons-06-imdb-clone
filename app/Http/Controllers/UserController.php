@@ -13,7 +13,7 @@ class UserController extends Controller
     	return view('editprofile', array('user' => Auth::user()) );
     }
 
-    public function updatePic(Request $request) {
+    public function updateUser(Request $request) {
 
     	if ($request->hasFile('image')) {
 
@@ -41,14 +41,5 @@ class UserController extends Controller
     	return view('editprofile', array('user' => Auth::user()));
 
     }
-
-    /*public function updateBio(Request $request) {
-
-        $user->bio = $request->bio;
-        $user->save();
-
-        return view('editprofile', array('user' => Auth::user()));
-
-    }*/
 
 }

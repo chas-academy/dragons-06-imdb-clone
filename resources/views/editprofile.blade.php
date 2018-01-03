@@ -13,7 +13,7 @@
                 <label>Name: </label><input type="text" name="name" value="{{ $user->name }}">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit">
+                <input type="submit" value="Update">
             </form>
         </div>
     </div>
