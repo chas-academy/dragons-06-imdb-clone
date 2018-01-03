@@ -31,6 +31,7 @@ class UserController extends Controller
 
             $user = Auth::user();
             $user->bio = $request->bio;
+            $user->name = $request->name;
             $user->save();
 
             return view('editprofile', array('user' => Auth::user()));
