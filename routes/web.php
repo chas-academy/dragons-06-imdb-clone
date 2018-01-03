@@ -23,8 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('profile', 'UserController@Profile');
-Route::post('profile', 'UserController@updatePic');
+Route::get('editprofile', 'UserController@Profile');
+Route::post('editprofile', 'UserController@updatePic');
 
 
 
