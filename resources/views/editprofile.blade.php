@@ -9,6 +9,7 @@
             <form enctype="multipart/form-data" action="/editprofile" method="POST">
                 <label>Update Profile Picture</label><br>
                 <input type="file" name="image">
+                <input type="text" name="bio">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="submit">

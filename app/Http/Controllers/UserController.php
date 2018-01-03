@@ -16,6 +16,7 @@ class UserController extends Controller
     public function updatePic(Request $request) {
 
     	if ($request->hasFile('image')) {
+
     		$profilePic = $request->file('image');
     		//assigns a random number plus the original file extension
     		$filename = time() . '.' . $profilePic->getClientOriginalExtension();
@@ -26,10 +27,27 @@ class UserController extends Controller
     		$user = Auth::user();
     		$user->image = $filename;
     		$user->save();
-    	}
+    	} else {
+
+            $user = Auth::user();
+            $user->bio = $request->bio;
+            $user->save();
+
+            return view('editprofile', array('user' => Auth::user()));
+
+        }
 
     	return view('editprofile', array('user' => Auth::user()));
 
     }
+
+    /*public function updateBio(Request $request) {
+
+        $user->bio = $request->bio;
+        $user->save();
+
+        return view('editprofile', array('user' => Auth::user()));
+
+    }*/
 
 }
