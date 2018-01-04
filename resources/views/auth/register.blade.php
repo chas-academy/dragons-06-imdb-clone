@@ -25,6 +25,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: none;
+        height: 100%;
     
     }
     

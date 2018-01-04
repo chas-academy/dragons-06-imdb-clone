@@ -25,7 +25,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: none;
-    
+        height: 100%;
     }
     
 
@@ -38,7 +38,7 @@
 
     
 
-    <div class="container is-fluid">
+    <div class="container is-fluid is-fullheight">
 
         <div class="columns is-centered ">
             <h1 class="title">Moviekyte</h1>
