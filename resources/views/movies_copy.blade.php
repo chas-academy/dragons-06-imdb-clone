@@ -1,9 +1,100 @@
-@extends('layouts.default')
-@section('title')
-Titeln
-@endsection
-@section('content')
-<section>
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Movies</title>
+
+        <!-- Fonts -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="icon"
+      type="image/png"
+      href="favicon.png">
+
+    <title>Movykyte.io – Superbabies 2</title>
+    <style>
+
+    </style>
+
+  </head>
+  <body>
+
+
+<nav id="menu" class="menu" style="">
+
+      <header class="menu-header">
+        <h2 class="title is-2">MoviKyte</h2>
+      </header>
+
+    <section class="menu-section" style=""> <!-- Log in, skall includas sen -->
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="username" placeholder="Username">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user-circle"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field has-addons">
+        <p class="control has-icons-left">
+          <input class="input" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fa fa-lock"></i>
+          </span>
+        </p>
+        <p class="control">
+        <button class="button is-primary">
+          Login
+        </button>
+      </p>
+      </div>
+      <span class="smaller">New user? <a href="#">Register!</a></span>
+    </section> <!-- End longin -->
+
+    <section class="menu-section">
+      <h3 class="menu-label">Movies</h3>
+      <ul class="menu-list">
+        <li><a href="#" target="_blank" class="is-active">Title</a></li>
+        <li><a href="#" target="_blank">Actor</a></li>
+        <li><a href="#" target="_blank">Rating</a></li>
+        <li><a href="#" target="_blank">Other</a></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h3 class="menu-label">Reviews</h3>
+      <ul class="menu-list">
+        <li><a href="#" target="_blank">Read</a></li>
+        <li><a href="#" target="_blank">Write</a></li>
+        <li><a href="#" target="_blank">Comment</a></li>
+        <li><a href="#" target="_blank">Search</a></li>
+      </ul>
+    </section>
+
+</nav>
+
+
+<header class="fixed-header has-text-centered">
+                  <div class="field">
+                    <p class="control has-icons-left flap-holder">
+                      <input class="input is-large search-flap" >
+                      <span class="icon is-left" style="margin-left: 15%;">
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </p>
+                  </div>
+    <span class="field"><button class="button js-slideout-toggle is-large is-rounded" style="position: static; margin: 24px; float: right; border-radius: 50%;"><span class="icon"><i class="fas fa-chevron-left fa-2x"></i></span></button></span>
+</header>
+
+              <!-- Search field -->
+<main class="columns" id="panel">
+    <section class="column">
         <div class="hero is-large" style="background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);background-size: cover;background-attachment: fixed">
 
           <div class="level"><!-- Hero head: will stick at the top
@@ -83,4 +174,15 @@ Titeln
         </article>
       </section>
     </main>
-@endsection
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        MoviKyte – movies high as hell!
+      </p>
+    </div>
+  </div>
+</footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

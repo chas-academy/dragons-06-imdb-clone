@@ -17621,7 +17621,7 @@ body {
   font-style: italic;
   font-weight: bold;
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .content p:first-child {
@@ -17657,7 +17657,6 @@ q {
 
 .search-flap {
   border-radius: 0px 0px 30px 30px;
-  width: 70%;
   margin-left: 15%;
   float: left;
 }
@@ -17721,4 +17720,50 @@ input[type=range]::-ms-fill-lower {
 
 #menu {
   padding-left: 24px;
+}
+
+@media (max-width: 1023px) {
+  .content p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hanging-punctuation: first;
+  }
+  .content .pull {
+    margin-left: calc(10% + 24px);
+    margin-right: calc(10% + 24px);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.6rem;
+    float: none;
+    width: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .content p {
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hanging-punctuation: first;
+  }
+  .content .pull {
+    margin: 48px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    float: none;
+    width: inherit;
+  }
+  .wide {
+    width: calc(70% - 54px);
+  }
 }
