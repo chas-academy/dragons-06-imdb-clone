@@ -28,6 +28,22 @@
 
         </div>
     </section>
+    
+    <div class="columns is-variable is-1">
+  <div class="column is-one-quarter is-centered">
+  <button class="button is-light is-fullwidth">Top-10 Movies</button>
+  </div>
+  <div class="column">
+  <button class="button is-light is-fullwidth">Latest Movies</button>
+  </div>
+  <div class="column">
+  <button class="button is-light is-fullwidth">Movie Playlist</button>
+  </div>
+  <div class="column">
+  <button class="button is-light is-fullwidth">Views</button>
+  </div>
+</div>
+
 
     <section class="section">
         <div class="columns is-mobile">
