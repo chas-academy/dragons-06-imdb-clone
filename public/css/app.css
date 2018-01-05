@@ -17600,6 +17600,27 @@ body {
   display: block;
 }
 
+.has-bg-img {
+  background: url("/images/5931ceae2000001600be02dc.jpeg") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img_logo {
+  width: 450px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-bottom: 1em;
+  padding-top: 2em;
+  background-color: #3c4858;
+  margin-bttom: 0 !important;
+}
+
 body {
   overflow: hidden;
 }
@@ -17616,6 +17637,10 @@ body {
 
 .content .pull {
   width: calc(30% - 48px);
+  /* We want this as wide as the margin it resides in
+                              and thus it's the margin, 30%, but we also want
+                              to give it it's own margins of 24px each side,
+                              thus calc calculates this 30% - 48px*/
   margin: 24px;
   float: left;
   font-style: italic;
