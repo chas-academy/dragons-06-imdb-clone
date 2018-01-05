@@ -1,49 +1,38 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.default')
+@section('title')
+MovieKyte! Movies high as hell!
+@endsection
+@section('content')
+<section class="section">
+      <div class="container">
+          <img class="img_logo" src="/images/moviekyte_logo.png" alt="">
+      </div>
+</section>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<section class="hero is-large has-bg-img is-fullheight">
+      <div class="hero-body">
+        <h2 class="title-2">
+          Some kind of headin
+        </h2>
+      </div>
+</section>
 
-    <title>Moviekyte</title>
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" type="text/css">
-    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-
-</head>
-
-<body>
-    <section class="section">
-        <div class="container">
-            <img class="img_logo" src="/images/moviekyte_logo.png" alt="">
-        </div>
-    </section>
-
-
-    <section class="hero is-large has-bg-img is-fullheight">
-        <div class="hero-body">
-
-        </div>
-    </section>
-    
+  <section class="section">
     <div class="columns is-variable is-1">
-  <div class="column is-one-quarter is-centered">
-  <button class="button is-light is-fullwidth">Top-10 Movies</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Latest Movies</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Movie Playlist</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Views</button>
-  </div>
-</div>
-
+        <div class="column is-one-quarter is-centered">
+          <button class="button is-warning is-fullwidth">Top-10 Movies</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Latest Movies</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Movie Playlist</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Views</button>
+        </div>
+    </div>
+  </section>
 
     <section class="section">
         <div class="columns is-mobile">
@@ -70,6 +59,4 @@
         </div>
 
     </section>
-
-
-</body>
+@endsection
