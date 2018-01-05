@@ -6,8 +6,8 @@
 @include('blocks.floatbar')
 <main id="panel">
 @yield('content')
-</main>
 @include('blocks.footer')
+</main>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
