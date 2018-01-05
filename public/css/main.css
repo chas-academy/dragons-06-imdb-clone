@@ -1,0 +1,22 @@
+.has-bg-img {
+    background: url("/images/5931ceae2000001600be02dc.jpeg")center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_logo {
+    width: 450px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-bottom: 7px;
+    padding-top: 30px;
+}
+
+body {
+    background-color: #3c4858;
+}
