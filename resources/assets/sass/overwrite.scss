@@ -23,10 +23,12 @@
 .section {
     padding-bottom: 1em;
     padding-top: 2em;
-    background-color: #3c4858;
-    margin-bttom: 0!important;
+    margin-bottom: 0 !important;
 }
 
+main {
+    background-color: $background;
+}
 
 body {
   overflow: hidden; //This is important, or the page somehow resides a fex px
