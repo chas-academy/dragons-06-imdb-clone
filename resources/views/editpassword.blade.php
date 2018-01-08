@@ -10,6 +10,9 @@
 
             <form enctype="multipart/form-data" action="/editpassword" method="POST">
                 <h3>Update Password</h3><br>
+                <label>Old password</label>
+                <input type="password" name="oldPassword">
+                <br>
                 <label>New password</label>
                 <input type="password" name="password">
                 <!-- hidden csrf token! for security -->

@@ -15,11 +15,24 @@ class PasswordController extends Controller
 
     public function updatePassword(Request $request) {
 
-        $user = Auth::user();
+    	$user = Auth::user();
+    	$oldPassword = $request->input('oldPassword');
+    	$error = "Current password is not checkhing out";
 
-        $user->password = Hash::make($request->password);
-        $user->save();
-        return view('editpassword', array('user' => Auth::user()) );
+    	if (Hash::check($oldPassword, $user->password)) {
+        	$user->password = Hash::make($request->password);
+        	$user->save();
+        	return view('editpassword', array('user' => Auth::user()) );    	
+        }
+
+    	else {
+        	
+        	echo '<script language="javascript">';
+			echo 'alert("Current password is not matching")';
+			echo '</script>';
+			return view('editpassword', array('user' => Auth::user()) );
+
+ 		}
         
     }
 }
