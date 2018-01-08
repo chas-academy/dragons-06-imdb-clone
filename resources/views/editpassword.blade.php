@@ -19,6 +19,8 @@
                 <br action="/editpassword" method="POST">
                 <input type="submit" value="Update password">
             </form>
+            <p id="message"></p>
+
 
             <a href="{{ url('/home') }}">Go Back</a>
 
