@@ -9,7 +9,6 @@
             <h3>Edit {{ Auth::user()->name }}'s Password. </h3>
 
             <form enctype="multipart/form-data" action="/editpassword" method="POST">
-                <h3>Update Password</h3><br>
                 <label>Old password</label>
                 <input type="password" name="oldPassword">
                 <br>
