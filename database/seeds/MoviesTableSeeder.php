@@ -59,5 +59,16 @@ class MoviesTableSeeder extends Seeder
             'rating' => '',
             'reviews' => '',
         ));
+        Movie::create(array(
+            'id' => '5',
+            'titel' => 'Movie 5',
+            'genre' => 'Action',
+            'year' => '2014',
+            'actors' => 'Mambo no 5',
+            'plot' => "It's all about 5",
+            'director' => 'Master Cinqo',
+            'rating' => '',
+            'reviews' => '',
+        ));
     }
 }
