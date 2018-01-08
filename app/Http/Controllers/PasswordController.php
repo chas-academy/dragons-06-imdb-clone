@@ -17,7 +17,6 @@ class PasswordController extends Controller
 
     	$user = Auth::user();
     	$oldPassword = $request->input('oldPassword');
-    	$error = "Current password is not checkhing out";
 
     	if (Hash::check($oldPassword, $user->password)) {
         	$user->password = Hash::make($request->password);
