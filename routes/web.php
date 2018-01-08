@@ -31,3 +31,5 @@ Route::get('/search', function () {
     return view('search');
 });
 
+Route::resource('movie','MovieController');
+
