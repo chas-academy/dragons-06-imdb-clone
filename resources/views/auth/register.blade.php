@@ -19,17 +19,26 @@
 
     <style>
     
-    html{
-        
+    html { height: 100%; }
+
+    body{
+        line-height: 3.5;
         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp8GMRz-lSUgR0EfVlXq4lbz9nn7IOZIsj8RY7ATjK2i-aj5XwA);
         background-repeat: no-repeat;
         background-size: cover;
         background-color: none;
-        height: 100%;
-    
+        background-position: center top;
     }
-    
 
+    div.columns.is-centered{
+        margin-top: 15px;
+    }
+
+    .img_logo{
+        width: 450px;
+        height: 150px;
+        
+    }
     
 
     </style>
@@ -39,13 +48,13 @@
 
     
 
-    <div class="container is-fluid">
+    <div class="container has-text-centered">
 
-        <div class="columns is-centered ">
-            <h1 class="title">Moviekyte</h1>
-        </div>
+        <div class="column is-fluid ">
+            <img class="img_logo"src="../../../images/moviekyte_logo.png" alt="">
+        
 
-        <div class="columns is-centered">
+        <div class="column is-fluid">
             <h2 class="subtitle">Create New Account</h2>
         </div>
         
