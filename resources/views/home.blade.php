@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-<<<<<<< HEAD
                     Hello there {{ Auth::user()->name }}! Welcome to your profile page.
 
                     <img src="/uploads/profile/{{ Auth::user()->image }}" style="width:100px; border-radius:50%;" alt="Profile picture">
@@ -27,9 +26,7 @@
                     {{ csrf_field() }}
                     <a href="{{ url('/editprofile') }}">edit profile</a>
 
-=======
                     You are logged in!
->>>>>>> mike
                 </div>
             </div>
         </div>

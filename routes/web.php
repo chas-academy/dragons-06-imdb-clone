@@ -21,9 +21,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/movies', function () {
-    return view('movies');
-});
+// Route::get('/movies', function () {
+//     return view('movies');
+// });
 
 Auth::routes();
 
@@ -37,5 +37,5 @@ Route::get('/search', function () {
     return view('search');
 });
 
-Route::resource('movie','MovieController');
+Route::resource('movies','MovieController');
 

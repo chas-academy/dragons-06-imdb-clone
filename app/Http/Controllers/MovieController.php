@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MoviKyte\Movie;
 
 class MovieController extends Controller
 {
@@ -43,12 +44,13 @@ class MovieController extends Controller
             'year' => 'required',
             'actors' => 'required',
             'plot' => 'required',
-            'director' => 'required', /*-- This maybe need to be on its own table---*/
+            'director' => 'required',
+            'rating' => 'required', /*-- This maybe need to be on its own table---*/
             'reviews' => 'required', /*-- This maybe need to be on its own table---*/
         ]);
         Movie::create($request->all());
         return redirect()->route('movies.index')
-                        ->('succes', 'Movie created succesfully');
+                        ->with('success', 'Movie created succesfully');
     }
 
     /**
@@ -95,7 +97,7 @@ class MovieController extends Controller
         ]);
         Movie::find($id)->update($request->all());
         return redirect()->route('movies.index')
-                        ->('succes', 'Movie updated succesfully');
+                        ->with('success', 'Movie updated succesfully');
     }
 
     /**
@@ -108,6 +110,6 @@ class MovieController extends Controller
     {
         Movie::find($id)->delete();
         return redirect()->route('movies.index')
-                        ->with('succes','Movie deleted succesfully');
+                        ->with('success','Movie deleted succesfully');
     }
 }
