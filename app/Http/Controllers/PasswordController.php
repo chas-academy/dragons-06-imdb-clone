@@ -16,10 +16,10 @@ class PasswordController extends Controller
     public function updatePassword(Request $request) {
 
         $user = Auth::user();
-       
-            $user->password = Hash::make($request->password);
-            $user->save();
-            return view('editpassword', array('user' => Auth::user()) );
+
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return view('editpassword', array('user' => Auth::user()) );
         
     }
 }

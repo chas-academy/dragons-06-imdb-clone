@@ -9,12 +9,13 @@
             <h3>Edit {{ Auth::user()->name }}'s Password. </h3>
 
             <form enctype="multipart/form-data" action="/editpassword" method="POST">
-                <label>Update Password</label><br>
-                <input type="text" name="password">
+                <h3>Update Password</h3><br>
+                <label>New password</label>
+                <input type="password" name="password">
                 <!-- hidden csrf token! for security -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <br action="/editpassword" method="POST">
-                <input type="submit" value="Update picture">
+                <input type="submit" value="Update password">
             </form>
 
             <a href="{{ url('/home') }}">Go Back</a>
