@@ -14642,7 +14642,7 @@ input[type=range].slider:not([orient="vertical"])::-ms-track {
 
 input[type=range].slider:not([orient="vertical"]).has-output + output, input[type=range].slider:not([orient="vertical"]).has-output-tooltip + output {
   width: 3rem;
-  background: #4a4a4a;
+  background: red;
   border-radius: 3px;
   padding: .4rem .8rem;
   font-size: 0.75rem;
@@ -14702,7 +14702,7 @@ input[type=range].slider::-webkit-slider-runnable-track {
   animate: 0.2s;
   -webkit-box-shadow: 0px 0px 0px #7a7a7a;
           box-shadow: 0px 0px 0px #7a7a7a;
-  background: #dbdbdb;
+  background: -webkit-gradient linear, left top, left bottom, color-stop(0%, #5F7FB7);
   border-radius: 3px;
   border: 0px solid #7a7a7a;
 }
@@ -14711,7 +14711,7 @@ input[type=range].slider::-moz-range-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #7a7a7a;
-  background: #dbdbdb;
+  background: -webkit-gradient linear, left top, left bottom, color-stop(0%, #5F7FB7);
   border-radius: 3px;
   border: 0px solid #7a7a7a;
 }
@@ -14720,7 +14720,7 @@ input[type=range].slider::-ms-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #7a7a7a;
-  background: #dbdbdb;
+  background: -webkit-gradient linear, left top, left bottom, color-stop(0%, #5F7FB7);
   border-radius: 3px;
   border: 0px solid #7a7a7a;
 }
@@ -17596,14 +17596,33 @@ body {
   will-change: transform;
 }
 
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-
 .slideout-open .slideout-menu {
   display: block;
+}
+
+.has-bg-img {
+  background: url("/images/5931ceae2000001600be02dc.jpeg") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img_logo {
+  width: 450px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-bottom: 1em;
+  padding-top: 2em;
+  background-color: #3c4858;
+  margin-bttom: 0 !important;
+}
+
+body {
+  overflow: hidden;
 }
 
 .content p {
@@ -17618,12 +17637,16 @@ body {
 
 .content .pull {
   width: calc(30% - 48px);
+  /* We want this as wide as the margin it resides in
+                              and thus it's the margin, 30%, but we also want
+                              to give it it's own margins of 24px each side,
+                              thus calc calculates this 30% - 48px*/
   margin: 24px;
   float: left;
   font-style: italic;
   font-weight: bold;
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .content p:first-child {
@@ -17636,4 +17659,136 @@ q {
 
 .tabs a {
   color: white;
+}
+
+.slideout-menu {
+  left: auto;
+}
+
+.btn-hamburger {
+  left: auto;
+  right: 12px;
+}
+
+.box {
+  height: 1500px;
+}
+
+.menu-section {
+  margin-top: 1em;
+  padding-right: 24px;
+  font-size: 1.5rem;
+}
+
+.search-flap {
+  border-radius: 0px 0px 30px 30px;
+  margin-left: 15%;
+  float: left;
+}
+
+.flap-holder:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  left: 0px;
+  right: 0px;
+}
+
+.btn-hamburger {
+  position: static;
+  height: 40px;
+  width: 40px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(45deg, red, blue);
+  background-position: right top;
+}
+
+input[type=range]::-moz-range-track {
+  background: linear-gradient(to left, red 30%, transparent 30%);
+  background-position: right top;
+}
+
+input[type=range]::-ms-track {
+  background: linear-gradient(to left, red 30%, transparent 30%);
+  background-position: right top;
+  background-repeat: no-repeat;
+  /* no repeat means background appears a little on the left due to width issue and hence the fix */
+  width: 100%;
+  /* to fix width issue in Edge */
+  color: transparent;
+  /* to avoid the intermediate stripe lines in < IE11 */
+  border: none;
+  /* just do away with the track's border */
+}
+
+input[type=range]::-ms-fill-lower {
+  background: transparent;
+  /* IE11 has default fill and that needs to be removed */
+}
+
+.wide {
+  width: 70%;
+}
+
+#menu {
+  padding-left: 24px;
+}
+
+@media (max-width: 1023px) {
+  .content p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hanging-punctuation: first;
+  }
+  .content .pull {
+    margin-left: calc(10% + 24px);
+    margin-right: calc(10% + 24px);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.6rem;
+    float: none;
+    width: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .content p {
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hanging-punctuation: first;
+  }
+  .content .pull {
+    margin: 48px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    float: none;
+    width: inherit;
+  }
+  .wide {
+    width: calc(70% - 54px);
+  }
 }
