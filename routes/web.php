@@ -32,8 +32,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/editprofile', 'UserController@Profile');
 Route::post('/editprofile', 'UserController@updateUser');
 
+Route::get('/editpassword', 'PasswordController@Profile');
+Route::post('/editpassword', 'PasswordController@updatePassword');
 
 Route::get('/search', function () {
     return view('search');
 });
+
 

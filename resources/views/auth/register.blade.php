@@ -1,110 +1,77 @@
+@extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Register</div>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }}
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Name</label>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
-</head>
-    <!--style for register, make a new file later-->
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
-    <style>
-    
-    html { height: 100%; }
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
-    body{
-        line-height: 3.5;
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp8GMRz-lSUgR0EfVlXq4lbz9nn7IOZIsj8RY7ATjK2i-aj5XwA);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: none;
-        background-position: center top;
-    }
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-    div.columns.is-centered{
-        margin-top: 15px;
-    }
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
-    .img_logo{
-        width: 450px;
-        height: 150px;
-        
-    }
-    
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
-    </style>
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
 
-    <!--Register Form Bulma-->
-<body>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
 
-    
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
-    <div class="container has-text-centered">
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
-        <div class="column is-fluid ">
-            <img class="img_logo"src="../../../images/moviekyte_logo.png" alt="">
-        
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
 
-        <div class="column is-fluid">
-            <h2 class="subtitle">Create New Account</h2>
-        </div>
-        
-        <div class="columns is-centered">
-            <div class="column is-half">
-                <div class="field">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Name">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                        <i class="fa fa-check"></i>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="field"> 
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="field">
-                    <p class="control">
-                        <button class="button is-success is-fullwidth">
-                        Submit  
-                        </button>
-                    </p>
-                </div>
-
-                <div class="columns is-centered">
-                    <h2 class="subtitle">Already have an Account?
-                    <a href="/login">Sign in</a></h2>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-
     </div>
-
- 
-
-</body>
-</html>
+</div>
+@endsection
