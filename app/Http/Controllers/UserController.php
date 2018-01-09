@@ -38,6 +38,12 @@ class UserController extends Controller
 
     	return view('editprofile', array('user' => Auth::user()));
 
-    }
+	}
+
+	Public function userWatchlist(){
+		$watchlist = DB::table('watch')->get();
+
+		return view('watchlist', compact('watchlist'));
+	}
 
 }
