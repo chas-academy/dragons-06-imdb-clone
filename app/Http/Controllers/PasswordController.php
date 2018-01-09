@@ -25,7 +25,7 @@ class PasswordController extends Controller
         	$user->save();
         	//print $sucess;
         	echo '<script language="javascript">';
-			echo 'alert("Password changed")';
+			echo 'alert("Password successfully changed")';
 			echo '</script>';
         	return view('editpassword', array('user' => Auth::user()) );    	
         }
