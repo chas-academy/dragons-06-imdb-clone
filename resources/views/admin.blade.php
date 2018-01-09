@@ -14,14 +14,11 @@
                         </div>
                     @endif
 
-                    Hello there admin {{ Auth::admin()->name }}! Welcome to your profile page.
+                    Welcome to the admin page
 
                     
                     {{ csrf_field() }}
-                    <a href="{{ url('/editprofile') }}">edit profile</a>
-                    <br>
-                    <a href="{{ url('/editpassword') }}">change password</a>
-
+                  
                 </div>
             </div>
         </div>

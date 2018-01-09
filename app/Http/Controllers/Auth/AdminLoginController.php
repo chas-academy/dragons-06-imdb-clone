@@ -4,6 +4,7 @@ namespace MoviKyte\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use MoviKyte\Http\Controllers\Controller;
+use Auth;
 
 class AdminLoginController extends Controller
 {
@@ -15,14 +16,17 @@ class AdminLoginController extends Controller
     	return view ('auth.admin-login');
     }
 
-    public function login() {
-    	//validate
+    public function login(Request $request) {
 
-    	//attempt login
-
-    	//if success == true, redirect
-
-    	//if success == false, redirect back
+    	$this->validate($request, [
+    		'email' => 'required|email',
+    		'password' => 'required' //add min:6 or min:8 or w/e
+    	]);
+    	//attempt login via the Auth facade, also no need to hash as 'attempt' sees to that
+    	if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
+    		return redirect()->intended(route('admin.dashboard'));
+    	}
+    	return redirect()->back()->withInput($request->only('email', 'remember'));
 
 
     }
