@@ -29,17 +29,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'AdminController@index')->name('home');
 
+Route::prefix('admin')->group(function() {
+	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+	Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
 
+//group this
 Route::get('/editprofile', 'UserController@Profile');
 Route::post('/editprofile', 'UserController@updateUser');
 
+//group this
 Route::get('/editpassword', 'PasswordController@Profile');
 Route::post('/editpassword', 'PasswordController@updatePassword');
 
 Route::get('/search', function () {
     return view('search');
 });
-
-
