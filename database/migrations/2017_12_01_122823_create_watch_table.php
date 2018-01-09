@@ -15,6 +15,7 @@ class CreateWatchTable extends Migration
     {
         Schema::create('watch', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('content');
             $table->timestamps();
         });
     }

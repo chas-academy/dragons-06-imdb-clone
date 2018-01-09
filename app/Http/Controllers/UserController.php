@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Auth;
 use Image;
 
@@ -40,7 +41,7 @@ class UserController extends Controller
 
 	}
 
-	Public function userWatchlist(){
+	public function userWatchlist(){
 		$watchlist = DB::table('watch')->get();
 
 		return view('watchlist', compact('watchlist'));
