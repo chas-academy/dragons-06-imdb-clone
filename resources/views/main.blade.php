@@ -3,17 +3,11 @@
 MovieKyte! Movies high as hell!
 @endsection
 @section('content')
-<section class="section">
-      <div class="container">
-          <img class="img_logo" src="/images/moviekyte_logo.png" alt="">
-      </div>
-</section>
+
 
 <section class="hero is-large has-bg-img is-fullheight">
       <div class="hero-body">
-        <h2 class="title-2">
-          Some kind of headin
-        </h2>
+       
       </div>
 </section>
 

@@ -5,27 +5,26 @@
             <div class="level-item has-text-centered">
                 <nav class="breadcrumb has-dot-separator">
                     <ul>
-                        <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="level-item has-text-centered">
-                <span class="icon has-text-info">
-                            <i class="fa fa-facebook has-text-white"></i>
-                          </span>
-                <span class="icon has-text-success">
-                            <i class="fa fa-twitter has-text-white"></i>
-                          </span>
-                <span class="icon has-text-warning">
-                            <i class="fa fa-instagram has-text-white"></i>
-                          </span>
-                <span class="icon has-text-danger">
-                            <i class="fa fa-youtube has-text-white"></i>
-                          </span>
+            <span class="icon has-text-info has-text-grey-lighter is-medium">
+            <i class="fa fa-info-circle"></i>
+          </span>
+          <span class="icon has-text-info has-text-grey-lighter is-medium">
+            <i class="fa fa-info-circle"></i>
+          </span>
+          <span class="icon has-text-info has-text-grey-lighter is-medium">
+            <i class="fa fa-info-circle"></i>
+          </span>
+          <span class="icon has-text-info has-text-grey-lighter is-medium">
+            <i class="fa fa-info-circle"></i>
+          </span>
             </div>
-            <div class="level-item has-text-centered has-text-white">
-                <label class="">Subscribe to our newsletter!</label>
+            <div class="level-item has-text-white is-block">
+                <label class="">Subscribe to our newsletter!</label><br>
                 <div class="field has-addons is-pulled-left">
 
                     <div class="control">
@@ -40,8 +39,8 @@
             </div>
 
         </nav>
-</footer>
 
+</footer>
 
 
 

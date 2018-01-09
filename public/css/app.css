@@ -170,7 +170,7 @@ a:hover {
 }
 
 code {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #ff3860;
   font-size: 0.875em;
   font-weight: normal;
@@ -211,7 +211,7 @@ strong {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #4a4a4a;
   font-size: 0.875em;
   overflow-x: auto;
@@ -1409,12 +1409,12 @@ a.box:active {
 }
 
 .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #363636;
 }
 
 .button.is-text:active, .button.is-text.is-active {
-  background-color: #323c49;
+  background-color: #e8e8e8;
   color: #363636;
 }
 
@@ -2662,7 +2662,7 @@ a.box:active {
 }
 
 .content blockquote {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em;
 }
@@ -2745,7 +2745,7 @@ a.box:active {
 }
 
 .content table tr:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
 }
 
 .content table thead td,
@@ -2863,8 +2863,8 @@ a.box:active {
 
 .input[disabled],
 .textarea[disabled] {
-  background-color: #3c4858;
-  border-color: #3c4858;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #7a7a7a;
@@ -3228,8 +3228,8 @@ a.box:active {
 }
 
 .select select[disabled] {
-  background-color: #3c4858;
-  border-color: #3c4858;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #7a7a7a;
@@ -3256,7 +3256,7 @@ a.box:active {
 }
 
 .select select[disabled]:hover {
-  border-color: #3c4858;
+  border-color: whitesmoke;
 }
 
 .select select:not([multiple]) {
@@ -4474,7 +4474,7 @@ a.box:active {
 }
 
 .notification {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 3px;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
@@ -4974,7 +4974,7 @@ a.box:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 3px;
   color: #4a4a4a;
   display: -webkit-inline-box;
@@ -5100,11 +5100,11 @@ a.box:active {
 }
 
 .tag:not(body).is-delete:hover, .tag:not(body).is-delete:focus {
-  background-color: #323c49;
+  background-color: #e8e8e8;
 }
 
 .tag:not(body).is-delete:active {
-  background-color: #272f3a;
+  background-color: #dbdbdb;
 }
 
 .tag:not(body).is-rounded {
@@ -5363,7 +5363,7 @@ a.tag:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 290486px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -5669,7 +5669,7 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #0a0a0a;
 }
 
@@ -5951,7 +5951,7 @@ a.dropdown-item.is-active {
 }
 
 .menu-list a:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #363636;
 }
 
@@ -5982,7 +5982,7 @@ a.dropdown-item.is-active {
 }
 
 .message {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 3px;
   font-size: 1rem;
 }
@@ -6363,7 +6363,7 @@ a.dropdown-item.is-active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3c4858;
+  background-color: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7089,7 +7089,7 @@ html.has-navbar-fixed-bottom {
 a.navbar-item:hover, a.navbar-item.is-active,
 a.navbar-link:hover,
 a.navbar-link.is-active {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   color: #3273dc;
 }
 
@@ -7243,11 +7243,11 @@ a.navbar-link.is-active {
     background-color: transparent !important;
   }
   .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
-    background-color: #3c4858;
+    background-color: whitesmoke;
     color: #0a0a0a;
   }
   .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
-    background-color: #3c4858;
+    background-color: whitesmoke;
     color: #3273dc;
   }
   .navbar-burger {
@@ -7349,11 +7349,11 @@ a.navbar-link.is-active {
     padding-right: 3rem;
   }
   .navbar-dropdown a.navbar-item:hover {
-    background-color: #3c4858;
+    background-color: whitesmoke;
     color: #0a0a0a;
   }
   .navbar-dropdown a.navbar-item.is-active {
-    background-color: #3c4858;
+    background-color: whitesmoke;
     color: #3273dc;
   }
   .navbar-dropdown.is-boxed {
@@ -7420,7 +7420,7 @@ a.navbar-link.is-active {
     background-color: transparent;
   }
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #3c4858;
+    background-color: whitesmoke;
   }
 }
 
@@ -7694,7 +7694,7 @@ a.navbar-link.is-active {
 }
 
 .panel-heading {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 3px 3px 0 0;
   color: #363636;
   font-size: 1.25em;
@@ -7783,7 +7783,7 @@ label.panel-block {
 
 a.panel-block:hover,
 label.panel-block:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
 }
 
 .panel-icon {
@@ -7930,7 +7930,7 @@ label.panel-block:hover {
 }
 
 .tabs.is-boxed a:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-bottom-color: #dbdbdb;
 }
 
@@ -7957,7 +7957,7 @@ label.panel-block:hover {
 }
 
 .tabs.is-toggle a:hover {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-color: #b5b5b5;
   z-index: 2;
 }
@@ -10658,13 +10658,13 @@ label.panel-block:hover {
 }
 
 .footer {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
 }
 
 /* import bulma extensions. https://wikiki.github.io/ */
 .accordions .accordion {
-  background-color: #3c4858;
+  background-color: whitesmoke;
   border-radius: 3px;
   font-size: 1rem;
 }
@@ -17618,9 +17618,10 @@ body {
   padding-bottom: 1em;
   padding-top: 2em;
   margin-bottom: 0 !important;
+  background-color: #3c4858;
 }
 
-main {
+.footer {
   background-color: #3c4858;
 }
 
@@ -17692,8 +17693,8 @@ q {
 .flap-holder:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fixed-header {
@@ -17714,17 +17715,17 @@ q {
   width: 40px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   background: linear-gradient(45deg, red, blue);
   background-position: right top;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background: linear-gradient(to left, red 30%, transparent 30%);
   background-position: right top;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   background: linear-gradient(to left, red 30%, transparent 30%);
   background-position: right top;
   background-repeat: no-repeat;
@@ -17737,7 +17738,7 @@ input[type=range]::-ms-track {
   /* just do away with the track's border */
 }
 
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
   background: transparent;
   /* IE11 has default fill and that needs to be removed */
 }
