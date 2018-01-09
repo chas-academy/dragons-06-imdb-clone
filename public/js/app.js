@@ -746,7 +746,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
@@ -755,7 +755,7 @@ module.exports = __webpack_require__(40);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slideout__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slideout__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slideout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slideout__);
 
 /**
@@ -29391,18 +29391,112 @@ module.exports = function spread(callback) {
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 //require('bulma-extensions/bulma-accordion/accordion');
 //require('bulma-extensions/bulma-calendar/datepicker');
-//require('bulma-extensions/bulma-carousel/carousel');
+__webpack_require__(35);
 //require('bulma-extensions/bulma-iconpicker/iconPicker');
 //require('bulma-extensions/bulma-quickview/quickview');
-__webpack_require__(35);
-//require('bulma-extensions/bulma-steps/steps');
 __webpack_require__(36);
+//require('bulma-extensions/bulma-steps/steps');
+__webpack_require__(37);
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports) {
+
+class Carousel {
+  constructor(element) {
+    this.element = element;
+
+    this.init();
+  }
+
+  init() {
+    this.carouselContent = this.element.querySelector('.carousel-content');
+    this.items = this.carouselContent.querySelectorAll('.carousel-item');
+
+    this.element.querySelector('.carousel-nav-left').addEventListener('click', (e) => {
+      this.prevSlide();
+    }, false);
+    this.element.querySelector('.carousel-nav-right').addEventListener('click', (e) => {
+      this.nextSlide();
+    }, false);
+
+    this.setOrder();
+  }
+
+  setOrder(direction){
+    // initialize direction to change order
+    if (direction === 'previous') {
+      direction = 1;
+    } else if (direction === 'next') {
+      direction = -1;
+    }
+
+    let nbItems = this.items.length;
+    if (nbItems) {
+      this.items.forEach((item, index) => {
+        let newValue;
+        if (item.style.order) {
+          newValue = (parseInt(item.style.order, 10) + direction) % nbItems;
+        } else {
+          newValue = ((index + 2) % nbItems);
+        }
+        if (!newValue || newValue !== 2) {
+          item.style['z-index'] = '0';
+          item.classList.remove('is-active');
+        } else {
+          item.style['z-index'] = '1';
+          item.classList.add('is-active');
+        }
+        item.style.order = newValue ? newValue : nbItems;
+      });
+    }
+  }
+
+  prevSlide(evt) {
+    // add reverse
+    this.carouselContent.classList.add('carousel-reverse');
+    // Disable transition to instant change order
+    this.carouselContent.classList.toggle('carousel-animate');
+    // Change order of element
+    // Current order 2 visible become order 1
+    this.setOrder('previous');
+
+    // Enable transition to animate order 1 to order 2
+    setTimeout(() => {
+      this.carouselContent.classList.toggle('carousel-animate');
+    }, 50);
+  }
+
+  nextSlide(evt) {
+    // remove reverse
+    this.carouselContent.classList.remove('carousel-reverse');
+
+    // Disable transition to instant change order
+    this.carouselContent.classList.toggle('carousel-animate');
+    // Change order of element
+    // Current order 2 visible become order 3
+    this.setOrder('next');
+    // Enable transition to animate order 3 to order 2
+    setTimeout(() => {
+      this.carouselContent.classList.toggle('carousel-animate');
+    }, 50);
+  };
+}
+
+window.onload = function() {
+  let carousels = document.querySelectorAll('.carousel, .hero-carousel');
+  if (carousels) {
+    carousels.forEach(element => {
+      new Carousel(element);
+    })
+  }
+};
+
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports) {
 
 // Find output DOM associated to the DOM element passed as parameter
@@ -29479,7 +29573,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 class Tagify {
@@ -29789,7 +29883,7 @@ if (tagInputs) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29798,8 +29892,8 @@ if (tagInputs) {
 /**
  * Module dependencies
  */
-var decouple = __webpack_require__(38);
-var Emitter = __webpack_require__(39);
+var decouple = __webpack_require__(39);
+var Emitter = __webpack_require__(40);
 
 /**
  * Privates
@@ -30142,7 +30236,7 @@ module.exports = Slideout;
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30189,7 +30283,7 @@ module.exports = decouple;
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30348,7 +30442,7 @@ exports["default"] = Emitter;
 module.exports = exports["default"];
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

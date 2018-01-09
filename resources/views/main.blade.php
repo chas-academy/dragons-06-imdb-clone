@@ -5,11 +5,35 @@ MovieKyte! Movies high as hell!
 @section('content')
 
 
-<section class="hero is-large has-bg-img is-fullheight">
-      <div class="hero-body">
-       
+<div class='carousel'>
+  <div class='carousel-container is-0'>
+    <div class='carousel-content carousel-animate carousel-animate-slide'>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
+        
       </div>
-</section>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
+        
+      </div>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
+        
+      </div>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
+        
+      </div>
+    </div>
+    <div class="carousel-nav-left">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div class="carousel-nav-right">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+
 
   <section class="section">
     <div class="columns is-variable is-1">
@@ -51,6 +75,20 @@ MovieKyte! Movies high as hell!
                 </div>
             </div>
         </div>
+  
+    
 
-    </section>
+<script>
+function goNext() {
+    console.log("goNext");
+    let carouselRight = document.querySelector('.carousel-nav-right');
+ 
+    carouselRight.click();
+
+    setTimeout(goNext, 5000);
+};
+
+window.addEventListener('load', function(){ setTimeout(goNext, 5000);});
+</script>
+
 @endsection
