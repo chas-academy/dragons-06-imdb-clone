@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="hero is-medium is-primary is-bold">
+<section class="hero is-medium is-danger is-bold">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -13,7 +13,7 @@
     </div>
   </div>
 </section>
-<section>
+<section class="">
                 <div class="">
                     <form class="form-horizontal"
                           method="POST"
