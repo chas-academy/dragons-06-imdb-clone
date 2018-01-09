@@ -17617,8 +17617,12 @@ body {
 .section {
   padding-bottom: 1em;
   padding-top: 2em;
+  margin-bottom: 0 !important;
   background-color: #3c4858;
-  margin-bttom: 0 !important;
+}
+
+.footer {
+  background-color: #3c4858;
 }
 
 body {
@@ -17689,8 +17693,8 @@ q {
 .flap-holder:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fixed-header {
@@ -17711,17 +17715,17 @@ q {
   width: 40px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   background: linear-gradient(45deg, red, blue);
   background-position: right top;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background: linear-gradient(to left, red 30%, transparent 30%);
   background-position: right top;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   background: linear-gradient(to left, red 30%, transparent 30%);
   background-position: right top;
   background-repeat: no-repeat;
@@ -17734,7 +17738,7 @@ input[type=range]::-ms-track {
   /* just do away with the track's border */
 }
 
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
   background: transparent;
   /* IE11 has default fill and that needs to be removed */
 }
