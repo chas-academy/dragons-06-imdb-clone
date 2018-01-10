@@ -62,6 +62,8 @@ document.querySelector('.js-slideout-toggle').addEventListener('click', function
   slideout.toggle();
 });
 
+var slideoutToggleIconElement = document.getElementById('slideoutToggleIcon');
+
 var fixed = document.querySelector('.fixed-header');
 
 slideout.on('translate', function(translated) {
@@ -80,8 +82,13 @@ slideout.on('beforeclose', function () {
 
 slideout.on('open', function () {
   fixed.style.transition = '';
+  slideoutToggleIconElement.classList.add('fa-chevron-right');
+  slideoutToggleIconElement.classList.remove('fa-chevron-left');
+
 });
 
 slideout.on('close', function () {
   fixed.style.transition = '';
+  slideoutToggleIconElement.classList.add('fa-chevron-left');
+  slideoutToggleIconElement.classList.remove('fa-chevron-right');
 });

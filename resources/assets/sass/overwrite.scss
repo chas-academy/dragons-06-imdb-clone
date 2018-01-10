@@ -5,22 +5,6 @@
 //          elementselektorer som möjligt, och död åt den som använder *.
 //
 //
-.has-bg-img {
-    background: url("/images/5931ceae2000001600be02dc.jpeg")center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.img_logo {
-    // Måste ändras, att ange sådana saker i absoluta pixelvärden innebär
-    // att det inte är speciellt responsivt!
-    width: 450px;
-    height: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .section {
     padding-bottom: 1em;
     padding-top: 2em;
