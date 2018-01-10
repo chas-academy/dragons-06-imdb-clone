@@ -40,4 +40,8 @@ class UserController extends Controller
 
     }
 
+    public function display() {
+        $users = DB:table
+    }
+
 }

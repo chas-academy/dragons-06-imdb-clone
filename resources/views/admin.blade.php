@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    Welcome to the admin page
+                    <p>Welcome mr manager called "{{ Auth::user()->name }}", to the admin page</p>
+                    
 
                     
                     {{ csrf_field() }}
