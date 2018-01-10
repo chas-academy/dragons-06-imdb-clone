@@ -225,3 +225,8 @@ input[type="range"]::-ms-fill-lower {
         width: calc(70% - 54px);
     }
 }
+
+.margin {
+    // återställer margin vid behov
+  margin: 1rem;
+}
