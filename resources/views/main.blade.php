@@ -25,10 +25,10 @@ MovieKyte! Movies high as hell!
         
       </div>
     </div>
-    <div class="carousel-nav-left">
+    <div class="carousel-nav-left is-hidden">
       <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </div>
-    <div class="carousel-nav-right">
+    <div class="carousel-nav-right is-hidden">
       <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </div>
   </div>
