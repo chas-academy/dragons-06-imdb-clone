@@ -15,7 +15,7 @@ class MovieController extends Controller
     public function index()
     {   
         //hämta ut alla reviews genom att skapa en var med alla reviews i .
-        $reviews = Review::all();
+        $reviews = Review::paginate(2);
 
         //returnera en view med alla posterna för reviews.
         return view('review')->withReviews($reviews);
@@ -24,7 +24,7 @@ class MovieController extends Controller
 
     public function create()
     {
-        $reviews = Review::all();
+        $reviews = Review::paginate(2);
 
         return view('review')->withReviews($reviews);
     }
@@ -54,12 +54,13 @@ class MovieController extends Controller
     public function show($id) 
     {
         $review = Review::find($id);
-        $reviews = Review::all();
+        $reviews = Review::paginate(2);
         return view('review')->with([
             'review' => $review,
             'reviews' => $reviews
         ]);
-
+    
+        
     }
 
 }

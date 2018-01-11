@@ -92,6 +92,10 @@
                         @endforeach
                     </tbody>
                 </table>
+
+                <div>
+                    {!! $reviews->links(); !!}
+                </div>
             
 
         <div class="field">
