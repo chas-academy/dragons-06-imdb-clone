@@ -1,110 +1,115 @@
+@extends('layouts.default')
 
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
-</head>
-    <!--style for register, make a new file later-->
-
-    <style>
-    
-    html { height: 100%; }
-
-    body{
-        line-height: 3.5;
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp8GMRz-lSUgR0EfVlXq4lbz9nn7IOZIsj8RY7ATjK2i-aj5XwA);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: none;
-        background-position: center top;
-    }
-
-    div.columns.is-centered{
-        margin-top: 15px;
-    }
-
-    .img_logo{
-        width: 450px;
-        height: 150px;
-        
-    }
-    
-
-    </style>
-
-    <!--Register Form Bulma-->
-<body>
-
-    
-
-    <div class="container has-text-centered">
-
-        <div class="column is-fluid ">
-            <img class="img_logo"src="../../../images/moviekyte_logo.png" alt="">
-        
-
-        <div class="column is-fluid">
-            <h2 class="subtitle">Create New Account</h2>
-        </div>
-        
-        <div class="columns is-centered">
-            <div class="column is-half">
-                <div class="field">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Name">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                        <i class="fa fa-check"></i>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="field"> 
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="field">
-                    <p class="control">
-                        <button class="button is-success is-fullwidth">
-                        Submit  
-                        </button>
-                    </p>
-                </div>
-
-                <div class="columns is-centered">
-                    <h2 class="subtitle">Already have an Account?
-                    <a href="/login">Sign in</a></h2>
-                </div>
-            </div>
-        </div>
-
+@section('content')
+<section class="hero is-medium is-danger is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Register
+      </h1>
+      <h2 class="subtitle">
+        Be a part of our MoveKyte World!
+      </h2>
     </div>
+  </div>
+</section>
+<section class="">
+                <div class="">
+                    <form class="form-horizontal"
+                          method="POST"
+                          action="{{ route('register') }}">
 
- 
+                        {{ csrf_field() }}
 
-</body>
-</html>
+                        <div class="field {{ $errors->has('name') ? ' is-warning' : '' }}">
+                            <label for="name"
+                                   class="">Name
+                            </label>
+
+                            <div class="control">
+                                <input id="name"
+                                        type="text"
+                                        class="input"
+                                        name="name"
+                                        value="{{ old('name') }}"
+                                        required
+                                        autofocus>
+                            </div>
+
+                            @if ($errors->has('name'))
+                                    <span class="help">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                              @endif
+                        </div>
+
+                        <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
+
+                            <label for="email"
+                                   class="">E-Mail Address
+                            </label>
+
+                            <div class="control">
+                                <input id="email"
+                                       type="email"
+                                       class="input"
+                                       name="email"
+                                       value="{{ old('email') }}"
+                                       required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="field {{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password"
+                                   class="">
+                                   Password
+                            </label>
+
+                            <div class="control">
+                                <input id="password"
+                                       type="password"
+                                       class="input"
+                                       name="password"
+                                       required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="password-confirm"
+                                   class="">
+                                   Confirm Password
+                            </label>
+
+                            <div class="control">
+                                <input id="password-confirm"
+                                       type="password"
+                                       class="input"
+                                       name="password_confirmation"
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit"
+                                        class="button is-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+</section>
+@endsection
