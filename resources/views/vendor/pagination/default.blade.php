@@ -1,5 +1,5 @@
 @if ($paginator->hasPages())
-    <ul class="pagination is-medium is-centered">
+    <ul class="pagination is-medium">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="pagination-link is-disabled" ><span>&laquo;</span></li>
@@ -30,7 +30,7 @@
         @if ($paginator->hasMorePages())
             <li><a href="{{ $paginator->nextPageUrl() }}" class="pagination-link" rel="next">&raquo;</a></li>
         @else
-            <li class="disabled"><span>&raquo;</span></li>
+            <li class="pagination-link "><span>&raquo;</span></li>
         @endif
     </ul>
 @endif

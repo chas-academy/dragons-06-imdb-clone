@@ -63,4 +63,27 @@ class MovieController extends Controller
         
     }
 
+    public function edit()
+    {
+           //validate the data
+           $this->validate($request, array(
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ));
+
+        //save the data to the database
+        $review = Review::find($id);
+
+        $review->title = $request->input('title');
+        $review->body = $request->input('body');
+
+        $review->save();
+
+        //set flash data with success message
+        Session::flash('success', 'This review was successfully saved.');
+
+        //redirect with flash data to review
+        return redirect()->route('review',$review->id);
+    }
+
 }
