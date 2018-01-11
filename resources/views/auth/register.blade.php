@@ -43,7 +43,7 @@
                         <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
 
                             <label for="email"
-                                   class="has-text-light">E-Mail
+                                   class="has-text-light">E-mail
                             </label>
 
                             <div class="control has-icons-left has-icons-right">
@@ -93,7 +93,7 @@
                         <div class="field">
                             <label for="password-confirm"
                                    class="has-text-light">
-                                   Confirm Password
+                                   Confirm password
                             </label>
 
                             <div class="control has-icons-left">
