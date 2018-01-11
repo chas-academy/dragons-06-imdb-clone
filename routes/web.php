@@ -37,7 +37,4 @@ Route::get('/search', function () {
     return view('search');
 });
 
-Route::resource('/review', 'ReviewController');
-
-
-
+Route::resource('/review', 'MovieController');
