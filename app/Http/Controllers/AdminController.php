@@ -24,6 +24,12 @@ class AdminController extends Controller
      */
     public function index()
     {
+        return view('admin');
+       
+    }
+
+    public function editusers()
+    {
         //return view('admin');
         //$users = User::selectRaw("name, email, bio")->get();
         //   $data = [
@@ -31,7 +37,7 @@ class AdminController extends Controller
         //   ];
         //   return view('admin', $data);
         $users = User::all();
-        return view('admin')->with([
+        return view('editusers')->with([
                'users' => $users
            ]);
     }
