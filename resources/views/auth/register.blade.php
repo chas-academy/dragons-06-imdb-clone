@@ -1,20 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="hero is-medium is-danger is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Register
-      </h1>
-      <h2 class="subtitle">
-        Be a part of our MoveKyte World!
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="">
-                <div class="">
+
+
+<div class="register-background-image">
+
+    <section class="register-form">
+    <h1 class="title has-text-light">Create account</h1>
+                
                     <form class="form-horizontal"
                           method="POST"
                           action="{{ route('register') }}">
@@ -23,18 +16,22 @@
 
                         <div class="field {{ $errors->has('name') ? ' is-warning' : '' }}">
                             <label for="name"
-                                   class="">Name
+                                   class="has-text-light">Your name
                             </label>
 
-                            <div class="control">
-                                <input id="name"
+                            <div class="control has-icons-left has-icons-right">
+                                 <input id="name"
                                         type="text"
                                         class="input"
                                         name="name"
                                         value="{{ old('name') }}"
                                         required
                                         autofocus>
+                            <span class="icon is-small is-left"> 
+                            <i class="fas fa-user"></i></span>
+                
                             </div>
+                            
 
                             @if ($errors->has('name'))
                                     <span class="help">
@@ -46,10 +43,10 @@
                         <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
 
                             <label for="email"
-                                   class="">E-Mail Address
+                                   class="has-text-light">E-Mail
                             </label>
 
-                            <div class="control">
+                            <div class="control has-icons-left has-icons-right">
                                 <input id="email"
                                        type="email"
                                        class="input"
@@ -62,16 +59,21 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i></span>
+                                <span class="icon is-small is-right"></span>
+                                <span class="icon is-small is-right"></span>
                             </div>
+                            
                         </div>
 
                         <div class="field {{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password"
-                                   class="">
+                                   class="has-text-light">
                                    Password
                             </label>
 
-                            <div class="control">
+                            <div class="control has-icons-left">
                                 <input id="password"
                                        type="password"
                                        class="input"
@@ -83,21 +85,25 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i></span>
                             </div>
                         </div>
 
                         <div class="field">
                             <label for="password-confirm"
-                                   class="">
+                                   class="has-text-light">
                                    Confirm Password
                             </label>
 
-                            <div class="control">
+                            <div class="control has-icons-left">
                                 <input id="password-confirm"
                                        type="password"
                                        class="input"
                                        name="password_confirmation"
                                        required>
+                                       <span class="icon is-small is-left">
+                                       <i class="fas fa-lock"></i></span>
                             </div>
                         </div>
 
@@ -110,6 +116,9 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                
 </section>
+</div>
+
+
 @endsection
