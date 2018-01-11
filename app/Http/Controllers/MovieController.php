@@ -45,8 +45,8 @@ class MovieController extends Controller
             'actors' => 'required',
             'plot' => 'required',
             'director' => 'required',
-            'rating' => 'required', /*-- This maybe need to be on its own table---*/
-            'reviews' => 'required', /*-- This maybe need to be on its own table---*/
+            'rating' => 'required', 
+            'reviews' => 'required',
         ]);
         Movie::create($request->all());
         return redirect()->route('movies.index')
