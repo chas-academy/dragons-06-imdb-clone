@@ -4,6 +4,7 @@ namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MoviKyte\User;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -41,4 +42,20 @@ class AdminController extends Controller
                'users' => $users
            ]);
     }
+
+    public function updateUser(Request $request) {
+
+        if ($request) {
+            $user = User::all()->get();
+            $user->bio = $request->bio;
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->save();
+
+        }
+
+        return view('editprofile');
+
+    }
+
 }

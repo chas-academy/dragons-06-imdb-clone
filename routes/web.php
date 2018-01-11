@@ -34,6 +34,7 @@ Route::prefix('admin')->group(function() {
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::get('/editusers', 'AdminController@editusers')->name('admin.dashboard');
+	Route::post('/editusers', 'AdminController@updateUser');
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 

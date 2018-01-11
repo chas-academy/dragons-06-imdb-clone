@@ -16,7 +16,7 @@
 
                     <p>Welcome mr manager called "{{ Auth::user()->name }}", to the admin page</p>
                     
-                   
+                   <a href="{{ url('admin/editusers') }}">Edit users</a>
 
                     
                     {{ csrf_field() }}
