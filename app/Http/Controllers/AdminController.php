@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MoviKyte\User;
 
 class AdminController extends Controller
 {
@@ -23,6 +24,15 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        //return view('admin');
+        //$users = User::selectRaw("name, email, bio")->get();
+        //   $data = [
+        //        'user' => @user
+        //   ];
+        //   return view('admin', $data);
+        $users = User::all();
+        return view('admin')->with([
+               'users' => $users
+           ]);
     }
 }

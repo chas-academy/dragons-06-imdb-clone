@@ -16,11 +16,29 @@
 
                     <p>Welcome mr manager called "{{ Auth::user()->name }}", to the admin page</p>
                     
+                    <table class="table">
+                        
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>bio</th>
+                        <th>created at</th>
+                        <th>updated at</th>
+
+                    </table>
+                    @foreach ($users as $user)
+                        {{ $user->name }}
+                        {{ $user->email }}
+                        {{ $user->bio }}
+                        {{ $user->created_at }}
+                        {{ $user->updated_at }}
+                    @endforeach   
+
 
                     
                     {{ csrf_field() }}
                   
                 </div>
+               
             </div>
         </div>
     </div>
