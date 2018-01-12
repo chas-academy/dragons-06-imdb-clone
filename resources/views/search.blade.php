@@ -1,8 +1,23 @@
-@extends('layouts.default')
-@section('title')
-Search Results
-@endsection
-@section('content')
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">   
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    <link href="{{ asset('css/search.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <a class="pagination-previous">Previous</a>
     <a class="pagination-next">Next letter</a>
@@ -29,7 +44,7 @@ Search Results
         <a class="pagination-link" aria-label="Goto page 86">Z</a>
       </li>
     </ul>
-  </nav>
+  </nav>  
   <div class="columns">
     <div class="column">
       Title
@@ -198,7 +213,7 @@ Search Results
     </div>
   </div>
   <div class="columns">
-
+  
     <div class="column">
       Title
       <figure class="image is-128x128">
@@ -280,4 +295,6 @@ Search Results
       </li>
     </ul>
   </nav>
-@endsection
+</body>
+
+</html>
