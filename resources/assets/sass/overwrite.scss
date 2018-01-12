@@ -5,189 +5,228 @@
 //          elementselektorer som möjligt, och död åt den som använder *.
 //
 //
-.has-bg-img {
-    background: url("/images/5931ceae2000001600be02dc.jpeg")center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.img_logo { // Måste ändras, att ange sådana saker i absoluta pixelvärden innebär
-            // att det inte är speciellt responsivt!
-    width: 450px;
-    height: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .section {
     padding-bottom: 1em;
     padding-top: 2em;
-    background-color: #3c4858;
-    margin-bttom: 0!important;
+    margin-bottom: 0 !important;
 }
 
+.footer {
+    background-color: #3c4858;
+}
+
+.register-form {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 130px;
+}
+
+.register-background-image {
+    background-image: url("https://image.tmdb.org/t/p/w780/jAk9FDJTvlMJuuyO4nJedJ1ASjR.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 body {
-  overflow: hidden; //This is important, or the page somehow resides a fex px
-                    //above the actual browser window.
-}
-.content p { // Styles the paragraph text, used for body copy
-  margin-left: 30%;
-  margin-right: 15%;
-  text-align: justify;
-  -webkit-hyphens: auto; //Provides hyphenations, i.e this thing where poly-
-      -ms-hyphens: auto; //syllabic or otherwhise long words are divided with
-          hyphens: auto; //hyphens!
-  hanging-punctuation: first; //Allows punctuation to hang in the margins
+    overflow: hidden; //This is important, or the page somehow resides a fex px
+    //above the actual browser window.
 }
 
-.content .pull { // Creates a pull quote that is floating in the left margin
-  width: calc(30% - 48px); /* We want this as wide as the margin it resides in
+.content p {
+    // Styles the paragraph text, used for body copy
+    margin-left: 30%;
+    margin-right: 15%;
+    text-align: justify;
+    -webkit-hyphens: auto; //Provides hyphenations, i.e this thing where poly-
+    -ms-hyphens: auto; //syllabic or otherwhise long words are divided with
+    hyphens: auto; //hyphens!
+    hanging-punctuation: first; //Allows punctuation to hang in the margins
+}
+
+.content .pull {
+    // Creates a pull quote that is floating in the left margin
+    width: calc(30% - 48px);
+    /* We want this as wide as the margin it resides in
                               and thus it's the margin, 30%, but we also want
                               to give it it's own margins of 24px each side,
                               thus calc calculates this 30% - 48px*/
-  margin: 24px;
-  float: left;
-  font-style: italic;
-  font-weight: bold;
-  text-align: left;
-  font-size: 1.7rem;
-}
-.content p:first-child { // Gives the first paragraph child extra top padding
-  padding-top: 2em;
-}
-q { //Sets the <q>-element to use typographic citation marks
-quotes: "\201C" "\201D";
-  }
-
-.tabs a { // Forces the colour of the tab links to be white
-          // this is an ugly solution, and a better one would be nice.
-  color: white;
+    margin: 24px;
+    float: left;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.7rem;
 }
 
-.slideout-menu { //Part of the slideout menu, only edit with care
-  left: auto;
+.content p:first-child {
+    // Gives the first paragraph child extra top padding
+    padding-top: 2em;
 }
-.btn-hamburger { //Part of the slideout menu, only edit with care
-  left: auto;
-   right: 12px;
- }
+
+q {
+    //Sets the <q>-element to use typographic citation marks
+    quotes: "\201C" "\201D";
+}
+
+.tabs a {
+    // Forces the colour of the tab links to be white
+    // this is an ugly solution, and a better one would be nice.
+    color: white;
+}
+
+.slideout-menu {
+    //Part of the slideout menu, only edit with care
+    left: auto;
+}
+
+.btn-hamburger {
+    //Part of the slideout menu, only edit with care
+    left: auto;
+    right: 12px;
+}
+
 .box {
-  height: 1500px; } //Part of the slideout menu, only edit with care
-
-.menu-section { //Padding addition to Bulma's menu class
-  margin-top:1em;
-  padding-right: 24px;
-  font-size: 1.5rem;
-}
-.search-flap { // Gives the search bar it's characteristic look
-border-radius: 0px 0px 30px 30px;
-margin-left: 15%;
-float: left;
-}
-.flap-holder:hover { //Expands the search bar on hover
-transform: scale(1.1);
-transition: all .2s ease-in-out;
+    height: 1500px;
+} //Part of the slideout menu, only edit with care
+.menu-section {
+    //Padding addition to Bulma's menu class
+    margin-top: 1em;
+    padding-right: 24px;
+    font-size: 1.5rem;
 }
 
-.fixed-header { // This is a cointainer the search bar and the nav-button
-                // resides in, so that they float above everything else
-position: fixed;
-width: 100%;
-backface-visibility: hidden;
-z-index: 2;
-margin: 0;
-padding: 0;
-left: 0px;
-right: 0px;
+.search-flap {
+    // Gives the search bar it's characteristic look
+    border-radius: 0px 0px 30px 30px;
+    margin-left: 15%;
+    float: left;
 }
 
-.btn-hamburger { //The nav-button, albeit it's not really a hamburger
-position: static;
-height: 40px;
-width: 40px;
+.flap-holder:hover {
+    //Expands the search bar on hover
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.fixed-header {
+    // This is a cointainer the search bar and the nav-button
+    // resides in, so that they float above everything else
+    position: fixed;
+    width: 100%;
+    backface-visibility: hidden;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    right: 0px;
+}
+
+.btn-hamburger {
+    //The nav-button, albeit it's not really a hamburger
+    position: static;
+    height: 40px;
+    width: 40px;
 }
 
 // Styling range-type elements is a bloody mess, edit with care!
 // Following styles makes a blue-to-red grandient
 // Different browsers do this in different ways, yippie!
-
-input[type=range]::-webkit-slider-runnable-track {
-background: linear-gradient(45deg, red, blue);
-background-position: right top;
-}
-input[type=range]::-moz-range-track {
-background: linear-gradient(to left, red 30%, transparent 30%);
-background-position: right top;
-}
-input[type=range]::-ms-track {
-background: linear-gradient(to left, red 30%, transparent 30%);
-background-position: right top;
-background-repeat: no-repeat;  /* no repeat means background appears a little on the left due to width issue and hence the fix */
-width: 100%;  /* to fix width issue in Edge */
-color: transparent;  /* to avoid the intermediate stripe lines in < IE11 */
-border: none;  /* just do away with the track's border */
-}
-input[type=range]::-ms-fill-lower {
-background: transparent; /* IE11 has default fill and that needs to be removed */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(45deg, red, blue);
+    background-position: right top;
 }
 
-.wide { //Used to set the width of the search bar
-  width: 70%;
+input[type="range"]::-moz-range-track {
+    background: linear-gradient(to left, red 30%, transparent 30%);
+    background-position: right top;
 }
 
-#menu { // This is an ugly hack that gives the menue some left margin
-  padding-left: 24px;
+input[type="range"]::-ms-track {
+    background: linear-gradient(to left, red 30%, transparent 30%);
+    background-position: right top;
+    background-repeat: no-repeat;
+    /* no repeat means background appears a little on the left due to width issue and hence the fix */
+    width: 100%;
+    /* to fix width issue in Edge */
+    color: transparent;
+    /* to avoid the intermediate stripe lines in < IE11 */
+    border: none;
+    /* just do away with the track's border */
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: transparent;
+    /* IE11 has default fill and that needs to be removed */
+}
+
+.wide {
+    //Used to set the width of the search bar
+    width: 70%;
+}
+
+#menu {
+    // This is an ugly hack that gives the menue some left margin
+    padding-left: 24px;
 }
 
 /// Media Queried stylesheets
 /// Please only use if necessary as they tend to make it rather bloated
 //Go from thr widthest maxwidth to the smallest, remember the cascade
-
-
- @media (max-width: 1023px) { // I.e. tablets
- .content p {
-   margin-left: 10%;
-   margin-right: 10%;
-   text-align: justify;
-   -webkit-hyphens: auto;
-       -ms-hyphens: auto;
-   hyphens: auto;
-   hanging-punctuation: first;
- }
- .content .pull {
-   margin-left: calc(10% + 24px); //Gives pullquotes a bit more margin than p
-   margin-right: calc(10% + 24px);
-   font-style: italic;
-   font-weight: bold;
-   text-align: center;
-   font-size: 1.6rem;
-   float: none;
-   width: inherit; //Important to remove the regular pullquote width
- }
-  }
-  @media (max-width: 768px) {
-  .content p {
-    margin-left: 24px;
-    margin-right: 24px;
-    text-align: justify;
-    -webkit-hyphens: auto;
+@media (max-width: 1023px) {
+    // I.e. tablets
+    .content p {
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: justify;
+        -webkit-hyphens: auto;
         -ms-hyphens: auto;
-    hyphens: auto;
-    hanging-punctuation: first;
-  }
-  .content .pull {
-    margin: 48px;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.2rem;
-    float: none;
-    width: inherit;
-  }
-  .wide { // Denna gör att knappen som öppnar menyn inte hoppar ned när sidan
-          // blir för smal för att både den och en 70% sökbar skall få plats
-    width: calc(70% - 54px);
-  }
-   }
+        hyphens: auto;
+        hanging-punctuation: first;
+    }
+    .content .pull {
+        margin-left: calc(10% + 24px); //Gives pullquotes a bit more margin than p
+        margin-right: calc(10% + 24px);
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.6rem;
+        float: none;
+        width: inherit; //Important to remove the regular pullquote width
+    }
+}
+
+@media (max-width: 768px) {
+    .content p {
+        margin-left: 24px;
+        margin-right: 24px;
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        hanging-punctuation: first;
+    }
+    .content .pull {
+        margin: 48px;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2rem;
+        float: none;
+        width: inherit;
+    }
+    .wide {
+        // Denna gör att knappen som öppnar menyn inte hoppar ned när sidan
+        // blir för smal för att både den och en 70% sökbar skall få plats
+        width: calc(70% - 54px);
+    }
+}
+
+.margin {
+    // återställer margin vid behov
+    margin: 1rem;
+}
