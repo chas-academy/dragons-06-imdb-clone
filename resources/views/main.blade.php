@@ -1,49 +1,56 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Moviekyte</title>
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" type="text/css">
-    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-
-</head>
-
-<body>
-    <section class="section">
-        <div class="container">
-            <img class="img_logo" src="/images/moviekyte_logo.png" alt="">
-        </div>
-    </section>
+@extends('layouts.default')
+@section('title')
+MovieKyte! Movies high as hell!
+@endsection
+@section('content')
 
 
-    <section class="hero is-large has-bg-img is-fullheight">
-        <div class="hero-body">
-
-        </div>
-    </section>
-    
-    <div class="columns is-variable is-1">
-  <div class="column is-one-quarter is-centered">
-  <button class="button is-light is-fullwidth">Top-10 Movies</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Latest Movies</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Movie Playlist</button>
-  </div>
-  <div class="column">
-  <button class="button is-light is-fullwidth">Views</button>
+<div class='carousel'>
+  <div class='carousel-container is-0'>
+    <div class='carousel-content carousel-animate carousel-animate-slide'>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
+        
+      </div>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
+        
+      </div>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
+        
+      </div>
+      <div class='carousel-item'>
+        <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
+        
+      </div>
+    </div>
+    <div class="carousel-nav-left is-hidden">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div class="carousel-nav-right is-hidden">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
   </div>
 </div>
 
+
+  <section class="section">
+    <div class="columns is-variable is-1">
+        <div class="column is-one-quarter is-centered">
+          <button class="button is-warning is-fullwidth">Top-10 Movies</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Latest Movies</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Movie Playlist</button>
+        </div>
+        <div class="column">
+          <button class="button is-light is-fullwidth">Views</button>
+        </div>
+    </div>
+  </section>
 
     <section class="section">
         <div class="columns is-mobile">
@@ -68,8 +75,20 @@
                 </div>
             </div>
         </div>
+  
+    
 
-    </section>
+<script>
+function goNext() {
+    console.log("goNext");
+    let carouselRight = document.querySelector('.carousel-nav-right');
+ 
+    carouselRight.click();
 
+    setTimeout(goNext, 5000);
+};
 
-</body>
+window.addEventListener('load', function(){ setTimeout(goNext, 5000);});
+</script>
+
+@endsection
