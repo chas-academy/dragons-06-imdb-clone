@@ -14,9 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::latest()->paginate(5);
-        return view('movies.index',compact('movies'))
-            ->with('i', (request()->input('page',1) - 1) * 5);
+        //
     }
 
     /**
@@ -37,20 +35,21 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'id' => 'required',
-            'titel' => 'required',
-            'genre' => 'required',
-            'year' => 'required',
-            'actors' => 'required',
-            'plot' => 'required',
-            'director' => 'required',
-            'rating' => 'required', 
-            'reviews' => 'required',
+        $movie = $this->validate(request(), [
+                'id' => 'required',
+                'title' => 'required',
+                'genre' => 'required',
+                'year' => 'required',
+                'actors' => 'required',
+                'plot' => 'required',
+                'director' => 'required',
+                'rating' => 'required', 
+                'reviews' => 'required',
         ]);
-        Movie::create($request->all());
-        return redirect()->route('movies.index')
-                        ->with('success', 'Movie created succesfully');
+
+        Movie::create($movie);
+
+        return back()->with('success', 'Movie has been added');
     }
 
     /**
@@ -72,8 +71,7 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        $movie = Movie::find($id);
-        return view('movies.edit',compact('movie'));
+        //
     }
 
     /**
@@ -85,19 +83,7 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        request()->validate([
-            'id' => 'required',
-            'titel' => 'required',
-            'genre' => 'required',
-            'year' => 'required',
-            'actors' => 'required',
-            'plot' => 'required',
-            'director' => 'required', /*-- This maybe need to be on its own table---*/
-            'reviews' => 'required', /*-- This maybe need to be on its own table---*/
-        ]);
-        Movie::find($id)->update($request->all());
-        return redirect()->route('movies.index')
-                        ->with('success', 'Movie updated succesfully');
+        //
     }
 
     /**
@@ -108,8 +94,6 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        Movie::find($id)->delete();
-        return redirect()->route('movies.index')
-                        ->with('success','Movie deleted succesfully');
+        //
     }
 }
