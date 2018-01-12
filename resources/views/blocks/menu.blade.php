@@ -30,7 +30,7 @@
         </button>
       </p>
       </div>
-      <span class="smaller">New user? <a href="#">Register!</a></span>
+      <span class="smaller">New user? <a href="{{ route('register') }}">Register!</a></span>
       @else
       <div class="card">
     <div class="card-content">
