@@ -54,7 +54,7 @@ Titeln
                 <ul>
                   <li class="is-active"><a>Synopsis</a></li>
                   <li><a>Stats</a></li>
-                  <li><a>Reviews</a></li>
+                  <li> <a href=" {{ route('review.create') }} ">Reviews</a></li>
                   <li><a>Trailers</a></li>
                 </ul>
               </div>
@@ -62,7 +62,6 @@ Titeln
           </div>
         </div>
         <article class="content is-medium">
-
             <p>The film starts with a group of babies in a day care center. Archie tells his friends, Finkleman, Alex, and Rosita, a story about Kahuna; according to Archie, Kahuna is a super baby with super strength and seemingly doesn't age, and he once rescued a group of children from an evil orphanage at the Berlin Wall run by a villainous overseer Biscane.</p>
 
             <p class="pull">
