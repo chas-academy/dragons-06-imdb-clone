@@ -13253,3 +13253,7 @@ input[type="range"]::-ms-fill-lower {
   margin: 1rem;
 }
 
+main {
+  background-color: white;
+}
+
