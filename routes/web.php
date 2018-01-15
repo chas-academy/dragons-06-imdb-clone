@@ -21,9 +21,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/movies', function () {
-    return view('movies');
-});
+// Route::get('/movies', function () {
+//     return view('movies');
+// });
 
 Auth::routes();
 
@@ -38,5 +38,7 @@ Route::post('/editpassword', 'PasswordController@updatePassword');
 Route::get('/search', function () {
     return view('search');
 });
+
+Route::resource('movies','MovieController');
 
 

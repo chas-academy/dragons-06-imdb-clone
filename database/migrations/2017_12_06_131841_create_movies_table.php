@@ -15,7 +15,7 @@ class CreateMoviesTable extends Migration
      {
          Schema::create('movies', function (Blueprint $table) {
              $table->increments('id')->unique();
-             $table->string('titel');
+             $table->string('title');
              $table->string('genre');
              $table->integer('year');
              $table->string('actors');
@@ -26,15 +26,7 @@ class CreateMoviesTable extends Migration
              $table->timestamps();
          });
      }
-    // TO BE REMOVED!
-    // public function up()
-    // {
-    //     Schema::create('movies', function (Blueprint $table) {
-    //         $table->increments('id');
-    //         $table->timestamps();
-    //     });
-    // }
-
+     
     /**
      * Reverse the migrations.
      *
