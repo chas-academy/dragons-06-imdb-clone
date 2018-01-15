@@ -6,31 +6,7 @@
 
     <section class="menu-section" style=""> <!-- Log in, skall includas sen -->
       @guest
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="username" placeholder="Username">
-          <span class="icon is-small is-left">
-            <i class="fa fa-user-circle"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fa fa-check"></i>
-          </span>
-        </p>
-      </div>
-      <div class="field has-addons">
-        <p class="control has-icons-left">
-          <input class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
-            <i class="fa fa-lock"></i>
-          </span>
-        </p>
-        <p class="control">
-        <button class="button is-primary">
-          Login
-        </button>
-      </p>
-      </div>
-      <span class="smaller">New user? <a href="#">Register!</a></span>
+      @include('blocks.login')
       @else
       <div class="card">
     <div class="card-content">
