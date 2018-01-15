@@ -4,11 +4,22 @@ Search Results
 @endsection
 @section('content')
 
-
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Latest Movies
+      </h1>
+      <h2 class="subtitle">
+        Explore our latest movies!
+      </h2>
+    </div>
+  </div>
+</section>
 
 <div class="latest-background">
 <section class="section">
-<h1 class="title is-2 has-text-white has-text-weight-light">Latest movies</h1>
+<!-- <h1 class="title is-2 has-text-white has-text-weight-light">Latest movies</h1> -->
               
             @foreach ($movies as $movie)
             <div class="movie-container is-inline-block">
