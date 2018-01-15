@@ -3,87 +3,97 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
-use MoviKyte\Movie; //lägg till
-use MoviKyte\Review; 
-use Session; //läg till den oxå
+use MoviKyte\Movie;
 
 class MovieController extends Controller
 {
-    //koppa innehållet till michals movie controller när han pushat
-
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
-    {   
-        //hämta ut alla reviews genom att skapa en var med alla reviews i .
-        $reviews = Review::paginate(2);
-
-        //returnera en view med alla posterna för reviews.
-        return view('review')->withReviews($reviews);
-
+    {
+        //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        $reviews = Review::paginate(2);
-
-        return view('review')->withReviews($reviews);
+        return view('movies.create');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        //validera datan
-        $this->validate($request, [
-            'title' => 'required|max:255',
-            'body' => 'required'
+        $movie = $this->validate(request(), [
+                'id' => 'required',
+                'title' => 'required',
+                'genre' => 'required',
+                'year' => 'required',
+                'actors' => 'required',
+                'plot' => 'required',
+                'director' => 'required',
+                'rating' => 'required', 
+                'reviews' => 'required',
         ]);
 
-        //spara  i databasen
-        $review = new Review;
+        Movie::create($movie);
 
-        $review->title = $request->title;
-        $review->body = $request->body;
- 
-        $review->save();
-
-        Session::flash('success', 'The review is saved');
-
+        return back()->with('success', 'Movie has been added');
     }
-        
-        //hämta datan från databasen och visa den med show
 
-    public function show($id) 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        $review = Review::find($id);
-        $reviews = Review::paginate(2);
-        return view('review')->with([
-            'review' => $review,
-            'reviews' => $reviews
-        ]);
-    
-        
+        //
     }
 
-    public function edit()
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-           //validate the data
-           $this->validate($request, array(
-            'title' => 'required|max:255',
-            'body' => 'required'
-        ));
-
-        //save the data to the database
-        $review = Review::find($id);
-
-        $review->title = $request->input('title');
-        $review->body = $request->input('body');
-
-        $review->save();
-
-        //set flash data with success message
-        Session::flash('success', 'This review was successfully saved.');
-
-        //redirect with flash data to review
-        return redirect()->route('review',$review->id);
+        //
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }
