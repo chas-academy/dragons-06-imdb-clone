@@ -13257,3 +13257,20 @@ main {
   background-color: white;
 }
 
+.latest-background {
+  background-color: black;
+}
+
+.movie-container {
+  width: 330px;
+  margin-top: 5%;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.latest-movie-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
