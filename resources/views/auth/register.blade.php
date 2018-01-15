@@ -1,110 +1,124 @@
+@extends('layouts.default')
 
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+<div class="register-background-image">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/08e7939fc8.js"></script>
-</head>
-    <!--style for register, make a new file later-->
+    <section class="register-form">
+    <h1 class="title has-text-light">Create account</h1>
+                
+                    <form class="form-horizontal"
+                          method="POST"
+                          action="{{ route('register') }}">
 
-    <style>
-    
-    html { height: 100%; }
+                        {{ csrf_field() }}
 
-    body{
-        line-height: 3.5;
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp8GMRz-lSUgR0EfVlXq4lbz9nn7IOZIsj8RY7ATjK2i-aj5XwA);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: none;
-        background-position: center top;
-    }
+                        <div class="field {{ $errors->has('name') ? ' is-warning' : '' }}">
+                            <label for="name"
+                                   class="has-text-light">Your name
+                            </label>
 
-    div.columns.is-centered{
-        margin-top: 15px;
-    }
+                            <div class="control has-icons-left has-icons-right">
+                                 <input id="name"
+                                        type="text"
+                                        class="input"
+                                        name="name"
+                                        value="{{ old('name') }}"
+                                        required
+                                        autofocus>
+                            <span class="icon is-small is-left"> 
+                            <i class="fas fa-user"></i></span>
+                
+                            </div>
+                            
 
-    .img_logo{
-        width: 450px;
-        height: 150px;
-        
-    }
-    
+                            @if ($errors->has('name'))
+                                    <span class="help">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                              @endif
+                        </div>
 
-    </style>
+                        <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
 
-    <!--Register Form Bulma-->
-<body>
+                            <label for="email"
+                                   class="has-text-light">E-mail
+                            </label>
 
-    
+                            <div class="control has-icons-left has-icons-right">
+                                <input id="email"
+                                       type="email"
+                                       class="input"
+                                       name="email"
+                                       value="{{ old('email') }}"
+                                       required>
 
-    <div class="container has-text-centered">
+                                @if ($errors->has('email'))
+                                    <span class="help">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i></span>
+                                <span class="icon is-small is-right"></span>
+                                <span class="icon is-small is-right"></span>
+                            </div>
+                            
+                        </div>
 
-        <div class="column is-fluid ">
-            <img class="img_logo"src="../../../images/moviekyte_logo.png" alt="">
-        
+                        <div class="field {{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password"
+                                   class="has-text-light">
+                                   Password
+                            </label>
 
-        <div class="column is-fluid">
-            <h2 class="subtitle">Create New Account</h2>
-        </div>
-        
-        <div class="columns is-centered">
-            <div class="column is-half">
-                <div class="field">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Name">
-                    </div>
-                </div>
+                            <div class="control has-icons-left">
+                                <input id="password"
+                                       type="password"
+                                       class="input"
+                                       name="password"
+                                       required>
 
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                        <i class="fa fa-check"></i>
-                        </span>
-                    </p>
-                </div>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i></span>
+                            </div>
+                        </div>
 
-                <div class="field"> 
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                        <i class="fa fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
+                        <div class="field">
+                            <label for="password-confirm"
+                                   class="has-text-light">
+                                   Confirm password
+                            </label>
 
-                <div class="field">
-                    <p class="control">
-                        <button class="button is-success is-fullwidth">
-                        Submit  
-                        </button>
-                    </p>
-                </div>
+                            <div class="control has-icons-left">
+                                <input id="password-confirm"
+                                       type="password"
+                                       class="input"
+                                       name="password_confirmation"
+                                       required>
+                                       <span class="icon is-small is-left">
+                                       <i class="fas fa-lock"></i></span>
+                            </div>
+                        </div>
 
-                <div class="columns is-centered">
-                    <h2 class="subtitle">Already have an Account?
-                    <a href="/login">Sign in</a></h2>
-                </div>
-            </div>
-        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit"
+                                        class="button is-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                
+</section>
+</div>
 
-    </div>
 
- 
-
-</body>
-</html>
+@endsection
