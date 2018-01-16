@@ -5,6 +5,10 @@
 //          elementselektorer som möjligt, och död åt den som använder *.
 //
 //
+.main-background {
+    background-color: black;
+}
+
 .section {
     padding-bottom: 1em;
     padding-top: 2em;
@@ -12,7 +16,7 @@
 }
 
 .footer {
-    background-color: #3c4858;
+    background-color: black;
 }
 
 .register-form {
@@ -230,6 +234,29 @@ input[type="range"]::-ms-fill-lower {
     // återställer margin vid behov
     margin: 1rem;
 }
+
 main {
-  background-color: white;
+    background-color: white;
+}
+
+.latest-background {
+    background-color: black;
+}
+
+.movie-container {
+    width: 330px;
+    margin-top: 5%;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.latest-movie-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-title-latest {
+    margin-top: 100px;
+    padding-left: 15px;
 }
