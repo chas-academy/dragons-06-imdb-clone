@@ -8,7 +8,9 @@ Search Results
 
 <div class="latest-background">
 <section class="section">
+  <section class="main-title-latest">
 <h1 class="title is-2 has-text-white has-text-weight-light">Explore Movies</h1>
+  </section>
 <!-- <h1 class="title is-2 has-text-white has-text-weight-light">Latest movies</h1> -->
               
             @foreach ($movies as $movie)
