@@ -58,12 +58,12 @@ MovieKyte! Movies high as hell!
     <div class="create-button-container">
 <div class="field is-grouped">
   <p class="control">
-    <a class="button is-danger">
+    <a class="button is-primary">
       Save
     </a>
   </p>
   <p class="control">
-    <a class="button is-primary">
+    <a class="button is-danger">
       Cancel
     </a>
   </p>
