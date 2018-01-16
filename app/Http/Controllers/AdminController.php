@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use MoviKyte\User;
 use Auth;
 
@@ -29,7 +30,7 @@ class AdminController extends Controller
        
     }
 
-    public function editusers()
+    public function editusersform()
     {
         //return view('admin');
         //$users = User::selectRaw("name, email, bio")->get();
@@ -46,7 +47,11 @@ class AdminController extends Controller
     public function edit(Request $request) {
 
         if ($request){
-            $users = User::find(1);//use this for other things!!!
+
+            //$id = Input::get('id');
+            $id = $request->input('id');
+            $user = User::find($id);//use this for other things!!!
+            //$user = User::find('users')->where('id', $id)->first();
             $user->name = $request->name;
             $user->email = $request->email;
             $user->bio = $request->bio;
