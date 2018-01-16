@@ -257,6 +257,28 @@ main {
 }
 
 .main-title-latest {
-    margin-top: 100px;
+    padding-top: 100px;
     padding-left: 15px;
+}
+
+.create-background {
+    background-color: black;
+}
+
+.create-field-container {
+    max-width: 70%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.create-button-container {
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-title-create {
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-bottom: 50px;
 }
