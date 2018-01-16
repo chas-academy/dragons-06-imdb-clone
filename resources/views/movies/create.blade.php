@@ -9,53 +9,46 @@
 </head>
 <body>
     <!--  Form for creating movies  -->
-    <div class="field">
-  <label class="label">Title</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter title of the movie">
-  </div>
-</div>
 <div class="field">
-  <label class="label">Genre</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter genre">
-  </div>
+  {!! Form::open(['route' => 'movies.store']) !!}
+    <label class="label">Title</label>
+      <div class="control">
+      {{ Form::text('Title', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Genre</label>
+    <div class="control">
+      {{ Form::text('Genre', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Year</label>
+    <div class="control">
+      {{ Form::text('Year', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Actors</label>
+    <div class="control">
+      {{ Form::text('Actors', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Plot</label>
+    <div class="control">
+      {{ Form::textarea('Plot', null, array('class' => 'textarea')) }}
+      </div>
+    <label class="label">Director</label>
+    <div class="control">
+      {{ Form::text('Director', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Rating</label>
+    <div class="control">
+      {{ Form::text('Rating', null, array('class' => 'input')) }}
+      </div>
+    <label class="label">Review</label>
+    <div class="control">
+      {{ Form::text('Review', null, array('class' => 'input')) }}
+      </div>
+ <div class="control">
+      {{ Form::submit('Add movie', array('class' => 'button is-success is-large')) }}
+      </div>
+  {!! Form::close() !!}
 </div>
-<div class="field">
-  <label class="label">Year</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter movie year">
-  </div>
-  </div>
-  <div class="field">
-  <label class="label">Actors</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter actors">
-  </div>
-  </div>
-  <label class="label">Plot</label>
-  <div class="field">
-  <textarea class="textarea" name="" placeholder="Enter plot here" rows="8"></textarea>
-</div>
-<label class="label">Director</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter Director">
-  </div>
-  <label class="label">Rating</label>
-  <div class="control">
-    <input class="input" type="form-control" name="" placeholder="Enter Rating">
-  </div>
-  <label class="label">Review</label>
-  <div class="field">
-  <textarea class="textarea" name="" placeholder="Enter your review" rows="8"></textarea>
-</div>
-<a class="button is-danger">
-  Cancel
-</a>
 
-<a class="button is-success">
-  Save
-</a>
 
 </body>
 </html>

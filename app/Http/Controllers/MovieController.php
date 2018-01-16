@@ -35,8 +35,8 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        $movie = $this->validate(request(), [
-                'id' => 'required',
+        $this->validate($request, [
+                
                 'title' => 'required',
                 'genre' => 'required',
                 'year' => 'required',
@@ -47,9 +47,19 @@ class MovieController extends Controller
                 'reviews' => 'required',
         ]);
 
-        Movie::create($movie);
+        $movie = new Movie;
 
-        return back()->with('success', 'Movie has been added');
+        $movie->title = $request->title;
+        $movie->genre = $request->genre;
+        $movie->year = $request->year;
+        $movie->actors = $request->actors;
+        $movie->plot = $request->plot;
+        $movie->director = $request->director;
+        $movie->rating = $request->rating;
+        $movie->reviews = $request->reviews;
+
+        $movie->save();
+        
     }
 
     /**
