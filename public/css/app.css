@@ -13257,3 +13257,18 @@ main {
   background-color: white;
 }
 
+.create-background {
+  background-color: black;
+}
+
+.create-field-container {
+  max-width: 70%;
+  margin-left: 15px;
+}
+
+.create-button-container {
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
