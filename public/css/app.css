@@ -13047,6 +13047,10 @@ body {
   display: block;
 }
 
+.main-background {
+  background-color: black;
+}
+
 .section {
   padding-bottom: 1em;
   padding-top: 2em;
@@ -13054,7 +13058,7 @@ body {
 }
 
 .footer {
-  background-color: #3c4858;
+  background-color: black;
 }
 
 .register-form {
@@ -13268,7 +13272,25 @@ main {
 
 .create-button-container {
   margin-left: 15px;
+.latest-background {
+  background-color: black;
+}
+
+.movie-container {
+  width: 330px;
+  margin-top: 5%;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.latest-movie-title {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.main-title-latest {
+  margin-top: 100px;
+  padding-left: 15px;
 }
 

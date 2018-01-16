@@ -9,7 +9,7 @@ MovieKyte! Movies high as hell!
     
       
     <div class="create-background">
-    <h1 class="subtitle is-1 has-text-white">Add New Movie</h1>
+    <h1 class="title is-2 has-text-white has-text-weight-light">Explore Movies</h1>
     
     <div class="create-field-container">
     <div class="field">

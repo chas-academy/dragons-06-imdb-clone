@@ -36,15 +36,15 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         $movie = $this->validate(request(), [
-                'id' => 'required',
-                'title' => 'required',
-                'genre' => 'required',
-                'year' => 'required',
-                'actors' => 'required',
-                'plot' => 'required',
-                'director' => 'required',
-                'rating' => 'required', 
-                'reviews' => 'required',
+            'id' => 'required',
+            'title' => 'required',
+            'genre' => 'required',
+            'year' => 'required',
+            'actors' => 'required',
+            'plot' => 'required',
+            'director' => 'required',
+            'rating' => 'required',
+            'reviews' => 'required',
         ]);
 
         Movie::create($movie);
@@ -95,5 +95,12 @@ class MovieController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function latest()
+    {
+        $movies = Movie::all();
+
+        return view('latestMovies')->with('movies', $movies);
     }
 }

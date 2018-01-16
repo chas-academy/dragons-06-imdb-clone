@@ -35,10 +35,8 @@ Route::post('/editprofile', 'UserController@updateUser');
 Route::get('/editpassword', 'PasswordController@Profile');
 Route::post('/editpassword', 'PasswordController@updatePassword');
 
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/latestmovies', 'MovieController@latest');
 
-Route::resource('movies','MovieController');
+Route::resource('movies', 'MovieController');
 
 
