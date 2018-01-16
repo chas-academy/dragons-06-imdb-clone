@@ -30,16 +30,16 @@
                     <tbody>
                         
                             @foreach ($users as $user)
-                            <form enctype="multipart/form-data" action="editusers" method="POST">
+                            <form enctype="multipart/form-data" action="/editusers" method="POST">
                                 <tr>
                                 <td><input type="text" name="name" value="{{ $user->name }}"></td>
                                 <td><input type="text" name="name" value="{{ $user->email }}"></td>
                                 <td><input type="text" name="name" value="{{ $user->bio }}"></td>
                                 <td>{{ $user->created_at }}</td>
                                 <td>{{ $user->updated_at }}</td>
+                                <td><input type="hidden" name="id" value="{{ $user->id }}"</td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
                                 <td><input type="submit" value="Update profile"></td>
-
                                 <!--<td><a href="<?php echo $user->id ?>">Edit</a></td>
                                 <td><a href="<?php echo $user->id ?>">Delete</a></td>-->
                                 </tr>

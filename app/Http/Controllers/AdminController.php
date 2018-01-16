@@ -43,18 +43,18 @@ class AdminController extends Controller
            ]);
     }
 
-    public function updateUser(Request $request) {
+    public function edit(Request $request) {
 
-        if ($request) {
-            $user = User::all()->get();
-            $user->bio = $request->bio;
+        if ($request){
+            $users = User::find(1);//use this for other things!!!
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->save();
+            $user->bio = $request->bio;
 
+            $user->save();
         }
 
-        return view('editprofile');
+        return view('admin');
 
     }
 
