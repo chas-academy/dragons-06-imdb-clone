@@ -4,6 +4,7 @@ namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use MoviKyte\User;
 use Auth;
 
@@ -48,10 +49,11 @@ class AdminController extends Controller
 
         if ($request){
 
-            //$id = Input::get('id');
+            //passes the hidden user form id
             $id = $request->input('id');
-            $user = User::find($id);//use this for other things!!!
-            //$user = User::find('users')->where('id', $id)->first();
+            //find the user with that particular id
+            $user = User::find($id);
+            //overwrite those values in the corresponding rows
             $user->name = $request->name;
             $user->email = $request->email;
             $user->bio = $request->bio;
@@ -59,7 +61,8 @@ class AdminController extends Controller
             $user->save();
         }
 
-        return view('admin');
+        return Redirect::back()->with('message','User updated');
+
 
     }
 
