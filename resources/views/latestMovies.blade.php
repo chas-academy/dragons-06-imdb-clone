@@ -48,7 +48,7 @@ Search Results
 
 
 
-<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+<nav class="latest-pagination" role="navigation" aria-label="pagination">
     <a class="pagination-previous">Previous</a>
     <a class="pagination-next">Next letter</a>
   </nav>

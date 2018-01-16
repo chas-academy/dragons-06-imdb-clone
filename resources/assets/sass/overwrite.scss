@@ -5,6 +5,10 @@
 //          elementselektorer som möjligt, och död åt den som använder *.
 //
 //
+.main-background {
+    background-color: black;
+}
+
 .section {
     padding-bottom: 1em;
     padding-top: 2em;
@@ -12,7 +16,7 @@
 }
 
 .footer {
-    background-color: #3c4858;
+    background-color: black;
 }
 
 .register-form {

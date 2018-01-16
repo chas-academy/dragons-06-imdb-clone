@@ -13047,6 +13047,10 @@ body {
   display: block;
 }
 
+.main-background {
+  background-color: black;
+}
+
 .section {
   padding-bottom: 1em;
   padding-top: 2em;
@@ -13054,7 +13058,7 @@ body {
 }
 
 .footer {
-  background-color: #3c4858;
+  background-color: black;
 }
 
 .register-form {

@@ -34,7 +34,7 @@ MovieKyte! Movies high as hell!
   </div>
 </div>
 
-
+<div class="main-background">
   <section class="section">
     <div class="columns is-variable is-1">
         <div class="column is-one-quarter is-centered">
@@ -75,7 +75,7 @@ MovieKyte! Movies high as hell!
                 </div>
             </div>
         </div>
-  
+</div>
     
 
 <script>
