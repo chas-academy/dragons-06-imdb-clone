@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MoviKyte\Users;
 use Auth;
 use Image;
 
@@ -38,6 +39,15 @@ class UserController extends Controller
 
     	return view('editprofile', array('user' => Auth::user()));
 
+    }
+
+    public function display() {
+        
+           $users = Users::selectRaw("name, email, bio")->get();
+           $data = [
+                'user' => @user
+           ];
+           return view('admin', $data);
     }
 
 }
