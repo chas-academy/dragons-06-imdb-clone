@@ -14,4 +14,14 @@ class Movie extends Model
     {
         return $this->belongsToMany('MoviKyte\Watchlist');
     }
+
+    public function addToWatchlist($movieId)
+    {
+        $userId = Auth::user()->id;
+
+        $movieModel = new Movie();
+        $movieModel->addToWatchlist($movieId, $userId);
+
+        return redirect('home');
+    }
 }

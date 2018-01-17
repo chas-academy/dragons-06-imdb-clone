@@ -53,7 +53,10 @@ Route::resource('movies', 'MovieController');
 
 
 Route::get('/home/watchlist', 'UserController@showUserWatchlist');
-Route::post('/add', [
+Route::get('/movie/{movie}/add/{user}', [
     'as' => 'add',
     'uses' => 'UserController@addToWatchlist'
 ]);
+Route::get('/addtest', function() {
+    return view('addwatchlist');
+});

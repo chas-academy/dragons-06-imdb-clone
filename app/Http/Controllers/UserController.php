@@ -60,9 +60,13 @@ class UserController extends Controller
 		return view('watchlist', compact('movies'));
 	}
 
-	public function addToWatchlist(Request $request){
+	public function addToWatchlist($movieId, $userId){
 		
-		$request = DB::table('watch')->where('id', '=', Auth::user()->id)->insert();
+		// $request = DB::table('watch')->where('id', '=', Auth::user()->id)->insert();
+		DB::table('watchlists')->insert([
+		'user_id' => $userId,
+		'movie_id' => $movieId
+		]);
 
 	}
     public function display() {
