@@ -21,9 +21,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-// Route::get('/movies', function () {
-//     return view('movies');
-// });
+Route::get('/movies', function () {
+    return view('movies');
+});
 
 Auth::routes();
 
@@ -46,9 +46,6 @@ Route::post('/editprofile', 'UserController@updateUser');
 Route::get('/editpassword', 'PasswordController@Profile');
 Route::post('/editpassword', 'PasswordController@updatePassword');
 
-
-Route::get('/latestmovies', 'MovieController@latest');
-
-Route::resource('movies', 'MovieController');
-
-
+Route::get('/search', function () {
+    return view('search');
+});
