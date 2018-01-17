@@ -51,7 +51,10 @@ Route::get('/latestmovies', 'MovieController@latest');
 
 Route::resource('movies', 'MovieController');
 
-
+Route::get('watchlist/delete/{movie}', [
+    'as'=> 'delete',
+    'uses' => 'UserController@deleteFromWatchlist'
+]);
 Route::get('/home/watchlist', 'UserController@showUserWatchlist');
 Route::get('/movie/{movie}/add/{user}', [
     'as' => 'add',

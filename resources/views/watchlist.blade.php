@@ -7,7 +7,7 @@ Your watchlist
 
 @foreach($movies as $film)
 <ul>
-    <li>{{$film->title}} {{$film->year}}</li>
+    <li>{{$film->title}} {{$film->year}} <button href="/watchlist/delete/{{$film->id}}" type="submit">Delete</button></li>
 <ul>
 @endforeach
 

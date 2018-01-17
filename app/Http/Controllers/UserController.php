@@ -69,6 +69,12 @@ class UserController extends Controller
 		]);
 
 	}
+	public function deleteFromWatchlist($movieId, $userId){
+		DB::table('watchlists')->delete([
+		'user_id' => $userId,
+		'movie_id' => $movieId
+		]);
+	}
     public function display() {
         
            $users = Users::selectRaw("name, email, bio")->get();
@@ -76,6 +82,6 @@ class UserController extends Controller
                 'user' => @user
            ];
            return view('admin', $data);
-    }
+	}
 
 }
