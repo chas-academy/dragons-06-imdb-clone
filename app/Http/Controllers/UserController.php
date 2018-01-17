@@ -42,12 +42,14 @@ class UserController extends Controller
 	}
 
 	public function showUserWatchlist(){
+
 		$watchlist = DB::table('watch')->where('id', '=', Auth::user()->id)->get();
 
 		return view('watchlist', compact('watchlist'));
 	}
 
 	public function addToWatchlist(Request $request){
+		
 		$request = DB::table('watch')->where('id', '=', Auth::user()->id)->insert();
 
 		return redirect()->route('home')->with('success', 'Added to watchlist');
