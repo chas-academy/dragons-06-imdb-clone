@@ -25,6 +25,10 @@ Route::get('/movies', function () {
     return view('movies');
 });
 
+Route::get('movies/{id}', function ($id) {
+    return 'This is movie number '.$id;
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
