@@ -14,9 +14,10 @@ class CreateWatchTable extends Migration
     public function up()
     {
         Schema::create('watch', function (Blueprint $table) {
-            $table->increments('id');
-            $table->text('content');
-            $table->timestamps();
+            $table->integer('movie_id')->unsigned()->after('id');
+            $table->foreign('movie_id')->references('id')->on('movies');
+            $table->integer('user_id')->unsigned()->after('id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -27,6 +28,12 @@ class CreateWatchTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('watch');
+    
+        Schema::table('watch', function(Blueprint $table) {
+            $table->dropForeign('watch_movie_id_foreign');
+            $table->dropColumn('movie_id');
+            $table->dropForeign('watch_user_id_foreign');
+            $table->dropColumn('user_id');
+        });
     }
 }

@@ -37,4 +37,8 @@ Route::get('/search', function () {
     return view('search');
 });
 
-Route::get('/user/{user_id}/watchlist', 'UserController@userWatchlist');
+Route::get('/home/watchlist', 'UserController@showUserWatchlist');
+Route::post('/add', [
+    'as' => 'add',
+    'uses' => 'UserController@addToWatchlist'
+]);
