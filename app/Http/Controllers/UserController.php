@@ -4,6 +4,11 @@ namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use MoviKyte\User;
+use MoviKyte\Movie;
+use MoviKyte\Watchlist;
+
 use Auth;
 use Image;
 
@@ -43,15 +48,30 @@ class UserController extends Controller
 
 	public function showUserWatchlist(){
 
-		$watchlist = DB::table('watch')->where('id', '=', Auth::user()->id)->get();
+		// $watchlist = DB::table('watch')->where('user_id', '=', Auth::user()->id)->get();
+		$user = Auth::user();
+		$watchlists = $user->watchlists;
 
-		return view('watchlist', compact('watchlist'));
+		$movies = [];
+		foreach ($watchlists as $watchlist) {
+			array_push($movies, Movie::find($watchlist->movie_id));
+		}
+
+		return view('watchlist', compact('movies'));
 	}
 
 	public function addToWatchlist(Request $request){
 		
 		$request = DB::table('watch')->where('id', '=', Auth::user()->id)->insert();
 
-		return redirect()->route('home')->with('success', 'Added to watchlist');
 	}
+    public function display() {
+        
+           $users = Users::selectRaw("name, email, bio")->get();
+           $data = [
+                'user' => @user
+           ];
+           return view('admin', $data);
+    }
+
 }
