@@ -23,8 +23,6 @@ class MoviesTableSeeder extends Seeder
             'actors' => 'Luke Skywalker',
             'plot' => 'In a galaxy far away',
             'director' => 'J.J. Abrams',
-            'rating' => '',
-            'reviews' => '',
         ));
         Movie::create(array(
             'id' => '2',
@@ -34,8 +32,6 @@ class MoviesTableSeeder extends Seeder
             'actors' => 'Baby O',
             'plot' => 'Super babies to the rescue!',
             'director' => 'Babsan',
-            'rating' => '',
-            'reviews' => '',
         ));
         Movie::create(array(
             'id' => '3',
@@ -45,8 +41,6 @@ class MoviesTableSeeder extends Seeder
             'actors' => 'Clown Clownsson',
             'plot' => 'Red baloon',
             'director' => 'Master Clown',
-            'rating' => '',
-            'reviews' => '',
         ));
         Movie::create(array(
             'id' => '4',
@@ -56,8 +50,6 @@ class MoviesTableSeeder extends Seeder
             'actors' => 'Bagarn Bosse',
             'plot' => 'One cheesecake to rule them all',
             'director' => 'Master Bagger',
-            'rating' => '',
-            'reviews' => '',
         ));
         Movie::create(array(
             'id' => '5',
@@ -67,8 +59,6 @@ class MoviesTableSeeder extends Seeder
             'actors' => 'Mambo no 5',
             'plot' => "It's all about 5",
             'director' => 'Master Cinqo',
-            'rating' => '',
-            'reviews' => '',
         ));
     }
 }
