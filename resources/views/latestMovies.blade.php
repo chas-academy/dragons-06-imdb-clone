@@ -20,12 +20,11 @@ Search Results
         </figure>
       <div class="latest-movie-title">
         <p class="title is-6 has-text-white has-text-centered">{{ $movie->title }}</p>
-        <p class="movie-actors subtitle is-7 has-text-white has-text-weight-light has-text-centered">{{ $movie->actors }}</p>
       </div>
     <!-- <div class="content has-text-white has-text-weight-light">
     {{ $movie->plot }}
     </div> -->
-    <a class="button is-primary is-outlined">
+    <a class="button is-primary is-outlined" href="{{ route('login') }}">
         <span class="icon is-small">
           <i class="fa fa-thumbs-up"></i>
         </span>
