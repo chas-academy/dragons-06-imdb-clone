@@ -43,8 +43,6 @@ class MovieController extends Controller
                 'actors' => 'required',
                 'plot' => 'required',
                 'director' => 'required',
-                'rating' => 'required', 
-                'reviews' => 'required',
         ]);
 
         $movie = new Movie;
@@ -55,8 +53,6 @@ class MovieController extends Controller
         $movie->actors = $request->actors;
         $movie->plot = $request->plot;
         $movie->director = $request->director;
-        $movie->rating = $request->rating;
-        $movie->reviews = $request->reviews;
 
         $movie->save();
         

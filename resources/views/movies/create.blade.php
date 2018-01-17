@@ -35,14 +35,6 @@
     <div class="control">
       {{ Form::text('Director', null, array('class' => 'input')) }}
       </div>
-    <label class="label">Rating</label>
-    <div class="control">
-      {{ Form::text('Rating', null, array('class' => 'input')) }}
-      </div>
-    <label class="label">Review</label>
-    <div class="control">
-      {{ Form::text('Review', null, array('class' => 'input')) }}
-      </div>
  <div class="control">
       {{ Form::submit('Add movie', array('class' => 'button is-success is-large')) }}
       </div>
