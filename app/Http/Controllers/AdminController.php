@@ -33,12 +33,6 @@ class AdminController extends Controller
 
     public function editusersform()
     {
-        //return view('admin');
-        //$users = User::selectRaw("name, email, bio")->get();
-        //   $data = [
-        //        'user' => @user
-        //   ];
-        //   return view('admin', $data);
         $users = User::all();
         return view('editusers')->with([
                'users' => $users

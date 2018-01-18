@@ -5,6 +5,8 @@ namespace MoviKyte\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use MoviKyte\Movie;
+use Image;
+
 
 class MovieController extends Controller
 {
@@ -39,12 +41,20 @@ class MovieController extends Controller
 
         $movie = new Movie();
 
+        $movieImage = $request->file('image');
+        //assigns a random number plus the original file extension
+        $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
+        //the line below uses image intervention. link pinned on slack
+        //this changes the image size and saves it with the filename
+        Image::make($movieImage)->resize(300, 100)->save( public_path('/uploads/movie/' . $filename));
+        
         $movie->title = $request->title;
         $movie->genre = $request->genre;
         $movie->year = $request->year;
         $movie->actors = $request->actors;
         $movie->plot = $request->plot;
         $movie->director = $request->director;
+        $movie->image = $filename;
 
 
         $movie->save();
@@ -105,12 +115,6 @@ class MovieController extends Controller
 
     public function editmoviesform()
     {
-        //return view('admin');
-        //$users = User::selectRaw("name, email, bio")->get();
-        //   $data = [
-        //        'user' => @user
-        //   ];
-        //   return view('admin', $data);
         $movies = Movie::all();
         return view('editmovies')->with([
                'movies' => $movies
@@ -137,7 +141,6 @@ class MovieController extends Controller
         }
 
         return Redirect::back()->with('message','Movie updated');
-
-
     }
+
 }
