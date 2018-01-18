@@ -24,8 +24,8 @@
                             <th>Actors</th>
                             <th>Plot</th>
                             <th>Directors</th>
-                            <th>Created at</th>
-                            <th>Updated at</th>
+                            <th>Image</th>
+                            
                         </tr>
                     </thread>
                     <tbody>
@@ -39,8 +39,8 @@
                                 <td><input type="text" name="actors" value="{{ $movie->actors }}"></td>
                                 <td><input type="text" name="plot" value="{{ $movie->plot }}"></td>
                                 <td><input type="text" name="director" value="{{ $movie->director }}"></td>
-                                <td>{{ $movie->created_at }}</td>
-                                <td>{{ $movie->updated_at }}</td>
+                                <td><input type="file" name="image"></td>
+                                
                                 <td><input type="hidden" name="id" value="{{ $movie->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
                                 <td><input type="submit" value="Update profile"></td>

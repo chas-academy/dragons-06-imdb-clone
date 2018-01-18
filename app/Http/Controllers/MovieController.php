@@ -125,6 +125,13 @@ class MovieController extends Controller
 
         if ($request){
 
+            $movieImage = $request->file('image');
+            //assigns a random number plus the original file extension
+            $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
+            //the line below uses image intervention. link pinned on slack
+            //this changes the image size and saves it with the filename
+            Image::make($movieImage)->resize(200, 300)->save( public_path('/uploads/movie/' . $filename));
+
             //passes the hidden movie form id
             $id = $request->input('id');
             //find the movie with that particular id
@@ -136,6 +143,7 @@ class MovieController extends Controller
             $movie->actors = $request->actors;
             $movie->plot = $request->plot;
             $movie->director = $request->director;
+            $movie->image = $filename;
 
             $movie->save();
         }
