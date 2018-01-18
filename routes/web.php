@@ -55,7 +55,7 @@ Route::post('/storemovie', 'MovieController@store');
 
 Route::get('/review' , 'ReviewController@create');
 
-Route::get('/review' , 'ReviewController@store');
+//Route::get('/review' , 'ReviewController@store');
 
 
 
