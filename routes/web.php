@@ -53,3 +53,9 @@ Route::get('/movies/create', 'MovieController@create');
 
 Route::post('/storemovie', 'MovieController@store');
 
+Route::get('/review' , 'ReviewController@create');
+
+Route::get('/review' , 'ReviewController@store');
+
+
+
