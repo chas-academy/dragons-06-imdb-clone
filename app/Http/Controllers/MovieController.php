@@ -58,7 +58,9 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Movie::find($id);
+        dd($movie);
+
     }
 
     /**
@@ -102,3 +104,4 @@ class MovieController extends Controller
         return view('latestMovies')->with('movies', $movies);
     }
 }
+

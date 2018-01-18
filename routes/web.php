@@ -53,3 +53,4 @@ Route::get('/movies/create', 'MovieController@create');
 
 Route::post('/storemovie', 'MovieController@store');
 
+Route::get('/movies/{id}', 'MovieController@show');
