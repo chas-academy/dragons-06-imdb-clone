@@ -21,9 +21,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/movies', function () {
-    return view('movies');
-});
+// Route::get('/movies', function () {
+//     return view('movies');
+// });
 
 Route::get('movies/{id}', function ($id) {
     return 'This is movie number '.$id;
@@ -50,6 +50,9 @@ Route::post('/editprofile', 'UserController@updateUser');
 Route::get('/editpassword', 'PasswordController@Profile');
 Route::post('/editpassword', 'PasswordController@updatePassword');
 
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/latestmovies', 'MovieController@latest');
+
+Route::get('/movies/create', 'MovieController@create');
+
+Route::post('/storemovie', 'MovieController@store');
+
