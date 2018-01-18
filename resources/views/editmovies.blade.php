@@ -39,6 +39,7 @@
                                 <td><input type="text" name="actors" value="{{ $movie->actors }}"></td>
                                 <td><input type="text" name="plot" value="{{ $movie->plot }}"></td>
                                 <td><input type="text" name="director" value="{{ $movie->director }}"></td>
+                                <td><img src="/uploads/movie/{{ $movie->image }}"></td>
                                 <td><input type="file" name="image"></td>
                                 
                                 <td><input type="hidden" name="id" value="{{ $movie->id }}"></td>
