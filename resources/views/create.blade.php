@@ -15,7 +15,7 @@ MovieKyte! Movies high as hell!
   
   <form class="form-horizontal"
         method="POST"
-        action="/storemovie">
+        action="/admin/storemovie">
     {{csrf_field()}}
     <div class="create-field-container">
     <div class="field">

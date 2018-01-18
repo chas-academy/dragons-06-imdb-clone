@@ -33,8 +33,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('admin')->group(function() {
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
 	Route::get('/editusers', 'AdminController@editusersform')->name('admin.dashboard');
 	Route::post('/editusers', 'AdminController@edit');
+
+	Route::get('/create', 'MovieController@create');
+	Route::post('/storemovie', 'MovieController@store');
+
+	Route::get('/editmovies', 'MovieController@editmoviesform');
+	Route::post('/editmovies', 'MovieController@editmovies');
+
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 
@@ -48,7 +56,5 @@ Route::post('/editpassword', 'PasswordController@updatePassword');
 
 Route::get('/latestmovies', 'MovieController@latest');
 
-Route::get('/movies/create', 'MovieController@create');
 
-Route::post('/storemovie', 'MovieController@store');
 

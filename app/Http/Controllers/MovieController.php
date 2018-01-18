@@ -3,6 +3,7 @@
 namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use MoviKyte\Movie;
 
 class MovieController extends Controller
@@ -24,7 +25,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return view('movies.create');
+        return view('create');
     }
 
     /**
@@ -100,5 +101,43 @@ class MovieController extends Controller
         $movies = Movie::all();
 
         return view('latestMovies')->with('movies', $movies);
+    }
+
+    public function editmoviesform()
+    {
+        //return view('admin');
+        //$users = User::selectRaw("name, email, bio")->get();
+        //   $data = [
+        //        'user' => @user
+        //   ];
+        //   return view('admin', $data);
+        $movies = Movie::all();
+        return view('editmovies')->with([
+               'movies' => $movies
+           ]);
+    }
+
+    public function editmovies(Request $request) {
+
+        if ($request){
+
+            //passes the hidden movie form id
+            $id = $request->input('id');
+            //find the movie with that particular id
+            $movie = Movie::find($id);
+            //overwrite those values in the corresponding rows
+            $movie->title = $request->title;
+            $movie->genre = $request->genre;
+            $movie->year = $request->year;
+            $movie->actors = $request->actors;
+            $movie->plot = $request->plot;
+            $movie->director = $request->director;
+
+            $movie->save();
+        }
+
+        return Redirect::back()->with('message','Movie updated');
+
+
     }
 }
