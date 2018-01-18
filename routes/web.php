@@ -49,6 +49,7 @@ Route::post('/editpassword', 'PasswordController@updatePassword');
 
 Route::get('/latestmovies', 'MovieController@latest');
 
-Route::resource('movies', 'MovieController');
+Route::get('/movies/create', 'MovieController@create');
 
+Route::post('/storemovie', 'MovieController@store');
 
