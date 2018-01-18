@@ -55,7 +55,6 @@ MovieKyte! Movies high as hell!
 <div class="field is-grouped">
   <p class="control">
     <input type="submit" class="button is-primary">
-      Save
     </input>
   </p>
   <p class="control">
