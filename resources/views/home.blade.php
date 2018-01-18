@@ -3,7 +3,6 @@
 Dashboard {{ Auth::user()->name }}
 @endsection
 @section('content')
-
 {{ csrf_field() }}
 <section class="hero is-medium is-primary is-bold">
   <div class="hero-body">

@@ -21,8 +21,6 @@ class CreateMoviesTable extends Migration
              $table->string('actors');
              $table->string('plot');
              $table->string('director');
-             $table->string('rating');
-             $table->string('reviews');
              $table->timestamps();
          });
      }
