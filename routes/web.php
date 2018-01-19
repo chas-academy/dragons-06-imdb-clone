@@ -58,3 +58,11 @@ Route::get('/latestmovies', 'MovieController@latest');
 
 
 
+Route::get('/movies/{id}', 'MovieController@show');
+
+//Just to show movieblade, !!NEEDS TO BE ROMOVED LATER!
+Route::get('/hejsanroutes', function(){
+    return view('hejsanroutes');
+});
+
+//Remove until here
