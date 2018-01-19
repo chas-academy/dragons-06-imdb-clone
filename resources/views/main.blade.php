@@ -9,19 +9,19 @@ MovieKyte! Movies high as hell!
   <div class='carousel-container is-0'>
     <div class='carousel-content carousel-animate carousel-animate-slide'>
       <div class='carousel-item'>
-        <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
+        <img class="is-background" src="https://www.hdwallpapers.in/walls/maze_runner_the_death_cure_2018-wide.jpg" alt="" width="640" height="310" />
         
       </div>
       <div class='carousel-item'>
-        <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
+        <img class="is-background" src="https://www.hdwallpapers.in/walls/jumanji_welcome_to_the_jungle_2017_movie-wide.jpg" alt="" width="640" height="310" />
         
       </div>
       <div class='carousel-item'>
-        <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
+        <img class="is-background" src="https://www.hdwallpapers.in/walls/star_wars_the_last_jedi_rey_4k-wide.jpg" alt="" width="640" height="310" />
         
       </div>
       <div class='carousel-item'>
-        <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
+        <img class="is-background" src="https://www.hdwallpapers.in/walls/justice_league_dc_comics_superheroes-wide.jpg" alt="" width="640" height="310" />
         
       </div>
     </div>
@@ -38,16 +38,13 @@ MovieKyte! Movies high as hell!
   <section class="section">
     <div class="columns is-variable is-1">
         <div class="column is-one-quarter is-centered">
-          <button class="button is-warning is-fullwidth">Top-10 Movies</button>
+          <button class="button is-primary is-fullwidth">Latest Movies</button>
         </div>
         <div class="column">
-          <button class="button is-light is-fullwidth">Latest Movies</button>
+          <button class="button is-primary is-outlined is-fullwidth">All Movies</button>
         </div>
         <div class="column">
-          <button class="button is-light is-fullwidth">Movie Playlist</button>
-        </div>
-        <div class="column">
-          <button class="button is-light is-fullwidth">Views</button>
+          <button class="button is-primary is-outlined is-fullwidth">All Reviews</button>
         </div>
     </div>
   </section>
