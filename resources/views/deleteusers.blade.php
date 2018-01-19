@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Admin</div>
+                <div class="panel-heading">Delete users</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -13,39 +13,37 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @if(session()->has('message'))
+                            <div>
+                                {{ session()->get('message') }}
+                            </div>
+                    @endif
 
-                    <p>Welcome Admin "{{ Auth::user()->name }}", to the edit users page</p>
-                    <a href="{{ url('admin') }}">Go back</a>
                     <table class="table">
 
                     <thread>
                         <tr>
                             <th>Name</th>
-                            <th>email</th>
-                            <th>bio</th>
-                            <th>created at</th>
-                            <th>updated at</th>
+                            <th>E-mail</th>
+                            <th>Image</th>
+                            
                         </tr>
                     </thread>
                     <tbody>
                         
                             @foreach ($users as $user)
                                 <tr>
-                                <form enctype="multipart/form-data" action="{{ action('AdminController@delete') }}" method="POST">
+                                <form enctype="multipart/form-data" action="/admin/deleteusers" method="POST">
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->bio }}</td>
-                                <td>{{ $user->created_at }}</td>
-                                <td>{{ $user->updated_at }}</td>
+                                <td><img src="uploads/user/{{ $user->image }}"></td>
                                 <td><input type="hidden" name="id" value="{{ $user->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
-                                <td><input type="submit" value="Delete profile"></td>
-                                <!--<td><a href="<?php echo $user->id ?>">Edit</a></td>
-                                <td><a href="<?php echo $user->id ?>">Delete</a></td>-->
+                                <td><input type="submit" value="Delete user"></td>
                                 </form>
                                 </tr>
                             
-                             @endforeach 
+                            @endforeach
                             
                         
                     </tbody>
@@ -54,13 +52,6 @@
 
 
                     </table>
-                    <!--@foreach ($users as $user)
-                        {{ $user->name }}
-                        {{ $user->email }}
-                        {{ $user->bio }}
-                        {{ $user->created_at }}
-                        {{ $user->updated_at }}
-                    @endforeach --> 
 
 
                     
