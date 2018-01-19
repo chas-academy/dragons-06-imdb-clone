@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-                    <p>Welcome Admin "{{ Auth::user()->name }}", to the edit users page</p>
                     <a href="{{ url('admin') }}">Go back</a>
                     <table class="table">
 
@@ -31,7 +30,7 @@
                         
                             @foreach ($users as $user)
                                 <tr>
-                                <form enctype="multipart/form-data" action="{{ action('AdminController@edit') }}" method="POST">
+                                <form enctype="multipart/form-data" action="{{ action('UserController@edit') }}" method="POST">
                                 <td><input type="text" name="name" value="{{ $user->name }}"></td>
                                 <td><input type="text" name="email" value="{{ $user->email }}"></td>
                                 <td><input type="text" name="bio" value="{{ $user->bio }}"></td>

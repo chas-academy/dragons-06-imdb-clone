@@ -4,6 +4,9 @@ namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MoviKyte\Users;
+use MoviKyte\User;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
 use Auth;
 use Image;
 
@@ -49,5 +52,35 @@ class UserController extends Controller
            ];
            return view('admin', $data);
     }
+
+    public function editusersform()
+    {
+        $users = User::all();
+        return view('editusers')->with([
+               'users' => $users
+           ]);
+    }
+
+    public function edit(Request $request) {
+
+        if ($request){
+
+            //passes the hidden user form id
+            $id = $request->input('id');
+            //find the user with that particular id
+            $user = User::find($id);
+            //overwrite those values in the corresponding rows
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->bio = $request->bio;
+
+            $user->save();
+        }
+
+        return Redirect::back()->with('message','User updated');
+
+
+    }
+
 
 }
