@@ -20,6 +20,7 @@
                     <br><br>
                     <a href="{{ url('admin/create') }}">Add movies</a><br>
                     <a href="{{ url('admin/editmovies') }}">Edit movies</a><br>
+                    <a href="{{ url('admin/deletemovies') }}">Delete movies</a><br>
                     {{ csrf_field() }}
                   
                 </div>

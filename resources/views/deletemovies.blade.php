@@ -36,7 +36,6 @@
                                 <tr>
                                 <form enctype="multipart/form-data" action="/admin/deletemovies" method="POST">
                                 <td>{{ $movie->title }}</td>
-                                <td><img src="/uploads/movie/{{ $movie->image }}"></td>
                                 <td><input type="hidden" name="id" value="{{ $movie->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
                                 <td><input type="submit" value="Delete movie"></td>
