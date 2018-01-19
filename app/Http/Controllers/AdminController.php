@@ -31,6 +31,43 @@ class AdminController extends Controller
        
     }
 
+    public function editusersform()
+    {
+        $users = User::all();
+        return view('editusers')->with([
+               'users' => $users
+           ]);
+    }
+
+    public function create()
+    {
+        return view('create');
+    }
+
+    public function editmoviesform()
+    {
+        $movies = Movie::all();
+        return view('editmovies')->with([
+               'movies' => $movies
+           ]);
+    }
+
+    public function deletemoviesform()
+    {
+        $movies = Movie::all();
+        return view('deletemovies')->with([
+               'movies' => $movies
+           ]);
+    }
+
+    public function deleteusersform()
+    {
+        $users = User::all();
+        return view('deleteusers')->with([
+               'users' => $users
+           ]);
+    }
+
     
 
     

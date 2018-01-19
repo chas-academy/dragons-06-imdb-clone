@@ -13,6 +13,7 @@ use Image;
 
 class UserController extends Controller
 {
+
     public function profile() {
     	return view('editprofile', array('user' => Auth::user()) );
     }
@@ -53,13 +54,7 @@ class UserController extends Controller
            return view('admin', $data);
     }
 
-    public function editusersform()
-    {
-        $users = User::all();
-        return view('editusers')->with([
-               'users' => $users
-           ]);
-    }
+    
 
     public function edit(Request $request) {
 
@@ -83,13 +78,6 @@ class UserController extends Controller
 
     }
 
-    public function deleteusersform()
-    {
-        $users = User::all();
-        return view('deleteusers')->with([
-               'users' => $users
-           ]);
-    }
 
     public function deleteusers(Request $request) {
 

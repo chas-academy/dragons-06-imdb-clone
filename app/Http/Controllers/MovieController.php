@@ -146,13 +146,6 @@ class MovieController extends Controller
         return view('latestMovies')->with('movies', $movies);
     }
 
-    public function editmoviesform()
-    {
-        $movies = Movie::all();
-        return view('editmovies')->with([
-               'movies' => $movies
-           ]);
-    }
 
     public function editmovies(Request $request) {
 
@@ -196,13 +189,6 @@ class MovieController extends Controller
         return Redirect::back()->with('message','Movie updated');
     }
 
-    public function deletemoviesform()
-    {
-        $movies = Movie::all();
-        return view('deletemovies')->with([
-               'movies' => $movies
-           ]);
-    }
 
     public function deletemovies(Request $request) {
 
