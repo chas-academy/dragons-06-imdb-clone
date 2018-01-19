@@ -282,3 +282,14 @@ main {
     padding-left: 20px;
     padding-bottom: 50px;
 }
+
+
+// Loops and makes a class from 1 to 100 where the color goes form blue to red.
+//This is supposed to be used as an indicator of the movie rating.
+@for $i from 0 through 100 {
+    $hue:  240 + $i * 1.2;
+
+    .rate-#{$i} {
+        background: hsl($hue, 100%, 45%);
+    }
+}
