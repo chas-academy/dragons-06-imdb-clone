@@ -41,7 +41,7 @@ class MovieController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'title' => 'required|unique:posts|max:50',
+            'title' => 'required|unique:movies|max:50',
             'genre' => 'required',
             'year' => 'required|integer',
             'actors' => 'required|max:255',
@@ -156,7 +156,6 @@ class MovieController extends Controller
     }
 
     public function editmovies(Request $request) {
-
 
         if ($request->hasFile('image')) {
             $movieImage = $request->file('image');

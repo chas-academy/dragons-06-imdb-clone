@@ -8,7 +8,11 @@
                 <div class="panel-heading">Admin</div>
 
                 <div class="panel-body">
-                    
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     @if(session()->has('message'))
                             <div>
                                 {{ session()->get('message') }}
