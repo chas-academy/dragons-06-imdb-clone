@@ -34,19 +34,19 @@ Route::prefix('admin')->group(function() {
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 
-	Route::get('/editusers', 'UserController@editusersform')->name('admin.dashboard');
+	Route::get('/editusers', 'AdminController@editusersform');
 	Route::post('/editusers', 'UserController@edit');
 
-	Route::get('/create', 'MovieController@create');
+	Route::get('/create', 'AdminController@create');
 	Route::post('/storemovie', 'MovieController@store');
 
-	Route::get('/editmovies', 'MovieController@editmoviesform');
+	Route::get('/editmovies', 'AdminController@editmoviesform');
 	Route::post('/editmovies', 'MovieController@editmovies');
 
-	Route::get('/deletemovies', 'MovieController@deletemoviesform');
+	Route::get('/deletemovies', 'AdminController@deletemoviesform');
 	Route::post('/deletemovies', 'MovieController@deletemovies');
 
-	Route::get('/deleteusers', 'UserController@deleteusersform');
+	Route::get('/deleteusers', 'AdminController@deleteusersform');
 	Route::post('/deleteusers', 'UserController@deleteusers');
 
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
