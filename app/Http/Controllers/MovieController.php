@@ -200,4 +200,23 @@ class MovieController extends Controller
         return Redirect::back()->with('message','Movie updated');
     }
 
+    public function deletemoviesform()
+    {
+        $movies = Movie::all();
+        return view('deletemovies')->with([
+               'movies' => $movies
+           ]);
+    }
+
+    public function deletemovies(Request $request) {
+
+        $id = $request->input('id');
+        $movie = Movie::find($id);
+
+        $movie->delete();
+
+        return Redirect::back()->with('message','Movie deleted');
+
+    }
+
 }
