@@ -18,7 +18,7 @@
                     
                     <a href="{{ url('admin/editusers') }}">Edit users</a><br>
                     <br><br>
-                    <a href="{{ url('admin/addmovies') }}">Add movies</a><br>
+                    <a href="{{ url('admin/create') }}">Add movies</a><br>
                     <a href="{{ url('admin/editmovies') }}">Edit movies</a><br>
                     {{ csrf_field() }}
                   
