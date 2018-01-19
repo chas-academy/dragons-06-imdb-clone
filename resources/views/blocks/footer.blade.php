@@ -2,13 +2,7 @@
     <div class="container">
 
         <nav class="level">
-            <div class="level-item has-text-centered">
-                <nav class="breadcrumb has-dot-separator">
-                    <ul>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+           
             <div class="level-item has-text-centered">
             <span class="icon has-text-info has-text-grey-lighter is-medium">
             <i class="fa fa-info-circle"></i>
@@ -31,7 +25,7 @@
                         <input class="input" type="text" placeholder="Enter your email">
                     </div>
                     <div class="control">
-                        <a class="button is-primary">
+                        <a class="button is-primary is-outlined">
                                     Subscribe
                                   </a>
                     </div>

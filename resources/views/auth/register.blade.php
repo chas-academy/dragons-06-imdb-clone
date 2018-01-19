@@ -6,7 +6,7 @@
 <div class="register-background-image">
 
     <section class="register-form">
-    <h1 class="title has-text-light">Create account</h1>
+    <h1 class="title is-2 has-text-white has-text-weight-light">Create account</h1>
                 
                     <form class="form-horizontal"
                           method="POST"
@@ -110,7 +110,7 @@
                         <div class="field">
                             <div class="control">
                                 <button type="submit"
-                                        class="button is-primary">
+                                        class="button is-primary is-outlined">
                                     Register
                                 </button>
                             </div>
