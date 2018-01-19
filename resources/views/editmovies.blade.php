@@ -49,7 +49,7 @@
                                 
                                 <td><input type="hidden" name="id" value="{{ $movie->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
-                                <td><input type="submit" value="Update profile"></td>
+                                <td><input type="submit" value="Update movie"></td>
                                 </form>
                                 </tr>
                             

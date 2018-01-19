@@ -41,7 +41,7 @@ class MovieController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'title' => 'required|unique:movies|max:50',
+            'title' => 'required|max:50',
             'genre' => 'required',
             'year' => 'required|integer',
             'actors' => 'required|max:255',
@@ -73,10 +73,7 @@ class MovieController extends Controller
 
         } else {
 
-            if ($request->hasFile('image')) {
-
-
-        $movie = new Movie();
+            $movie = new Movie();
 
             $movie->title = $request->title;
             $movie->genre = $request->genre;
@@ -84,7 +81,6 @@ class MovieController extends Controller
             $movie->actors = $request->actors;
             $movie->plot = $request->plot;
             $movie->director = $request->director;
-            $movie->image = $filename;
 
             $movie->save();
         }
@@ -92,9 +88,9 @@ class MovieController extends Controller
         if ($validator->fails()) {
             return redirect('admin/create')->withErrors($validator)->withInput();
         } else {
-        return Redirect::back()->with('message','Movie added to database');
+            return Redirect::back()->with('message','Movie added to database');
         }
-    }
+    
 
 }
 
@@ -200,6 +196,25 @@ class MovieController extends Controller
         }
 
         return Redirect::back()->with('message','Movie updated');
+    }
+
+    public function deletemoviesform()
+    {
+        $movies = Movie::all();
+        return view('deletemovies')->with([
+               'movies' => $movies
+           ]);
+    }
+
+    public function deletemovies(Request $request) {
+
+        $id = $request->input('id');
+        $movie = Movie::find($id);
+
+        $movie->delete();
+
+        return Redirect::back()->with('message','Movie deleted');
+
     }
 
 }
