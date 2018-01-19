@@ -25,6 +25,11 @@ MovieKyte! Movies high as hell!
     </ul>
   </div>
   @endif
+  @if(session()->has('message'))
+    <div>
+        {{ session()->get('message') }}
+    </div>
+  @endif
   
   <form class="form-horizontal"
         method="POST"

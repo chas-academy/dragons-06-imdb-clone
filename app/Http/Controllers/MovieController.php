@@ -89,8 +89,11 @@ class MovieController extends Controller
             $movie->save();
         }
 
-
-        return redirect('admin/create')->withErrors($validator)->withInput();
+        if ($validator->fails()) {
+            return redirect('admin/create')->withErrors($validator)->withInput();
+        } else {
+        return Redirect::back()->with('message','Movie added to database');
+        }
     }
 
 }
