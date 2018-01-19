@@ -43,6 +43,12 @@ Route::prefix('admin')->group(function() {
 	Route::get('/editmovies', 'MovieController@editmoviesform');
 	Route::post('/editmovies', 'MovieController@editmovies');
 
+	Route::get('/deletemovies', 'MovieController@deletemoviesform');
+	Route::post('/deletemovies', 'MovieController@deletemovies');
+
+	Route::get('/deleteusers', 'UserController@deleteusersform');
+	Route::post('/deleteusers', 'UserController@deleteusers');
+
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 

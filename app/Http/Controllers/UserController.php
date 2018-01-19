@@ -63,7 +63,7 @@ class UserController extends Controller
 
     public function edit(Request $request) {
 
-        
+
         if ($request){
 
             //passes the hidden user form id
@@ -80,6 +80,25 @@ class UserController extends Controller
 
         return Redirect::back()->with('message','User updated');
 
+
+    }
+
+    public function deleteusersform()
+    {
+        $users = User::all();
+        return view('deleteusers')->with([
+               'users' => $users
+           ]);
+    }
+
+    public function deleteusers(Request $request) {
+
+        $id = $request->input('id');
+        $user = User::find($id);
+
+        $user->delete();
+
+        return Redirect::back()->with('message','Movie deleted');
 
     }
 

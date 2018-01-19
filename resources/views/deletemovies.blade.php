@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Delete users</div>
+                <div class="panel-heading">Delete movies</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -23,27 +23,26 @@
 
                     <thread>
                         <tr>
-                            <th>Name</th>
-                            <th>E-mail</th>
+                            <th>Title</th>
+                            
+                            <th>Plot</th>
                             <th>Image</th>
                             
                         </tr>
                     </thread>
                     <tbody>
                         
-                            @foreach ($users as $user)
+                            @foreach ($movies as $movie)
                                 <tr>
-                                <form enctype="multipart/form-data" action="/admin/deleteusers" method="POST">
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td><img src="uploads/user/{{ $user->image }}"></td>
-                                <td><input type="hidden" name="id" value="{{ $user->id }}"></td>
+                                <form enctype="multipart/form-data" action="/admin/deletemovies" method="POST">
+                                <td>{{ $movie->title }}</td>
+                                <td><input type="hidden" name="id" value="{{ $movie->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
-                                <td><input type="submit" value="Delete user"></td>
+                                <td><input type="submit" value="Delete movie"></td>
                                 </form>
                                 </tr>
                             
-                            @endforeach
+                             @endforeach
                             
                         
                     </tbody>
