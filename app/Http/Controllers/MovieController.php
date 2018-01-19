@@ -4,6 +4,7 @@ namespace MoviKyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 use MoviKyte\Movie;
 use Image;
 
@@ -39,6 +40,17 @@ class MovieController extends Controller
     public function store(Request $request)
     {
 
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|unique:posts|max:50',
+            'genre' => 'required',
+            'year' => 'required|integer',
+            'actors' => 'required|max:255',
+            'plot' => 'required|max:255',
+            'director' => 'required|max:255',
+        ]);
+
+        if ($request->hasFile('image')) {
+       
         $movie = new Movie();
 
         $movieImage = $request->file('image');
@@ -56,10 +68,32 @@ class MovieController extends Controller
         $movie->director = $request->director;
         $movie->image = $filename;
 
-
         $movie->save();
-        return back()->with('success', 'Movie has been added');
+
+
+        } else {
+
+            if ($request->hasFile('image')) {
+
+
+        $movie = new Movie();
+
+            $movie->title = $request->title;
+            $movie->genre = $request->genre;
+            $movie->year = $request->year;
+            $movie->actors = $request->actors;
+            $movie->plot = $request->plot;
+            $movie->director = $request->director;
+            $movie->image = $filename;
+
+            $movie->save();
+        }
+
+
+        return redirect('admin/create')->withErrors($validator)->withInput();
     }
+
+}
 
     /**
      * Display the specified resource.

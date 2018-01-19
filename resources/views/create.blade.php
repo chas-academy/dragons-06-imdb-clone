@@ -12,6 +12,19 @@ MovieKyte! Movies high as hell!
     <section class="main-title-create">
 <h1 class="title is-2 has-text-white has-text-weight-light">Add New Movie</h1>
   </section>
+
+  <!-- no need to define the error-variable, in case you're wondering -->
+  @if($errors->any())
+   <div>
+    <ul>
+      @foreach($errors->all() as $error)
+       <li>
+          {{ $error }}
+       </li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
   
   <form class="form-horizontal"
         method="POST"
