@@ -157,7 +157,6 @@ class MovieController extends Controller
 
     public function editmovies(Request $request) {
 
-        if ($request){
 
         if ($request->hasFile('image')) {
             $movieImage = $request->file('image');
@@ -194,8 +193,6 @@ class MovieController extends Controller
             $movie->director = $request->director;
 
             $movie->save();
-        }
-
         }
 
         return Redirect::back()->with('message','Movie updated');

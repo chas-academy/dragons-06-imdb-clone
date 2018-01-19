@@ -15,7 +15,7 @@ MovieKyte! Movies high as hell!
 
   <!-- no need to define the error-variable, in case you're wondering -->
   @if($errors->any())
-   <div>
+   <div class>
     <ul>
       @foreach($errors->all() as $error)
        <li>

@@ -15,6 +15,11 @@
                     @endif
 
                     <a href="{{ url('admin') }}">Go back</a>
+                        @if(session()->has('message'))
+                            <div>
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
                     <table class="table">
 
                     <thread>
