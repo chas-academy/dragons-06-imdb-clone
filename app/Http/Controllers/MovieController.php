@@ -46,7 +46,7 @@ class MovieController extends Controller
         $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
         //the line below uses image intervention. link pinned on slack
         //this changes the image size and saves it with the filename
-        Image::make($movieImage)->resize(300, 100)->save( public_path('/uploads/movie/' . $filename));
+        Image::make($movieImage)->resize(640, 1136)->save( public_path('/uploads/movie/' . $filename));
         
         $movie->title = $request->title;
         $movie->genre = $request->genre;
@@ -131,7 +131,7 @@ class MovieController extends Controller
             $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
             //the line below uses image intervention. link pinned on slack
             //this changes the image size and saves it with the filename
-            Image::make($movieImage)->resize(200, 300)->save( public_path('/uploads/movie/' . $filename));
+            Image::make($movieImage)->resize(640, 1136)->save( public_path('/uploads/movie/' . $filename));
             //passes the hidden movie form id
             $id = $request->input('id');
             //find the movie with that particular id
