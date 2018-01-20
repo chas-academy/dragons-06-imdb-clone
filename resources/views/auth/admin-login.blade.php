@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
  @section('content') 
- <div class="admin-background-image">
+ <div class="latest-background">
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
         <section class="register-form"> 
-            <h1 class="title has-text-light">Admin account login</h1>
+            <h1 class="title is-2 has-text-white has-text-weight-light">Admin Login</h1>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('admin.login.submit') }}">
@@ -16,7 +16,7 @@
                             <label for="email" class="col-md-4 control-label has-text-white">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="input is-small" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -29,15 +29,15 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label has-text-white">Password</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-6"> 
+                                <input id="password" type="password" class="input is-small" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                            </div>
+                             </div> 
                         </div>
 
                         <div class="form-group">
@@ -56,8 +56,9 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link has-text-white" href="{{ route('password.request') }}">
+                                <a class="btn btn-link is-info" href="{{ route('password.request') }}">
                                     Forgot Your Password?
+                                    
                                 </a>
                             </div>
                         </div>
@@ -67,5 +68,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> 
+</section>
+
  @endsection 
