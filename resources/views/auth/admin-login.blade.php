@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        <section class="register-form">
+        <section class="register-form"> 
             <h1 class="title has-text-light">Admin account login</h1>
 
                 <div class="panel-body">
