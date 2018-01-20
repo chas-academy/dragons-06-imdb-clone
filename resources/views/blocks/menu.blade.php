@@ -1,3 +1,5 @@
+
+
 <nav id="menu" class="menu" style="">
 
       <header class="menu-header">
@@ -43,22 +45,26 @@
     </section> <!-- End longin -->
 
     <section class="menu-section">
-      <h3 class="menu-label">Movies</h3>
+      <h3 class="menu-label">Movie Genre</h3>
       <ul class="menu-list">
-        <li><a href="#" target="_blank" class="is-active">Title</a></li>
-        <li><a href="#" target="_blank">Actor</a></li>
-        <li><a href="#" target="_blank">Rating</a></li>
-        <li><a href="#" target="_blank">Other</a></li>
+        <li><a href="#" target="_blank" class="is-active">Comedy</a></li>
+        <li><a href="#" target="_blank" >Drama</a></li>
+        <li><a href="#" target="_blank">Romance</a></li>
+        <li><a href="#" target="_blank">Horror</a></li>
+        <li><a href="#" target="_blank">Sci-fi</a></li>
+        <li><a href="#" target="_blank">Family</a></li>
+        <li><a href="#" target="_blank">Kids</a></li>
+        <li><a href="#" target="_blank">Thriller</a></li>
+        
       </ul>
     </section>
 
     <section class="menu-section">
-      <h3 class="menu-label">Reviews</h3>
+      <h3 class="menu-label">Your Account</h3>
       <ul class="menu-list">
-        <li><a href="#" target="_blank">Read</a></li>
-        <li><a href="#" target="_blank">Write</a></li>
-        <li><a href="#" target="_blank">Comment</a></li>
-        <li><a href="#" target="_blank">Search</a></li>
+        <li><a href="#" target="_blank">Profile</a></li>
+        <li><a href="#" target="_blank">Watchlist</a></li>
+        <li><a href="#" target="_blank">Reviews</a></li>
       </ul>
     </section>
 

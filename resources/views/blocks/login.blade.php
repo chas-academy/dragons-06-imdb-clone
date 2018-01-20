@@ -59,12 +59,12 @@
     <label for="remember">Remember Me</label>
 </div>
 <p class="field">
-  <a class="button is-link" href="{{ route('password.request') }}">
+  <a class="button is-info" href="{{ route('password.request') }}">
       Forgot Your Password?
   </a>
 </p>
   <p class="field">
-  <a class="button is-warning" href="{{ route('register') }}">
+  <a class="button is-primary is-outlined" href="{{ route('register') }}">
       Register New User!
   </a>
 </p>
