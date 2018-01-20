@@ -17,9 +17,11 @@
                     <p>Welcome mr manager called "{{ Auth::user()->name }}", to the admin page</p>
                     
                     <a href="{{ url('admin/editusers') }}">Edit users</a><br>
+                    <a href="{{ url('admin/deleteusers') }}">Delete users</a><br>
                     <br><br>
-                    <a href="{{ url('admin/addmovies') }}">Add movies</a><br>
+                    <a href="{{ url('admin/create') }}">Add movies</a><br>
                     <a href="{{ url('admin/editmovies') }}">Edit movies</a><br>
+                    <a href="{{ url('admin/deletemovies') }}">Delete movies</a><br>
                     {{ csrf_field() }}
                   
                 </div>
