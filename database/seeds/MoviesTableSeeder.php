@@ -14,7 +14,7 @@ class MoviesTableSeeder extends Seeder
     {
         DB::table('movies')->delete();
 
-        //skapa upp 3 exempelfilmer.
+        //make sample movies
         Movie::create(array(
             'id' => '1',
             'title' => 'Star Wars: Episode VIII The Last Jedi',
