@@ -35,19 +35,12 @@ MovieKyte! Movies high as hell!
 </div>
 
 <div class="main-background">
-  <section class="section">
-    <div class="columns is-variable is-1">
-        <div class="column is-one-quarter is-centered">
-          <button class="button is-primary is-fullwidth">Latest Movies</button>
-        </div>
-        <div class="column">
-          <button class="button is-primary is-outlined is-fullwidth">All Movies</button>
-        </div>
-        <div class="column">
-          <button class="button is-primary is-outlined is-fullwidth">All Reviews</button>
-        </div>
-    </div>
-  </section>
+<div class="tabs is-centered is-size-1 has-text-weight-light">
+  <ul>
+    <li class="has-text-white"><a>Explore Movies</a></li>
+  </ul>
+</div>
+
 
     <section class="section">
         <div class="columns is-mobile">
