@@ -13305,6 +13305,10 @@ main {
   padding-bottom: 50px;
 }
 
+.admin-background-image {
+  background-image: url("https://www.hdwallpapers.in/walls/iron_throne_game_of_thrones_4k-wide.jpg");
+}
+
 .rate-0 {
   background: #0000e6;
 }
