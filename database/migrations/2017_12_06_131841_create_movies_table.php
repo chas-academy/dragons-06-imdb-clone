@@ -22,7 +22,7 @@ class CreateMoviesTable extends Migration
             $table->string('plot');
             $table->string('director');
             $table->timestamps();
-            $table->string('img_url');
+
         });
     }
 
