@@ -88,4 +88,5 @@ function goNext() {
 window.addEventListener('load', function(){ setTimeout(goNext, 5000);});
 </script>
 
+    </section>
 @endsection
