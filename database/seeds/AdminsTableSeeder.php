@@ -17,7 +17,7 @@ class AdminsTableSeeder extends Seeder
         Admin::create(array(
             'name' => 'admin',
             'email' => 'admin@movikyte.com',
-            'password' => 'secret',
+            'password' => Hash::make('secret'),
         ));
     }
 }
