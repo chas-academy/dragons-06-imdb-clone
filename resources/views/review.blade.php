@@ -2,7 +2,6 @@
 @section('title', '| Review')
 
 @section('content')
-<p>test</p>
       
                 <table class="table">
                     <thead>
@@ -18,7 +17,8 @@
                     </thead>
 
                     <tbody>
-                        {{--  @foreach ($reviews as $review)  
+                        <?php var_dump($reviews); die; ?>
+                          @foreach ($reviews as $review)  
 
                             <tr>
                                 <th> {{ $review->id }} </th>
@@ -29,16 +29,16 @@
                                 <td><a href="" class="button is-secondary button is-small">Edit</a></td>
                             </tr>
 
-                        { @endforeach   --}}
+                        { @endforeach   
                     </tbody>
                 </table>
 
                 <div>
-                    {{--  {!! $reviews->links(); !!}  --}}
+                     {!! $reviews->links(); !!}  
                 </div>
             
 
-        {{--  <div class="field">
+          <div class="field">
             <label class="label">Your Review</label>
                 {!! Form::open(array('route' => 'review.store')) !!}
             <div class="control">
@@ -54,7 +54,7 @@
                 {{ Form::submit('Post Review', array('class' => 'button is-success button is-large')) }}
             </div>
             </div>
-                {!! Form::close() !!}  --}}
+                {!! Form::close() !!}  
         </div>
 
 

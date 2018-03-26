@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    protected $table = 'reviews';
+
+    public function reviews()
+    {
+        return $this->hasMany('Movikyte\review');
+    }
 }
