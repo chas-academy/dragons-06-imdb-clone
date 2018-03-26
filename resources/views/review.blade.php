@@ -2,8 +2,7 @@
 @section('title', '| Review')
 
 @section('content')
-<p>test</p>
-      
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -13,13 +12,13 @@
                             <th>Timestamp</th>
                             <th></th>
 
-                            
+
                         </tr>
                     </thead>
 
                     <tbody>
-                        {{--  @foreach ($reviews as $review)
-
+                        <?php var_dump($reviews); die; ?>
+                          @foreach ($reviews as $review)
                             <tr>
                                 <th> {{ $review->id }} </th>
                                 <td> {{ $review->title }} </td>
@@ -29,23 +28,23 @@
                                 <td><a href="" class="button is-secondary button is-small">Edit</a></td>
                             </tr>
 
-                        { @endforeach   --}}
+                        { @endforeach
                     </tbody>
                 </table>
 
                 <div>
-                    {{--  {!! $reviews->links(); !!}  --}}
+                     {!! $reviews->links(); !!}
                 </div>
-            
 
-        {{--  <div class="field">
+
+          <div class="field">
             <label class="label">Your Review</label>
                 {!! Form::open(array('route' => 'review.store')) !!}
             <div class="control">
                 {{ Form::text('title', null, array('class' => 'input')) }}
             </div>
 
-        <div class="field"> 
+        <div class="field">
             <div class="control">
                 {{ Form::textarea('body', null, array('class' => 'textarea')) }}
             </div>
@@ -54,16 +53,16 @@
                 {{ Form::submit('Post Review', array('class' => 'button is-success button is-large')) }}
             </div>
             </div>
-                {!! Form::close() !!}  --}}
+                {!! Form::close() !!}
         </div>
 
 
- 
+
 
 @endsection
 
 
 
-        
+
 
 

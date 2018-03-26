@@ -10,6 +10,11 @@ class Movie extends Model
 
     protected $table = 'movies';
 
+    public function reviews()
+    {
+        return $this->hasMany('Movikyte\review');
+    }
+
     public function watchlists()
     {
         return $this->belongsToMany('MovieKyte\WatchList');
