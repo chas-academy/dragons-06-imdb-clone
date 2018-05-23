@@ -51,3 +51,8 @@ Route::post('/editpassword', 'PasswordController@updatePassword');
 Route::get('/latestmovies', 'MovieController@latest');
 
 Route::get('/movies/{id}', 'MovieController@show');
+
+Route::post('/watchlist/{watchlistId}/movie/{movieId}', 'HomeController@addMovieToWatchlist')->name('watchlist.movie.add');
+
+Route::delete('/watchlist/{id}', 'HomeController@deleteWatchlist')->name('watchlist.delete');
+Route::delete('/watchlist/{watchlistId}/movie/{movieId}', 'HomeController@deleteMovieFromWatchlist')->name('watchlist.movie.delete');

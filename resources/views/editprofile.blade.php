@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.default')
+
+@section('title')
+  MovieKyte! Movies high as hell!
+@endsection
 
 @section('content')
 <div class="container">
@@ -17,12 +21,8 @@
                 <input type="submit" value="Update picture">
             </form>
 
-            <form enctype="multipart/form-data" action="/editprofile" method="POST">
-                <input type="submit" value="Reset to default">
-            </form>
-
             <br>
-            
+
             <form enctype="multipart/form-data" action="/editprofile" method="POST">
                 <label>Update Profile</label><br>
                 <label>Bio: </label><textarea type="text" name="bio" rows="5" cols="35">{{ Auth::user()->bio }}</textarea>

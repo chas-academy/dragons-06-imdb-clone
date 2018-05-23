@@ -11,11 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // Order dependent!
         $this->call([
             MoviesTableSeeder::class,
             AdminsTableSeeder::class,
-            UsersTableSeeder::class
+            UsersTableSeeder::class,
+            WatchListsTableSeeder::class
         ]);
     }
 }
