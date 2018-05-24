@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MoviesTableSeeder::class,
             AdminsTableSeeder::class,
-            UsersTableSeeder::class
+            UsersTableSeeder::class,
+            GenreMovieTableSeeder::class,
+            GenreTableSeeder::class          
         ]);
     }
 }

@@ -60,5 +60,6 @@ class MoviesTableSeeder extends Seeder
             'plot' => "It's all about 5",
             'director' => 'Master Cinqo',
         ));
+        
     }
 }
