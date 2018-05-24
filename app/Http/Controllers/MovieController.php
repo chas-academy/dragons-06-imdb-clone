@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Validator;
 use MoviKyte\Movie;
 use Image;
 
-
 class MovieController extends Controller
 {
     /**
@@ -39,7 +38,6 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'title' => 'required|max:50',
             'genre' => 'required',
@@ -50,29 +48,25 @@ class MovieController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-       
-        $movie = new Movie();
+            $movie = new Movie();
 
-        $movieImage = $request->file('image');
-        //assigns a random number plus the original file extension
-        $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
-        //the line below uses image intervention. link pinned on slack
-        //this changes the image size and saves it with the filename
-        Image::make($movieImage)->resize(640, 1136)->save( public_path('/uploads/movie/' . $filename));
+            $movieImage = $request->file('image');
+            //assigns a random number plus the original file extension
+            $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
+            //the line below uses image intervention. link pinned on slack
+            //this changes the image size and saves it with the filename
+            Image::make($movieImage)->resize(640, 1136)->save(public_path('/uploads/movie/' . $filename));
         
-        $movie->title = $request->title;
-        $movie->genre = $request->genre;
-        $movie->year = $request->year;
-        $movie->actors = $request->actors;
-        $movie->plot = $request->plot;
-        $movie->director = $request->director;
-        $movie->image = $filename;
+            $movie->title = $request->title;
+            $movie->genre = $request->genre;
+            $movie->year = $request->year;
+            $movie->actors = $request->actors;
+            $movie->plot = $request->plot;
+            $movie->director = $request->director;
+            $movie->image = $filename;
 
-        $movie->save();
-
-
+            $movie->save();
         } else {
-
             $movie = new Movie();
 
             $movie->title = $request->title;
@@ -88,11 +82,9 @@ class MovieController extends Controller
         if ($validator->fails()) {
             return redirect('admin/create')->withErrors($validator)->withInput();
         } else {
-            return Redirect::back()->with('message','Movie added to database');
+            return Redirect::back()->with('message', 'Movie added to database');
         }
-    
-
-}
+    }
 
     /**
      * Display the specified resource.
@@ -104,7 +96,6 @@ class MovieController extends Controller
     {
         $movie = Movie::find($id);
         dd($movie);
-
     }
 
 
@@ -116,15 +107,15 @@ class MovieController extends Controller
     }
 
 
-    public function editmovies(Request $request) {
-
+    public function editmovies(Request $request)
+    {
         if ($request->hasFile('image')) {
             $movieImage = $request->file('image');
             //assigns a random number plus the original file extension
             $filename =  time() . '.' . $movieImage->getClientOriginalExtension();
             //the line below uses image intervention. link pinned on slack
             //this changes the image size and saves it with the filename
-            Image::make($movieImage)->resize(640, 1136)->save( public_path('/uploads/movie/' . $filename));
+            Image::make($movieImage)->resize(640, 1136)->save(public_path('/uploads/movie/' . $filename));
             //passes the hidden movie form id
             $id = $request->input('id');
             //find the movie with that particular id
@@ -155,20 +146,17 @@ class MovieController extends Controller
             $movie->save();
         }
 
-        return Redirect::back()->with('message','Movie updated');
+        return Redirect::back()->with('message', 'Movie updated');
     }
 
 
-    public function deletemovies(Request $request) {
-
+    public function deletemovies(Request $request)
+    {
         $id = $request->input('id');
         $movie = Movie::find($id);
 
         $movie->delete();
 
-        return Redirect::back()->with('message','Movie deleted');
-
+        return Redirect::back()->with('message', 'Movie deleted');
     }
-
 }
-

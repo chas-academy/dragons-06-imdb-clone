@@ -1,7 +1,9 @@
 @extends('layouts.default')
+
 @section('title')
-MovieKyte! Movies high as hell!
+  MovieKyte! Movies high as hell!
 @endsection
+
 @section('content')
 
 
@@ -10,19 +12,19 @@ MovieKyte! Movies high as hell!
     <div class='carousel-content carousel-animate carousel-animate-slide'>
       <div class='carousel-item'>
         <img class="is-background" src="https://www.hdwallpapers.in/walls/maze_runner_the_death_cure_2018-wide.jpg" alt="" width="640" height="310" />
-        
+
       </div>
       <div class='carousel-item'>
         <img class="is-background" src="https://www.hdwallpapers.in/walls/jumanji_welcome_to_the_jungle_2017_movie-wide.jpg" alt="" width="640" height="310" />
-        
+
       </div>
       <div class='carousel-item'>
         <img class="is-background" src="https://www.hdwallpapers.in/walls/star_wars_the_last_jedi_rey_4k-wide.jpg" alt="" width="640" height="310" />
-        
+
       </div>
       <div class='carousel-item'>
         <img class="is-background" src="https://www.hdwallpapers.in/walls/justice_league_dc_comics_superheroes-wide.jpg" alt="" width="640" height="310" />
-        
+
       </div>
     </div>
     <div class="carousel-nav-left is-hidden">
@@ -66,13 +68,13 @@ MovieKyte! Movies high as hell!
             </div>
         </div>
 </div>
-    
+
 
 <script>
 function goNext() {
     console.log("goNext");
     let carouselRight = document.querySelector('.carousel-nav-right');
- 
+
     carouselRight.click();
 
     setTimeout(goNext, 5000);
