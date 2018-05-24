@@ -10,7 +10,7 @@ class Actor extends Model
     protected $table = 'actors';
 
     public function actor()
-        {
-            return $this->hasMany('App\Movie');
-        }
-  }
+    {
+        return $this->hasMany('App\Movie');
+    }
+}

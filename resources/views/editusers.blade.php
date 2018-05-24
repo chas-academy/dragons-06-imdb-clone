@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.default')
 @section('content')
 <div class="container">
     <div class="row">
@@ -15,63 +14,62 @@
                     @endif
 
                     <a href="{{ url('admin') }}">Go back</a>
-                        @if(session()->has('message'))
-                            <div>
-                                {{ session()->get('message') }}
-                            </div>
-                        @endif
+
+                    @if(session()->has('message'))
+                        <div>
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+
                     <table class="table">
 
-                    <thread>
-                        <tr>
-                            <th>Name</th>
-                            <th>email</th>
-                            <th>bio</th>
-                            <th>created at</th>
-                            <th>updated at</th>
-                        </tr>
-                    </thread>
-                    <tbody>
-                        
+                        <thread>
+                            <tr>
+                                <th>Name</th>
+                                <th>email</th>
+                                <th>bio</th>
+                                <th>created at</th>
+                                <th>updated at</th>
+                            </tr>
+                        </thread>
+                        <tbody>
                             @foreach ($users as $user)
-                                <tr>
+                            <tr>
                                 <form enctype="multipart/form-data" action="{{ action('UserController@edit') }}" method="POST">
-                                <td><input type="text" name="name" value="{{ $user->name }}"></td>
-                                <td><input type="text" name="email" value="{{ $user->email }}"></td>
-                                <td><input type="text" name="bio" value="{{ $user->bio }}"></td>
-                                <td>{{ $user->created_at }}</td>
-                                <td>{{ $user->updated_at }}</td>
-                                <td><input type="hidden" name="id" value="{{ $user->id }}"></td>
-                                <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
-                                <td><input type="submit" value="Update profile"></td>
-                                <!--<td><a href="<?php echo $user->id ?>">Edit</a></td>
-                                <td><a href="<?php echo $user->id ?>">Delete</a></td>-->
+                                    <td>
+                                        <input type="text" name="name" value="{{ $user->name }}">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="email" value="{{ $user->email }}">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="bio" value="{{ $user->bio }}">
+                                    </td>
+                                    <td>{{ $user->created_at }}</td>
+                                    <td>{{ $user->updated_at }}</td>
+                                    <td>
+                                        <input type="hidden" name="id" value="{{ $user->id }}">
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="Update profile">
+                                    </td>
                                 </form>
-                                </tr>
-                            
-                             @endforeach 
-                            
-                        
-                    </tbody>
+                            </tr>
+
+                            @endforeach
 
 
-
+                        </tbody>
 
                     </table>
-                    <!--@foreach ($users as $user)
-                        {{ $user->name }}
-                        {{ $user->email }}
-                        {{ $user->bio }}
-                        {{ $user->created_at }}
-                        {{ $user->updated_at }}
-                    @endforeach --> 
 
-
-                    
                     {{ csrf_field() }}
-                  
+
                 </div>
-               
+
             </div>
         </div>
     </div>

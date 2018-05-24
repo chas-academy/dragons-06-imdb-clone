@@ -29,7 +29,6 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin');
-       
     }
 
     public function editusersform()
@@ -68,8 +67,4 @@ class AdminController extends Controller
                'users' => $users
            ]);
     }
-
-    
-
-    
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
 @section('content')
 <div class="container">
@@ -26,26 +26,26 @@
                             <th>Name</th>
                             <th>E-mail</th>
                             <th>Image</th>
-                            
+
                         </tr>
                     </thread>
                     <tbody>
-                        
+
                             @foreach ($users as $user)
                                 <tr>
                                 <form enctype="multipart/form-data" action="/admin/deleteusers" method="POST">
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td><img src="uploads/user/{{ $user->image }}"></td>
+                                <td><img src="/uploads/profile/{{ $user->image }}"></td>
                                 <td><input type="hidden" name="id" value="{{ $user->id }}"></td>
                                 <td><input type="hidden" name="_token" value="{{ csrf_token() }}"></td>
                                 <td><input type="submit" value="Delete user"></td>
                                 </form>
                                 </tr>
-                            
+
                             @endforeach
-                            
-                        
+
+
                     </tbody>
 
 
@@ -54,11 +54,11 @@
                     </table>
 
 
-                    
+
                     {{ csrf_field() }}
-                  
+
                 </div>
-               
+
             </div>
         </div>
     </div>
