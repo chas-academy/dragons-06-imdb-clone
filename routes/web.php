@@ -50,7 +50,9 @@ Route::post('/editpassword', 'PasswordController@updatePassword');
 
 Route::get('/latestmovies', 'MovieController@latest');
 
-Route::get('/movies/{id}', 'MovieController@show');
+Route::get('/movies/create', 'MovieController@create');
+
+Route::post('/storemovie', 'MovieController@store');
 
 Route::post('/watchlist/{watchlistId}/movie/{movieId}', 'HomeController@addMovieToWatchlist')->name('watchlist.movie.add');
 
