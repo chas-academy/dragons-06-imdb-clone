@@ -53,7 +53,7 @@ Route::get('/movies/create', 'MovieController@create');
 
 Route::post('/storemovie', 'MovieController@store');
 
-Route::resource('')
+
 
 
 
