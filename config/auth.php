@@ -72,7 +72,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => MoviKyte\User::class,
+            'model' => Moviekyte\User::class,
         ],
 
         'admins' => [

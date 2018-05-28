@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Http\Middleware;
+namespace Moviekyte\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

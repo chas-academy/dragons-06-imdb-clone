@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Console;
+namespace Moviekyte\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

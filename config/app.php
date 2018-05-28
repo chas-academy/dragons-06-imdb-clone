@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        MoviKyte\Providers\AppServiceProvider::class,
-        MoviKyte\Providers\AuthServiceProvider::class,
-        // MoviKyte\Providers\BroadcastServiceProvider::class,
-        MoviKyte\Providers\EventServiceProvider::class,
-        MoviKyte\Providers\RouteServiceProvider::class,
+        Moviekyte\Providers\AppServiceProvider::class,
+        Moviekyte\Providers\AuthServiceProvider::class,
+        // Moviekyte\Providers\BroadcastServiceProvider::class,
+        Moviekyte\Providers\EventServiceProvider::class,
+        Moviekyte\Providers\RouteServiceProvider::class,
 
         Intervention\Image\ImageServiceProvider::class
 

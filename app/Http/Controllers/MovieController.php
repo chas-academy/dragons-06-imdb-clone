@@ -1,11 +1,11 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-use MoviKyte\Movie;
+use Moviekyte\Movie;
 use Image;
 
 class MovieController extends Controller

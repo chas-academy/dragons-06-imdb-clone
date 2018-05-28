@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Exceptions;
+namespace Moviekyte\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Providers;
+namespace Moviekyte\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'MoviKyte\Events\Event' => [
-            'MoviKyte\Listeners\EventListener',
+        'Moviekyte\Events\Event' => [
+            'Moviekyte\Listeners\EventListener',
         ],
     ];
 

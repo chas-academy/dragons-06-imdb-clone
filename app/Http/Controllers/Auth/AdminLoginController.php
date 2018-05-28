@@ -1,9 +1,9 @@
 <?php
 
-namespace MoviKyte\Http\Controllers\Auth;
+namespace Moviekyte\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
-use MoviKyte\Http\Controllers\Controller;
+use Moviekyte\Http\Controllers\Controller;
 use Auth;
 
 class AdminLoginController extends Controller

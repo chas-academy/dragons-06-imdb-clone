@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    MoviKyte\Http\Kernel::class
+    Moviekyte\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    MoviKyte\Console\Kernel::class
+    Moviekyte\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    MoviKyte\Exceptions\Handler::class
+    Moviekyte\Exceptions\Handler::class
 );
 
 /*

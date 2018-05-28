@@ -1,10 +1,10 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use MoviKyte\WatchList;
+use Moviekyte\WatchList;
 
 class HomeController extends Controller
 {

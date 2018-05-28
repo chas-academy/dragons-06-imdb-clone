@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(MoviKyte\User::class, function (Faker $faker) {
+$factory->define(Moviekyte\User::class, function (Faker $faker) {
     static $password;
 
     return [

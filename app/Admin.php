@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte;
+namespace Moviekyte;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

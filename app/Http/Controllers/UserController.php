@@ -1,10 +1,10 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
-use MoviKyte\Users;
-use MoviKyte\User;
+use Moviekyte\Users;
+use Moviekyte\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use Auth;

@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Providers;
+namespace Moviekyte\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-use MoviKyte\User;
-use MoviKyte\Movie;
+use Moviekyte\User;
+use Moviekyte\Movie;
 use Auth;
 
 class AdminController extends Controller

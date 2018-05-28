@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

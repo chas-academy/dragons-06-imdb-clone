@@ -1,9 +1,9 @@
 <?php
 
-namespace MoviKyte;
+namespace Moviekyte;
 
 use Illuminate\Database\Eloquent\Model;
-use MoviKyte\Movie;
+use Moviekyte\Movie;
 
 class WatchList extends Model
 {
@@ -21,7 +21,7 @@ class WatchList extends Model
 
     public function movies()
     {
-        // return $this->hasMany('MoviKyte\Movie', 'id', '');
+        // return $this->hasMany('Moviekyte\Movie', 'id', '');
         return Movie::all()->filter(function ($movie) {
             return in_array($movie->id, $this->movies) ? $movie : null;
         });
@@ -29,6 +29,6 @@ class WatchList extends Model
 
     public function users()
     {
-        return $this->belongsTo('MoviKyte\User');
+        return $this->belongsTo('Moviekyte\User');
     }
 }
