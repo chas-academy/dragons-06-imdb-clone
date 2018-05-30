@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte;
+namespace Moviekyte;
 
 use Illuminate\Database\Eloquent\Model;
 

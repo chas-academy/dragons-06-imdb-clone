@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte;
+namespace Moviekyte;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,16 @@ class Movie extends Model
 
     public function watchlists()
     {
-        return $this->belongsToMany('MovieKyte\WatchList');
+        return $this->belongsToMany('Moviekyte\WatchList');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany('Moviekyte\Review');
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany('Moviekyte\Genre');
     }
 }

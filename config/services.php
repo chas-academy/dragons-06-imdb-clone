@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => MoviKyte\User::class,
+        'model' => Moviekyte\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

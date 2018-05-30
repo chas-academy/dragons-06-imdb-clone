@@ -1,8 +1,8 @@
 <?php
 
-namespace MoviKyte\Http\Controllers\Auth;
+namespace Moviekyte\Http\Controllers\Auth;
 
-use MoviKyte\Http\Controllers\Controller;
+use Moviekyte\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

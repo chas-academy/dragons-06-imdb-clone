@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\Movie;
+use Moviekyte\Movie;
 
 class MoviesTableSeeder extends Seeder
 {
@@ -12,8 +12,6 @@ class MoviesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('movies')->delete();
-
         //make sample movies
         Movie::create(array(
             'id' => '1',
@@ -60,6 +58,16 @@ class MoviesTableSeeder extends Seeder
             'plot' => "It's all about 5",
             'director' => 'Master Cinqo',
         ));
-        
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('movies');
     }
 }

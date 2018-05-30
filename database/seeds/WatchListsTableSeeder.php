@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\WatchList;
+use Moviekyte\WatchList;
 
 class WatchListsTableSeeder extends Seeder
 {

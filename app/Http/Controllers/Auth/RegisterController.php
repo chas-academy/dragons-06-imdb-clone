@@ -1,9 +1,9 @@
 <?php
 
-namespace MoviKyte\Http\Controllers\Auth;
+namespace Moviekyte\Http\Controllers\Auth;
 
-use MoviKyte\User;
-use MoviKyte\Http\Controllers\Controller;
+use Moviekyte\User;
+use Moviekyte\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \MoviKyte\User
+     * @return \Moviekyte\User
      */
     protected function create(array $data)
     {

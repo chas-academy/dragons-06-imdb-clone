@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte;
+namespace Moviekyte;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -29,6 +29,6 @@ class User extends Authenticatable
 
     public function watchlists()
     {
-        return $this->hasMany('MoviKyte\WatchList');
+        return $this->hasMany('Moviekyte\WatchList');
     }
 }

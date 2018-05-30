@@ -1,12 +1,13 @@
 <?php
 
-namespace MoviKyte\Http\Controllers;
+namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-use MoviKyte\User;
-use MoviKyte\Movie;
+use Moviekyte\User;
+use Moviekyte\Movie;
+use Moviekyte\Review;
 use Auth;
 
 class AdminController extends Controller
@@ -43,6 +44,13 @@ class AdminController extends Controller
     {
         return view('create');
     }
+
+    public function reviews()
+    {
+        $reviews = Review::all();
+        return view('managereviews')->with(['reviews' => $reviews]);
+    }
+
 
     public function editmoviesform()
     {

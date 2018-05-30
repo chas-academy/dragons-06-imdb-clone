@@ -1,6 +1,6 @@
 <?php
 
-namespace MoviKyte\Providers;
+namespace Moviekyte\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'MoviKyte\Model' => 'MoviKyte\Policies\ModelPolicy',
+        'Moviekyte\Model' => 'Moviekyte\Policies\ModelPolicy',
     ];
 
     /**

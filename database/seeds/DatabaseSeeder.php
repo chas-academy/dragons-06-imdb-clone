@@ -16,9 +16,10 @@ class DatabaseSeeder extends Seeder
             MoviesTableSeeder::class,
             AdminsTableSeeder::class,
             UsersTableSeeder::class,
+            GenreTableSeeder::class,
             GenreMovieTableSeeder::class,
-            GenreTableSeeder::class,          
-            WatchListsTableSeeder::class
+            WatchListsTableSeeder::class,
+            ReviewsTableSeeder::class
         ]);
     }
 }

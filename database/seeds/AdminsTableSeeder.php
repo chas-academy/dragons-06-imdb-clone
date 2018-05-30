@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\Admin;
+use Moviekyte\Admin;
 
 class AdminsTableSeeder extends Seeder
 {
@@ -16,7 +16,7 @@ class AdminsTableSeeder extends Seeder
 
         Admin::create(array(
             'name' => 'admin',
-            'email' => 'admin@movikyte.com',
+            'email' => 'admin@moviekyte.com',
             'password' => Hash::make('secret'),
         ));
     }

@@ -1,7 +1,7 @@
 <nav id="menu" class="menu" style="">
 
       <header class="menu-header">
-        <h2 class="title is-2">MoviKyte</h2>
+        <h2 class="title is-2">MovieKyte</h2>
       </header>
 
     <section class="menu-section" style=""> <!-- Log in, skall includas sen -->
