@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\Genre;
+use Moviekyte\Genre;
 
 class GenreTableSeeder extends Seeder
 {

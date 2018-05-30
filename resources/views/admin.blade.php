@@ -16,14 +16,16 @@
 
                     <p>Welcome mr manager called "{{ Auth::user()->name }}", to the admin page</p>
 
-                    <a href="{{ url('admin/editusers') }}">Edit users</a><br>
-                    <a href="{{ url('admin/deleteusers') }}">Delete users</a><br>
-                    <br><br>
-                    <a href="{{ url('admin/create') }}">Add movies</a><br>
-                    <a href="{{ url('admin/editmovies') }}">Edit movies</a><br>
-                    <a href="{{ url('admin/deletemovies') }}">Delete movies</a><br>
-                    {{ csrf_field() }}
-
+                    <ul>
+                        <li><a href="{{ url('admin/editusers') }}">Edit users</a></li>
+                        <li><a href="{{ url('admin/deleteusers') }}">Delete users</a></li>
+                        <li></li>
+                        <li><a href="{{ url('admin/create') }}">Add movies</a></li>
+                        <li><a href="{{ url('admin/editmovies') }}">Edit movies</a></li>
+                        <li><a href="{{ url('admin/deletemovies') }}">Delete movies</a></li>
+                        <li></li>
+                        <li><a href="{{ url('admin/reviews') }}">Manage reviews</a></li>
+                    </ul>
                 </div>
 
             </div>

@@ -20,7 +20,7 @@
                   <img class="has-text-centered" src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
                 </figure>
                 <div class="latest-movie-title">
-                  <p class="title is-6 has-text-white has-text-centered">{{ $movie->title }}</p>
+                <a href="/movies/{{$movie->id}}" class="title is-6 has-text-white has-text-centered">{{ $movie->title }}</a>
                 </div>
 
                   <button class="button is-primary is-outlined" type="submit">
@@ -41,7 +41,7 @@
                   <img class="has-text-centered" src="https://bulma.io/images/placeholders/256x256.png" alt="Placeholder image">
                 </figure>
                 <div class="latest-movie-title">
-                  <p class="title is-6 has-text-white has-text-centered">{{ $movie->title }}</p>
+                  <a href="/movies/{{$movie->id}}" class="title is-6 has-text-white has-text-centered">{{ $movie->title }}</a>
                 </div>
 
                 <button class="button is-danger" type="submit">

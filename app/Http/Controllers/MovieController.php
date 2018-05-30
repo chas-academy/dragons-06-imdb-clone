@@ -56,7 +56,7 @@ class MovieController extends Controller
             //the line below uses image intervention. link pinned on slack
             //this changes the image size and saves it with the filename
             Image::make($movieImage)->resize(640, 1136)->save(public_path('/uploads/movie/' . $filename));
-        
+
             $movie->title = $request->title;
             $movie->genre = $request->genre;
             $movie->year = $request->year;
@@ -94,15 +94,14 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        $movie = Movie::find($id);
-        dd($movie);
+        $movie = Movie::findOrFail($id)->with(['reviews', 'genres'])->where('id', '=', $id)->first();
+        return view('movies')->with('movie', $movie);
     }
 
 
     public function latest()
     {
         $movies = Movie::all();
-
         return view('latestMovies')->with('movies', $movies);
     }
 

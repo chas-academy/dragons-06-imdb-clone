@@ -39,6 +39,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/deleteusers', 'AdminController@deleteusersform');
     Route::post('/deleteusers', 'UserController@deleteusers');
 
+    Route::get('/reviews', 'AdminController@reviews');
+
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 
@@ -57,8 +59,5 @@ Route::post('/watchlist/{watchlistId}/movie/{movieId}', 'HomeController@addMovie
 Route::delete('/watchlist/{id}', 'HomeController@deleteWatchlist')->name('watchlist.delete');
 Route::delete('/watchlist/{watchlistId}/movie/{movieId}', 'HomeController@deleteMovieFromWatchlist')->name('watchlist.movie.delete');
 
-
 Route::resource('/review' , 'ReviewController');
-
-
-
+Route::get('/review/{review}/delete' , 'ReviewController@destroy');

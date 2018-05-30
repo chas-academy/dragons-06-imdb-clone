@@ -77,7 +77,7 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'model' => MoviKyte\Admin::class,
+            'model' => Moviekyte\Admin::class,
         ],
 
         // 'users' => [

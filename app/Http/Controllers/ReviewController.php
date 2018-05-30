@@ -3,6 +3,7 @@
 namespace Moviekyte\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Moviekyte\Review;
 
 class ReviewController extends Controller
 {
@@ -23,7 +24,12 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        return view('review.create')
+        //
+    }
+
+    public function test(Request $request)
+    {
+
     }
 
     /**
@@ -34,19 +40,27 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array(
-                'title' => 'required|max:255',
-                'body' => 'required',
-                'rating' => 'required'
+
+        $validatedRequest = $this->validate($request, array(
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'rating' => 'required|max:100|min:0',
+            'movie_id' => 'required',
+            'author_id' => 'required',
         ));
 
-        $review = New Review;
-
-        $review->title = $request->title;
-        $review->body = $request->body;
-        $review->rating = $request->rating;
-
-        $review->save();
+        if (!$validatedRequest) {
+            return back()->with('error', 'Your review is missing something. Please check all fields and try again');
+        } else {
+            Review::create([
+                'title' => $request->title,
+                'body' => $request->body,
+                'rating' => $request->rating,
+                'movie_id' => $request->movie_id,
+                'author_id' => $request->author_id
+            ]);
+            return back()->with('success', 'Review added!');
+        }
     }
 
     /**
@@ -80,14 +94,13 @@ class ReviewController extends Controller
      */
     public function update(Request $request, $id)
     {
-            $this->validate($request, array(
-                
-                'title' => 'required|max:255',
-                'body' => 'required',
-                'rating' => 'required'   
-            ));
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'rating' => 'required|numeric|max:100|min:0'
+        ));
 
-        $review = Post::find($id);
+        $review = Review::find($id);
 
         $review->title = $request->input('title');
         $review->body = $request->input('body');
@@ -95,6 +108,7 @@ class ReviewController extends Controller
 
         $review->save();
 
+        return back()->with('message', 'Successfully updated review');
     }
 
     /**
@@ -105,8 +119,9 @@ class ReviewController extends Controller
      */
     public function destroy($id)
     {
-        $review = Post::find($id);
+        $review = Review::find($id);
 
         $review->delete();
+        return back()->with('message', 'Successfully deleted review');
     }
 }

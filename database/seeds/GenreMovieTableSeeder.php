@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\GenreMovie;
+use Moviekyte\GenreMovie;
 
 class GenreMovieTableSeeder extends Seeder
 {
@@ -16,24 +16,24 @@ class GenreMovieTableSeeder extends Seeder
 
         GenreMovie::create(array(
             'movie_id' => '1',
-            'genre_id' => '3',           
+            'genre_id' => '3',
         ));
         GenreMovie::create(array(
             'movie_id' => '2',
-            'genre_id' => '2', 
+            'genre_id' => '2',
         ));
         GenreMovie::create(array(
             'movie_id' => '3',
-            'genre_id' => '1', 
+            'genre_id' => '1',
         ));
         GenreMovie::create(array(
             'movie_id' => '4',
-            'genre_id' => '10', 
+            'genre_id' => '10',
         ));
         GenreMovie::create(array(
             'movie_id' => '5',
-            'genre_id' => '3', 
+            'genre_id' => '3',
         ));
-        
+
     }
 }

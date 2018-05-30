@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Moviekyte\Review;
 
 class ReviewsTableSeeder extends Seeder
 {
@@ -11,52 +12,47 @@ class ReviewsTableSeeder extends Seeder
      */
     public function run()
     {
-        Reviews::create(array(
-
-            'movie_id' => 1 ,
-            'author_id' => 2 ,
-            'title' => 'good shiit' ,
-            'body' => 'really good movie indeed' ,
+        Review::create(array(
+            'movie_id' => 1,
+            'author_id' => 2,
+            'title' => 'good shiit',
+            'body' => 'really good movie indeed',
             'rating' => 4
-
         ));
 
-            'movie_id' => 2 ,
-            'author_id' => 2 ,
-            'title' => 'good goodie' ,
-            'body' => 'gooooooooood' ,
+        Review::create(array(
+            'movie_id' => 2,
+            'author_id' => 2,
+            'title' => 'good goodie',
+            'body' => 'gooooooooood',
             'rating' => 5
 
         ));
 
-            'movie_id' => 3 ,
-            'author_id' => 2 ,
-            'title' => 'good naww' ,
-            'body' => 'whaaaaaaaattt' ,
+        Review::create(array(
+            'movie_id' => 3,
+            'author_id' => 2,
+            'title' => 'good naww',
+            'body' => 'whaaaaaaaattt',
             'rating' => 7
 
-        ));   
-        
-            'movie_id' => 2 ,
-            'author_id' => 3 ,
-            'title' => 'splended' ,
-            'body' => 'welll okey' ,
+        ));
+
+        Review::create(array(
+            'movie_id' => 2,
+            'author_id' => 3,
+            'title' => 'splended',
+            'body' => 'welll okey',
             'rating' => 5
 
         ));
 
-            'movie_id' => 4 ,
-            'author_id' => 1 ,
-            'title' => 'shiity as fuck' ,
-            'body' => 'really bad' ,
+        Review::create(array(
+            'movie_id' => 4,
+            'author_id' => 1,
+            'title' => 'shiity as fuck',
+            'body' => 'really bad',
             'rating' => 6
-
         ));
-
-
     }
 }
-
-
-
-

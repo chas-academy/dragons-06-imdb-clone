@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use MoviKyte\User;
+use Moviekyte\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'sven@gmail.com',
             'password' => Hash::make('123456'),
         ));
-        
+
         User::create(array(
             'name' => 'Adam',
             'email' => 'adam@gmail.com',
