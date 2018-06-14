@@ -24,4 +24,9 @@ class Movie extends Model
     {
         return $this->belongsToMany('Moviekyte\Genre');
     }
+
+    public function people()
+    {
+        return $this->hasMany('Moviekyte\People');
+    }
 }
